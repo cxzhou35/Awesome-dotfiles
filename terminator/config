@@ -1,0 +1,37 @@
+[global_config]
+  dbus = False
+  handle_size = 2
+  scroll_tabbar = True
+  title_transmit_fg_color = "#eeeeec"
+  title_transmit_bg_color = "#ad7fa8"
+  title_inactive_fg_color = "#729fcf"
+  title_inactive_bg_color = "#fdf7ff"
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminalShot
+  suppress_multiple_term_dialog = True
+  title_font = SauceCodePro Nerd Font Medium 14
+[keybindings]
+  split_horiz = <Primary>h
+  split_vert = <Primary>v
+[profiles]
+  [[default]]
+    background_color = "#fdf7ff"
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_color = "#ca92bd"
+    cursor_color_fg = False
+    font = Hack Nerd Font 13
+    foreground_color = "#3465a4"
+    scrollback_lines = 999
+    use_system_font = False
+    rewrap_on_resize = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+      size = 1000, 625
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
