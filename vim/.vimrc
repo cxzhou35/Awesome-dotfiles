@@ -1,5 +1,11 @@
 set guifont=Courier/20
+" 折叠设置
 set foldenable
+set foldmethod=syntax       " 设置语法折叠
+set foldcolumn=0            " 设置折叠区域的宽度
+setlocal foldlevel=1        " 设置折叠层数为1
+set foldlevelstart=99       " 打开文件是默认不折叠代码
+set foldclose=all          " 设置为自动关闭折叠
 set showcmd
 set shortmess=atI
 " 语法高亮
@@ -140,6 +146,15 @@ nmap <silent> <F7> <Plug>MarkdownPreview
 imap <silent> <F7> <Plug>MarkdownPreview
 nmap <silent> <F8> <Plug>StopMarkdownPreview
 imap <silent> <F8> <Plug>StopMarkdownPreview
+let g:vim_markdown_math = 1
+"设置tab键为触发键
+let g:UltiSnipsExpandTrigger = '<tab>'
+"设置向后跳转键
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+"设置向前跳转键
+let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
+"设置文件目录
+let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
 
 au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
 
