@@ -154,10 +154,24 @@ alias ra=ranger
 alias cat=bat
 alias lg=lazygit
 alias f=fzf
-alias v=nvim
-alias vi=nvim
-alias vim=nvim
 alias neo=neofetch
+alias ns=nvidia-smi
+
+# conda config
+alias condaa="conda activate"
+alias condad="conda deactivate"
+alias condae="conda env list"
+alias condai="conda info"
+
+# git config
+alias gita="git add ."
+alias gits="git status"
+alias gitl="git log"
+alias gitm="git commit -m"
+alias gitu="git remote -v"
+alias gitpl="git pull"
+alias gitph="git push"
+
 
 
 export EDITOR='/usr/bin/nvim'
@@ -205,5 +219,4 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --hidden --follow -E ".git" -E "node_modules" . /etc /home
 }
-
 
