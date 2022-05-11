@@ -27,10 +27,8 @@ set selectmode=mouse,key
 set number
 " 高亮当前行
 set cursorline
-highlight CursorLine cterm=NONE ctermbg=white ctermfg=blue guibg=NONE guifg=NONE
+set backspace=indent,start
 
-" theme
-colorscheme nord
 " 设置空白字符的视觉提示
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
@@ -51,7 +49,7 @@ call plug#begin()
 
 " Any valid git URL is allowed
 Plug 'git@github.com:junegunn/vim-github-dashboard.git'
-
+ 
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
@@ -59,26 +57,38 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'jiangmiao/auto-pairs'
 
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
- Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'fatih/vim-go', { 'tag': '*' }
 
 " Plugin options
- Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
-" Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
+Plug 'gcmt/wildfire.vim'
+Plug 'jameslawson/sandwich.vim'
+
+" theme
+Plug 'arcticicestudio/nord-vim'
 
 " markdown preview
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
 
+" command line 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " Initialize plugin system
 call plug#end()
+
+"theme
+colorscheme nord
 
 " NERDTree config
 " 显示行号
@@ -87,7 +97,7 @@ let NERDTreeAutoCenter=1
 " 是否显示隐藏文件
 let NERDTreeShowHidden=0
 " 设置宽度
-let NERDTreeWinSize=31
+let NERDTreeWinSize=25
 " 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 " 忽略一下文件的显示
@@ -105,8 +115,37 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
+
+" command line config
+set laststatus=2  "永远显示状态栏
+let g:airline_powerline_fonts = 1  " 支持 powerline 字体
+let g:airline#extensions#tabline#enabled = 1  
+let g:airline_theme='molokai'  
+
+if !exists('g:airline_symbols')
+let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '▶'
+let g:airline_left_alt_sep = '❯'
+let g:airline_right_sep = '◀'
+let g:airline_right_alt_sep = '❮'
+" let g:airline_symbols.linenr = '¶'
+" let g:airline_symbols.branch = '⎇'
+
+" 快捷键
+map <F2> :NERDTreeMirror<CR>
+map <F2> :NERDTreeToggle<CR>
+map <C-n> :tabnew<CR>
+
 " markdown preview config
 nmap <silent> <F7> <Plug>MarkdownPreview
 imap <silent> <F7> <Plug>MarkdownPreview
 nmap <silent> <F8> <Plug>StopMarkdownPreview
 imap <silent> <F8> <Plug>StopMarkdownPreview
+
+au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
+
+" wildfire config
+" This selects the next closest text object.
+map <SPACE> <Plug>(wildfire-fuel)
+vmap <C-SPACE> <Plug>(wildfire-water)
