@@ -32,6 +32,9 @@ set backspace=indent,start
 " 设置空白字符的视觉提示
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
+" 剪切板设置
+set clipboard^=unnamed,unnamedplus
+
 " plugins
 call plug#begin()
 " The default plugin directory will be as follows:
