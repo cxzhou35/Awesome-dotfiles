@@ -26,7 +26,9 @@ set selectmode=mouse,key
 " 显示行号
 set number
 " 高亮当前行
-set cursorline
+" set cursorline
+" highlight CursorLine cterm=NONE ctermbg=white ctermfg=blue guibg=NONE guifg=NONE
+
 set backspace=indent,start
 
 " 设置空白字符的视觉提示
@@ -87,10 +89,12 @@ Plug 'iamcco/markdown-preview.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'preservim/nerdcommenter'
+
 " Initialize plugin system
 call plug#end()
 
-"theme
+" theme
 colorscheme nord
 
 " NERDTree config
@@ -134,6 +138,7 @@ let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
 " let g:airline_symbols.linenr = '¶'
 " let g:airline_symbols.branch = '⎇'
+
 
 " 快捷键
 map <F2> :NERDTreeMirror<CR>

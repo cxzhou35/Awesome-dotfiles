@@ -171,7 +171,7 @@ alias gitm="git commit -m"
 alias gitu="git remote -v"
 alias gitpl="git pull"
 alias gitph="git push"
-
+alias gitd="git diff"
 
 
 export EDITOR='/usr/bin/nvim'
