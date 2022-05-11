@@ -80,6 +80,8 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'gcmt/wildfire.vim'
 Plug 'jameslawson/sandwich.vim'
+Plug 'junegunn/vim-emoji'
+
 
 " theme
 Plug 'arcticicestudio/nord-vim'
@@ -147,6 +149,19 @@ imap <silent> <F7> <Plug>MarkdownPreview
 nmap <silent> <F8> <Plug>StopMarkdownPreview
 imap <silent> <F8> <Plug>StopMarkdownPreview
 let g:vim_markdown_math = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_markdown_css = '/home/vercent/.config/Typora/themes/purple.css'
+set completefunc=emoji#complete
+
+augroup emoji_complete
+  autocmd!
+  autocmd FileType markdown setlocal completefunc=emoji#complete
+augroup END
+
+
+let g:user_completion_chain = ['emoji#complete', 'HTMLTagComplete']
+set completefunc=CompletionChain
+
 "设置tab键为触发键
 let g:UltiSnipsExpandTrigger = '<tab>'
 "设置向后跳转键
