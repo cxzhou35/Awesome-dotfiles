@@ -14,8 +14,8 @@
   split_vert = <Primary>v
 [profiles]
   [[default]]
-    background_color = "#fdf7ff"
-    background_darkness = 0.8
+    background_color = "#f3f3f3"
+    background_darkness = 0.85
     background_type = transparent
     cursor_color = "#ca92bd"
     cursor_color_fg = False
