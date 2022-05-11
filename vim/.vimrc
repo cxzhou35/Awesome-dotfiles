@@ -1,7 +1,7 @@
 set guifont=Courier/20
-set foldenable      " 允许折叠  
-set showcmd         " 输入的命令显示出来，看的清楚些 
-set shortmess=atI   " 启动的时候不显示那个援助乌干达儿童的提示 
+set foldenable
+set showcmd
+set shortmess=atI
 " 语法高亮
 set syntax=on
 " 自动缩进
@@ -12,7 +12,7 @@ set tabstop=2
 " 匹配括号高亮的时间（单位是十分之一秒）
 set matchtime=1
 "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  
-set nocompatible  
+set nocompatible
 "设置编码
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
@@ -99,7 +99,7 @@ let NERDTreeShowHidden=0
 " 设置宽度
 let NERDTreeWinSize=25
 " 在终端启动vim时，共享NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup=0
 " 忽略一下文件的显示
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 " 显示书签列表
@@ -120,7 +120,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
 let g:airline#extensions#tabline#enabled = 1  
-let g:airline_theme='molokai'  
+let g:airline_theme='molokai'
 
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
