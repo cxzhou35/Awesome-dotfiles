@@ -1,0 +1,42 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++11",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+			        "-I", "/usr/local/include",
+			        "-I", "/usr/local/include/opencv",
+			        "-I", "/usr/local/include/opencv2",
+			        "-L", "/usr/local/lib"
+            ],
+            "problemMatcher":{
+                "owner": "cpp",
+                "fileLocation":[
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern":[
+                    {
+                        "regexp": "^([^\\\\s].*)\\\\((\\\\d+,\\\\d+)\\\\):\\\\s*(.*)$",
+                        "file": 1,
+                        "location": 2,
+                        "message": 3
+                    }
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
