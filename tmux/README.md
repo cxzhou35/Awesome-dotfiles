@@ -3,7 +3,7 @@
 ```bash
 cd
 git clone git@github.com:Xuer04/Mydotfiles.git ~/dotfiles
-cp ~/dotfiles/tmux ~/.tmux
+cp -r ~/dotfiles/tmux ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf
 cp ~/dotfiles/tmux/.tmux.conf.local ~
 ```
