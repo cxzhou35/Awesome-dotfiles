@@ -2,9 +2,10 @@
 #### The setup guidance is below:
 ```bash
 cd
-git clone git@github:Xuer04/Mydotfiles.git ~/dotfiles
-ln -s -f ~/dotfiles/tmux/.tmux.conf
-cp ~/dotfiles/tmux/.tmux.conf.local .
+git clone git@github.com:Xuer04/Mydotfiles.git ~/dotfiles
+cp ~/dotfiles/tmux ~/.tmux
+ln -s -f ~/.tmux/.tmux.conf
+cp ~/dotfiles/tmux/.tmux.conf.local ~
 ```
 
 #### Tips:
