@@ -1,7 +1,7 @@
 # My dotfiles in Linux
-Here are some dotfiles for my linux.
+Here are some dotfiles for my Linux(Ubuntu 20.04).
 
-I put them here for convenienve.
+I put them here for handy and portable use.
 
 The config list is below:
 - `conda`
@@ -14,7 +14,7 @@ The config list is below:
 - `ranger`
 - `terminator`
 - `vim`
-- `vscode (c/c++)`
+- `vscode(c/c++)`
 - `source(ubuntu apt source)`
 
-
+Continue to update...  :)
