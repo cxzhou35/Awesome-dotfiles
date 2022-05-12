@@ -11,7 +11,7 @@
   title_font = SauceCodePro Nerd Font Medium 14
 [keybindings]
   split_horiz = <Primary>h
-  split_vert = <Primary>v
+  split_vert = <Primary>j
 [profiles]
   [[default]]
     background_color = "#f3f3f3"
