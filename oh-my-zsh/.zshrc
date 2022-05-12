@@ -10,7 +10,7 @@ export ZSH="/home/vercent/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # change theme here
 # source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
-# ZSH_THEME="af-magic"
+# ZSH_THEME="ys"
 ZSH_THEME="my-magic"
 
 # Set list of themes to pick from when loading at random
