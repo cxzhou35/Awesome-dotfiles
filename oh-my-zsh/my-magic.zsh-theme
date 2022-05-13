@@ -32,7 +32,7 @@ RPS1='${return_code}'
 
 # right prompt
 (( $+functions[virtualenv_prompt_info] )) && RPS1+='$(virtualenv_prompt_info)'
-RPS1+=' $my_gray%n@%m%{$reset_color%}%'
+RPS1+=' $my_orange%n@%m%{$reset_color%}%'
 
 # git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]($FG[078]"
