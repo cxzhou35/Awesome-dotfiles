@@ -16,5 +16,6 @@ The config list is below:
 - `vim`
 - `vscode(c/c++)`
 - `source(ubuntu apt source)`
+- `alacritty`
 
 Continue to update...  :)
