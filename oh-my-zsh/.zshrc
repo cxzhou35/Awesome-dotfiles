@@ -165,14 +165,14 @@ alias condae="conda env list"
 alias condai="conda info"
 
 # git config
-alias gita="git add ."
-alias gits="git status"
-alias gitl="git log"
-alias gitm="git commit -m"
-alias gitu="git remote -v"
-alias gitpl="git pull"
-alias gitph="git push"
-alias gitd="git diff"
+alias ga="git add ."
+alias gs="git status"
+alias gg="git log"
+alias gm="git commit -m"
+alias gu="git remote -v"
+alias gl="git pull"
+alias gh="git push"
+alias gd="git diff"
 
 
 export EDITOR='/usr/bin/nvim'
