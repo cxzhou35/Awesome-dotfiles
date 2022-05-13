@@ -73,7 +73,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions z sudo extract)
+plugins=(git zsh-autosuggestions z sudo extract git-open)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -175,6 +175,7 @@ alias gitu="git remote -v"
 alias gitl="git pull"
 alias gith="git push"
 alias gitd="git diff"
+alias go="git-open"
 
 
 export EDITOR='/usr/bin/nvim'
