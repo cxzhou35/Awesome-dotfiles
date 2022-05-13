@@ -17,5 +17,6 @@ The config list is below:
 - `vscode(c/c++)`
 - `source(ubuntu apt source)`
 - `alacritty`
+- `themes(gnome theme)`
 
 Continue to update...  :)
