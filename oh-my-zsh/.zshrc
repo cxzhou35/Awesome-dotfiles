@@ -157,12 +157,14 @@ alias f="fzf"
 alias neo="neofetch"
 alias ns="nvidia-smi"
 alias update="sudo apt update && sudo apt upgrade"
+alias clean="sudo apt autoremove && sudo apt clean && sudo apt autoclean"
 
 # conda config
 alias condaa="conda activate"
 alias condad="conda deactivate"
 alias condae="conda env list"
 alias condai="conda info"
+alias condac="conda clean -a"
 
 # git config
 alias gita="git add ."
