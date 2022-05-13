@@ -27,6 +27,9 @@ window:
     columns: 100
     lines: 28
   decorations: full
+  title: Zicx's Alacritty
+  # If choose true, the terminal will automaticly change the title.
+  dynamic_title: false
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
@@ -246,7 +249,7 @@ colors:
   #save_to_clipboard: false
 
 # Allow terminal applications to change Alacritty's window title.
-#dynamic_title: true
+# If choose true, the terminal will automatic change the title.
 
 #cursor:
   # Cursor style
@@ -273,8 +276,8 @@ colors:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
+shell:
+  program: /bin/zsh
 #  args:
 #    - --login
 
@@ -297,7 +300,7 @@ colors:
 # Send ESC (\x1b) before characters when alt is pressed.
 #alt_send_esc: true
 
-#mouse:
+mouse:
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
@@ -307,7 +310,7 @@ colors:
   #triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing: false
+  hide_when_typing: true
 
   #url:
     # URL launcher
@@ -353,15 +356,13 @@ colors:
 # And optionally:
 #
 # - `mods` (see key bindings)
-#mouse_bindings:
-#  - { mouse: Middle, action: PasteSelection }
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
 
 # Key bindings
 #
 # Key bindings are specified as a list of objects. For example, this is the
-# default paste binding:
 #
-# `- { key: V, mods: Control|Shift, action: Paste }`
 #
 # Each key binding will specify a:
 #
@@ -461,8 +462,6 @@ colors:
 # at once.
 key_bindings:
   # (Windows/Linux only)
-  - { key: V,        mods: Control,        action: Paste            }
-  - { key: C,        mods: Control,        action: Copy             }
   #- { key: Insert,   mods: Shift,         action: PasteSelection   }
   #- { key: Key0,     mods: Control,       action: ResetFontSize    }
   #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
@@ -475,7 +474,8 @@ key_bindings:
       #{program: "open", args: ["~/.config/alacritty/alacritty.yml"]}     }
   #- { key: N,         mods: Command,      action: SpawnNewInstance       }
   #- { key: Space,     mods: Alt,          chars: " "                     }
-
+  - { key: V,         mods: Control|Shift, action: Paste                  }
+  - { key: C,         mods: Control|Shift, action: Copy }                 
   - { key: A,         mods: Command,       chars: "\x01"                       }
   - { key: B,         mods: Command,       chars: "\x02"                       }
   - { key: C,         mods: Command,       chars: "\x03"                       }
