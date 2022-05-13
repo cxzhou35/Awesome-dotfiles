@@ -332,7 +332,7 @@ mouse:
     #
     # These are the modifiers that need to be held down for opening URLs when clicking
     # on them. The available modifiers are documented in the key binding section.
-    #modifiers: None
+    # modifiers: Command
 
 # Mouse bindings
 #
@@ -476,6 +476,7 @@ key_bindings:
   #- { key: Space,     mods: Alt,          chars: " "                     }
   - { key: V,         mods: Control|Shift, action: Paste                  }
   - { key: C,         mods: Control|Shift, action: Copy }                 
+  - { key: T,         mods: Control|Shift, action: SpawnNewInstance }                 
   - { key: A,         mods: Command,       chars: "\x01"                       }
   - { key: B,         mods: Command,       chars: "\x02"                       }
   - { key: C,         mods: Command,       chars: "\x03"                       }
@@ -671,7 +672,7 @@ key_bindings:
   - { key: Paste,                   action: Paste                            }
   - { key: Copy,                    action: Copy                             }
   - { key: L,        mods: Control, action: ClearLogNotice                   }
-  - { key: F,    mods: Command|Shift, action: ToggleFullscreen                   }
+  - { key: F11,                   action: ToggleFullscreen                   }
   - { key: L,        mods: Control, chars: "\x0c"                            }
   - { key: Home,     mods: Alt,     chars: "\x1b[1;3H"                       }
   - { key: Home,                    chars: "\x1bOH",        mode: AppCursor  }
@@ -720,7 +721,6 @@ key_bindings:
   - { key: F4,                      chars: "\x1bOS"                          }
   - { key: F5,                      chars: "\x1b[15~"                        }
   - { key: F6,                      chars: "\x1b[17~"                        }
-  - { key: F7,                      chars: "\x1b[18~"                        }
   - { key: F8,                      chars: "\x1b[19~"                        }
   - { key: F9,                      chars: "\x1b[20~"                        }
   - { key: F10,                     chars: "\x1b[21~"                        }
