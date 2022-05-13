@@ -20,3 +20,4 @@ The config list is below:
 - `themes(gnome theme)`
 
 Continue to update...  :)
+
