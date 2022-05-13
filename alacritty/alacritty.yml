@@ -18,7 +18,7 @@ tabspaces: 2
 live_config_reload: true
 
 window:
-  opacity: 0.9
+  opacity: 0.95
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
