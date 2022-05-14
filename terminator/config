@@ -2,10 +2,12 @@
   dbus = False
   handle_size = 2
   scroll_tabbar = True
-  title_transmit_fg_color = "#eeeeec"
-  title_transmit_bg_color = "#ad7fa8"
-  title_inactive_fg_color = "#729fcf"
-  title_inactive_bg_color = "#fdf7ff"
+  title_transmit_fg_color = "#2E3440"
+  title_transmit_bg_color = "#88C0D0"
+  title_receive_fg_color = "#2E3440"
+  title_receive_bg_color = "#8FBCBB"
+  title_inactive_fg_color = "#D8DEE9"
+  title_inactive_bg_color = "#4C566A"
   enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminalShot
   suppress_multiple_term_dialog = True
   title_font = SauceCodePro Nerd Font Medium 14
@@ -14,14 +16,21 @@
   split_vert = <Primary>j
 [profiles]
   [[default]]
-    background_color = "#f3f3f3"
+    background_color = "#26272e"
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#fbeaff"
+  [[nord]]
+    background_color = "#2E3440"
     background_darkness = 0.85
     background_type = transparent
-    cursor_color = "#ca92bd"
+    cursor_color = "#D8DEE9"
     cursor_color_fg = False
     font = Hack Nerd Font 13
-    foreground_color = "#3465a4"
+    foreground_color = "#D8DEE9"
     scrollback_lines = 999
+    palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8F  BCBB:#ECEFF4"
     use_system_font = False
     rewrap_on_resize = False
 [layouts]
