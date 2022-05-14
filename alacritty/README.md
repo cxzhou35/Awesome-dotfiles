@@ -1,4 +1,4 @@
-## This is alacritty config file for zicx
+## Here is the alacritty config file for zicx
 #### How to install alacritty and its config in your PC ?
 `Ubuntu/Debian`
 ```bash
