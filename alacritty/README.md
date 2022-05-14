@@ -11,4 +11,4 @@ git clone git@github.com:Xuer04/Mydotfiles.git
 cd Mydotfiles
 cp ./alacritty/alacritty.yml ~/.config/alacritty
 ```
-Then you can refresh your terminal and use your alacritty!
+Then you can refresh your terminal and enjoy your alacritty!
