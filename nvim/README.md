@@ -1,4 +1,4 @@
-## This is nvim config for zicx
+## Here is the nvim config for zicx
 
 #### This folder contains nvim config files below:
 - `init.vim`: the nvim config file.
