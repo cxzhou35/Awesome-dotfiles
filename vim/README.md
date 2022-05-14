@@ -1,4 +1,4 @@
-## Here is the vim config for zicx
+## Here is the vim config for Zicx
 
 #### This folder contains some config files below:
 - `.vimrc`: the vim config file.
