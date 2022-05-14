@@ -1,4 +1,4 @@
-## Here is gnome theme config for zicx
+## Here is the gnome theme config for zicx
 #### This file lists some pretty config:
 - `Cursor`: Future-cursors.
 - `Icon`: WhiteSur-icon-theme.
