@@ -1,4 +1,4 @@
-## Here is the tmux config file for zicx.
+## Here is the tmux config file for zicx
 #### The setup guidance is below:
 ```bash
 cd
