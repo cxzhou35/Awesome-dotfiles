@@ -1,4 +1,4 @@
-## This is zsh config for zicx
+## Here is the oh-my-zsh config for zicx
 
 #### This folder contains zsh config file below:
 - `.zshrc`: the zsh config file.
