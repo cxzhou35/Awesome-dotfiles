@@ -18,6 +18,7 @@ The config list is below:
 - `source(ubuntu apt source)`
 - `alacritty`
 - `themes(gnome theme)`
+- `gedit`
 
 Continue to update...  :)
 
