@@ -73,7 +73,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions z sudo extract git-open)
+plugins=(git zsh-autosuggestions z sudo extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -157,7 +157,7 @@ alias f="fzf"
 alias neo="neofetch"
 alias ns="nvidia-smi"
 alias update="sudo apt update && sudo apt upgrade"
-alias clean="sudo apt autoremove && sudo apt clean && sudo apt autoclean"
+alias autoclean="sudo apt autoremove && sudo apt clean && sudo apt autoclean"
 
 # conda config
 alias condaa="conda activate"
@@ -175,7 +175,6 @@ alias gitu="git remote -v"
 alias gitl="git pull"
 alias gith="git push"
 alias gitd="git diff"
-alias go="git-open"
 
 
 export EDITOR='/usr/bin/nvim'
