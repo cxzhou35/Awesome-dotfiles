@@ -185,10 +185,7 @@ source /home/vercent/.config/broot/launcher/bash/br
 
 # Set Ros environment
 source /opt/ros/noetic/setup.zsh
-source /home/vercent/code/ros_code/workpage1/devel/setup.zsh
-source /home/vercent/code/ros_code/workpage2/devel/setup.zsh
-source /home/vercent/code/ros_code/workpage3/devel/setup.zsh
-source /home/vercent/code/ros_code/workpage4/devel/setup.zsh
+# source /home/vercent/code/ros_code/workpage1/devel/setup.zsh
 
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
