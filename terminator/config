@@ -20,7 +20,9 @@
     background_darkness = 0.8
     background_type = transparent
     cursor_color = "#aaaaaa"
+    font = Hack Nerd Font Mono 14
     foreground_color = "#fbeaff"
+    use_system_font = False
   [[nord]]
     background_color = "#2E3440"
     background_darkness = 0.85
