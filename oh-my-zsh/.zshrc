@@ -193,14 +193,12 @@ source /home/vercent/code/ros_code/workpage4/devel/setup.zsh
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
 
-# FZF
+# FZF config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat # {} || tree -C {}) 2> /dev/null | head -500'"
-
-# export FZF_DEFAULT_COMMAND='fdfind --hidden --follow -E ".git" -E "node_modules" . /etc /home'
 export FZF_DEFAULT_OPTS='--height 90% --layout=reverse --bind=alt-j:down,alt-k:up,alt-i:toggle+down --border --preview "echo {} | ~/share/fzf_preview.py" --preview-window=down'
+
+# you need to change the fzf preview script path in your PC 
 
 
 # use fzf in bash and zsh

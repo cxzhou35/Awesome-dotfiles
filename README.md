@@ -19,6 +19,7 @@ The config list is below:
 - `alacritty`
 - `themes(gnome theme)`
 - `gedit`
+- `fzf`
 
 Continue to update...  :)
 
