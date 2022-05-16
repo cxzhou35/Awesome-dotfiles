@@ -73,7 +73,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions z sudo extract)
+plugins=(git zsh-autosuggestions z sudo extract zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,7 +124,7 @@ export PATH=/usr/local/cuda-11.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 #set oracle jdk environment
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64  
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64  ## 这里要注意目录要换成自己解压的jdk 目录
 export JRE_HOME=${JAVA_HOME}/jre  
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
 export PATH=${JAVA_HOME}/bin:$PATH 
@@ -185,17 +185,23 @@ source /home/vercent/.config/broot/launcher/bash/br
 
 # Set Ros environment
 source /opt/ros/noetic/setup.zsh
-# source /home/vercent/code/ros_code/workpage1/devel/setup.zsh
+source /home/vercent/code/ros_code/workpage1/devel/setup.zsh
+source /home/vercent/code/ros_code/workpage2/devel/setup.zsh
+source /home/vercent/code/ros_code/workpage3/devel/setup.zsh
+source /home/vercent/code/ros_code/workpage4/devel/setup.zsh
+source /home/vercent/code/ros_code/workpage5/devel/setup.zsh
 
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
 
-# FZF config
+# FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_OPTS='--height 90% --layout=reverse --bind=alt-j:down,alt-k:up,alt-i:toggle+down --border --preview "echo {} | ~/share/fzf_preview.py" --preview-window=down'
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat # {} || tree -C {}) 2> /dev/null | head -500'"
 
-# you need to change the fzf preview script path in your PC 
+# export FZF_DEFAULT_COMMAND='fdfind --hidden --follow -E ".git" -E "node_modules" . /etc /home'
+export FZF_DEFAULT_OPTS='--height 90% --layout=reverse --bind=alt-j:down,alt-k:up,alt-i:toggle+down --border --preview "echo {} | ~/share/fzf_preview.py" --preview-window=down'
 
 
 # use fzf in bash and zsh
@@ -218,3 +224,6 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow -E ".git" -E "node_modules" . /etc /home
 }
 
+# the robot config
+export ROS_MASTER_URI=http://192.168.1.3:11311
+export ROS_IP=192.168.1.1
