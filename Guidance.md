@@ -276,7 +276,6 @@ vim .zshrc
 alias ls="exa" 
 source .zshrc
 
-# 9. mcfly
 ```
 
 Continue to update...
