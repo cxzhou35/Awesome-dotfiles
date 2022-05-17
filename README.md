@@ -17,7 +17,7 @@ The config list is below:
 - `vscode(c/c++)`
 - `apt`
 - `alacritty`
-- `themes(gnome theme)`
+- `gnome theme`
 - `gedit`
 - `fzf`
 
