@@ -15,7 +15,7 @@ The config list is below:
 - `terminator`
 - `vim`
 - `vscode(c/c++)`
-- `source(ubuntu apt source)`
+- `apt`
 - `alacritty`
 - `themes(gnome theme)`
 - `gedit`
