@@ -11,7 +11,9 @@ git clone https://github.com/Xuer04/Mydotfiles.git
 mkdir -p ~/.config/nvim/autoload
 cp ~/Mydotfiles/nvim/autoload/plug.vim ~/.config/nvim/autoload
 cp ~/Mydotfiles/nvim/init.vim ~/.config/nvim
+nvim
 
+# :PlugInstall
 ```
 
 Now you can enjoy your neovim !
