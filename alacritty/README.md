@@ -7,7 +7,7 @@ sudo apt update
 sudo apt install alacritty
 mkdir -p .config/alacritty
 cd
-git clone git@github.com:Xuer04/Mydotfiles.git 
+git clone https://github.com/Xuer04/Mydotfiles.git 
 cd Mydotfiles
 cp ./alacritty/alacritty.yml ~/.config/alacritty
 ```
