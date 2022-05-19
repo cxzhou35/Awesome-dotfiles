@@ -45,9 +45,6 @@ call plug#begin()
 
 " Any valid git URL is allowed
 Plug 'git@github.com:junegunn/vim-github-dashboard.git'
- 
-" Multiple Plug commands can be written in a single line using | separators
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
 Plug 'preservim/nerdtree' |
@@ -87,13 +84,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdcommenter'
 
 " theme
-" Initialize plugin system
-Plug 'EdenEast/nightfox.nvim'
+" Plug 'EdenEast/nightfox.nvim'
 
 call plug#end()
 
 " theme
-colorscheme nightfox
+" colorscheme nightfox
 
 " NERDTree config
 " 显示行号
@@ -125,7 +121,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
 let g:airline#extensions#tabline#enabled = 1  
-let g:airline_theme='deus'
+let g:airline_theme='papercolor'
 
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
