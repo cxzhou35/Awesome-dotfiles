@@ -87,12 +87,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdcommenter'
 
 " theme
-Plug 'shaunsingh/nord.nvim'
 " Initialize plugin system
+Plug 'EdenEast/nightfox.nvim'
+
 call plug#end()
 
 " theme
-colorscheme nord
+colorscheme nightfox
 
 " NERDTree config
 " 显示行号
