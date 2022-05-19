@@ -32,7 +32,7 @@ sudo apt upgrade   # 有提示输出 Y
 
 ```bash
 sudo apt install gcc gdb cmake build-essential 
-sudo apt install wget htop aptitude
+sudo apt install wget htop aptitude neofetch
 sudo apt install curl perl zip unzip
 ```
 
@@ -105,13 +105,13 @@ ssh-keygen -t rsa -C "zjajzcx3566@163.com"      (换成自己的github邮箱)
 # 打开 github  https://github.com/
 # 将 ~/.ssh/id_rsa.pub 中的内容添加到ssh key中
 
- ssh -T  git@github.com
- # 输入 yes 后回车
+ssh -T  git@github.com
+# 输入 yes 后回车
 ```
 
 ### 5. 安装配置 vim
 
- vim 的配置文件有两个，分别是 User 和 root，对应 主目录下的 ~/.vimrc 和 /etc/vim/vimrc ，一般修改 ~/.vimrc
+vim 的配置文件有两个，分别是 User 和 root，对应 主目录下的 ~/.vimrc 和 /etc/vim/vimrc ，一般修改 ~/.vimrc
 
 ```bash
 # clone 我的配置
@@ -137,7 +137,7 @@ cp Mydotfiles/vim/nord.vim  ~/.vim/plugged/nord-vim/colors
 sudo apt install tmux
 
 # 配置
-git clone git@github.com:Xuer04/Mydotfiles.git  # 前面操作中clone过的不需要再clone
+git clone https://github.com/Xuer04/Mydotfiles.git  # 前面操作中clone过的不需要再clone
 cp -r ~/Mydotfiles/tmux ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf
 cp ~/Mydotfiles/tmux/.tmux.conf.local ~
@@ -241,7 +241,6 @@ source .zshrc
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 cd ~/.fzf/ 
 ./install
-sudo apt install highlight
 
 ## 通过dpkg安装
 cd ~/Downloads
@@ -256,7 +255,12 @@ cd ~/.fzf && git pull && ./install
 sudo apt install ncdu
 
 # 6. nnn
-sudo apt install nnn
+cd ~/Downloads
+git clone https://github.com/jarun/nnn.git
+cd nnn
+sudo make O_NERD=1
+./nnn
+sudo mv ~/Downloads/nnn/nnn /bin/ 
 
 # 7. tldr
 sudo apt install tldr
@@ -276,8 +280,337 @@ vim .zshrc
 alias ls="exa" 
 source .zshrc
 
+# 9. ranger
+pip install ranger-fm  or  sudo apt install ranger
+ranger --copy-config=all
+
+# 安装预览插件
+sudo apt install poppler
+sudo apt install highlight
+sudo apt install mediainfo
+sudo apt install ueberzug
+sudo apt install w3m-img
+sudo apt install libx11-dev
+sudo apt install libxext-dev
+sudo pip3 install ueberzug
+
+# 配置环境变量
+export RANGER_LOAD_DEFAULT_RC=FALSE
+
+# 图标显示
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+git clone https://github.com/Xuer04/Mydotfiles.git  # 前面操作中clone过的不需要再clone
+cp ~/Mydotfiles/ranger/rc.conf ~/.config/ranger/conf
+
+# 10. lazygit
+```bash
+sudo add-apt-repository ppa:lazygit-team/release
+sudo apt update
+sudo apt install lazygit
+# 添加缩写
+echo "alias lg="lazygit"" >> ~/.zshrc
 ```
 
-Continue to update...
+```
+
+### 番外：
+#### 1. 一些有意思的终端工具
+```bash
+sudo apt install sl  # 小火车
+sudo apt install cmatrix  # 字符雨
+sudo apt install xcowsay  # 奶牛
+sudo apt install aview  # ascii格式打开图片
+asciiview test.png
+
+sudo apt install lolcat  # 终端颜色真值输出
+neofetch | lolcat
+
+sudo apt install figlet  # 字符串转字符画
+
+```
+
+
+Continue to update... 📆 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
