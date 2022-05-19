@@ -62,6 +62,8 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 " lazygit
 Plug 'kdheepak/lazygit.nvim'
 
+Plug 'nvim-lua/plenary.nvim'
+
 " Plugin options
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
@@ -171,3 +173,7 @@ vmap <C-SPACE> <Plug>(wildfire-water)
 
 " mapping for lazygit -- alt + g
 noremap <M-g> :new<CR>:term lazygit<CR>i
+let g:lazygit_floating_window_winblend = 0 " transparency of floating window
+let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
+let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters<F11><F11>
+let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available
