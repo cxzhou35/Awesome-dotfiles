@@ -1,0 +1,16 @@
+{
+    "com.github.barathbheeman.vsw-extension": {
+        "id": "com.github.barathbheeman.vsw-extension",
+        "url": "https://github.com/barathbheeman/vsw-extension/",
+        "updated_at": "2022-05-03T20:18:35.428697",
+        "last_commit": "b4941107960183a1ad8299b0733c353f6753e07b",
+        "last_commit_time": "2021-12-05T06:38:43"
+    },
+    "com.github.msaistaken.ulauncher-translator": {
+        "id": "com.github.msaistaken.ulauncher-translator",
+        "url": "https://github.com/msaistaken/ulauncher-translator",
+        "updated_at": "2022-05-03T20:18:48.293860",
+        "last_commit": "824037cd06fb56162c0d629020bdc4b70ce3d77e",
+        "last_commit_time": "2021-07-25T18:22:55"
+    }
+}
