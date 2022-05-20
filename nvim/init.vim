@@ -121,7 +121,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
 let g:airline#extensions#tabline#enabled = 1  
-let g:airline_theme='papercolor'
+let g:airline_theme='violet'
 
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
