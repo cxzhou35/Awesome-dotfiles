@@ -1,4 +1,4 @@
-## Here is the ulauncher config for Zicx.
+## Here is the ulauncher config for Zicx
 
 #### How to install theme in your PC ?
 
