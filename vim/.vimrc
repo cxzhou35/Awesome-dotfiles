@@ -71,9 +71,6 @@ Plug 'tpope/vim-surround'
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go', { 'tag': '*' }
 
-" Plugin options
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -81,8 +78,6 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'gcmt/wildfire.vim'
 Plug 'jameslawson/sandwich.vim'
-Plug 'junegunn/vim-emoji'
-
 
 " theme
 Plug 'arcticicestudio/nord-vim'
