@@ -91,6 +91,7 @@ alias neo="neofetch"
 alias ns="nvidia-smi"
 alias update="sudo apt update && sudo apt upgrade"
 alias autoclean="sudo apt autoremove && sudo apt clean && sudo apt autoclean"
+alias nv="nvim"
 
 # alias for conda
 alias condaa="conda activate"
