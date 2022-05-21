@@ -32,7 +32,7 @@ set selectmode=mouse,key
 " 显示行号
 set number
 
-set backspace=indent,start
+set backspace=indent,start,eol
 
 " 设置空白字符的视觉提示
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
@@ -178,3 +178,10 @@ au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
 " This selects the next closest text object.
 map <SPACE> <Plug>(wildfire-fuel)
 vmap <C-SPACE> <Plug>(wildfire-water)
+
+" map config for fzf
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
+
+" map config for tabs
+
