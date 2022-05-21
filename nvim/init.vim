@@ -83,9 +83,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'preservim/nerdcommenter'
 
-" theme
-" Plug 'EdenEast/nightfox.nvim'
-
 call plug#end()
 
 " theme
