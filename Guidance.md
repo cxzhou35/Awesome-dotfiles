@@ -330,4 +330,4 @@ sudo apt install figlet  # 字符串转字符画
 ```
 
 
-Continue to update... 📆 
+Continue to update...  📆 
