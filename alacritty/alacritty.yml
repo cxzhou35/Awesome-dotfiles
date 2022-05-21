@@ -177,7 +177,8 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false 
+
 # Colors (Nord)
 colors:
    # Default colors
@@ -507,12 +508,12 @@ key_bindings:
   - { key: Key2,      mods: Command,    chars: "\x1bOQ"                          }
   - { key: Key3,      mods: Command,    chars: "\x1bOR"                          }
   - { key: Key4,      mods: Command,    chars: "\x1bOS"                          }
-  - { key: Key5,      mods: Command,    chars: "\x1b[15~"                        }
-  - { key: Key6,      mods: Command,    chars: "\x1b[17~"                        }
-  - { key: Key7,      mods: Command,    chars: "\x1b[18~"                        }
-  - { key: Key8,      mods: Command,    chars: "\x1b[19~"                        }
-  - { key: Key9,      mods: Command,    chars: "\x1b[20~"                        }
-  - { key: Key0,      mods: Command,   chars: "\x1b[21~"                        }
+  #- { key: Key5,      mods: Command,    chars: "\x1b[15~"                        }
+  # - { key: Key6,      mods: Command,    chars: "\x1b[17~"                        }
+  #- { key: Key7,      mods: Command,    chars: "\x1b[18~"                        }
+  #- { key: Key8,      mods: Command,    chars: "\x1b[19~"                        }
+  #- { key: Key9,      mods: Command,    chars: "\x1b[20~"                        }
+  #- { key: Key0,      mods: Command,   chars: "\x1b[21~"                        }
   #- { key: Key11,                     chars: "\x1b[23~"                        }
   #- { key: Key12,                     chars: "\x1b[24~"                        }
   #- { key: Key1,       mods: Shift,   chars: "\x1b[1;2P"                       }
@@ -719,13 +720,13 @@ key_bindings:
   - { key: F2,                      chars: "\x1bOQ"                          }
   - { key: F3,                      chars: "\x1bOR"                          }
   - { key: F4,                      chars: "\x1bOS"                          }
-  - { key: F5,                      chars: "\x1b[15~"                        }
-  - { key: F6,                      chars: "\x1b[17~"                        }
-  - { key: F8,                      chars: "\x1b[19~"                        }
-  - { key: F9,                      chars: "\x1b[20~"                        }
-  - { key: F10,                     chars: "\x1b[21~"                        }
-  - { key: F11,                     chars: "\x1b[23~"                        }
-  - { key: F12,                     chars: "\x1b[24~"                        }
+  #- { key: F5,                      chars: "\x1b[15~"                        }
+  #- { key: F6,                      chars: "\x1b[17~"                        }
+  #- { key: F8,                      chars: "\x1b[19~"                        }
+  #- { key: F9,                      chars: "\x1b[20~"                        }
+  #- { key: F10,                     chars: "\x1b[21~"                        }
+  #- { key: F11,                     chars: "\x1b[23~"                        }
+  #- { key: F12,                     chars: "\x1b[24~"                        }
   - { key: F1,       mods: Shift,   chars: "\x1b[1;2P"                       }
   - { key: F2,       mods: Shift,   chars: "\x1b[1;2Q"                       }
   - { key: F3,       mods: Shift,   chars: "\x1b[1;2R"                       }
