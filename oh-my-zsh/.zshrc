@@ -28,7 +28,6 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 export TERM="xterm-256color"
 export MANPATH=${MANPATH}:/usr/local/texlive/2021/texmf-dist/doc/man
@@ -52,14 +51,14 @@ unset __conda_setup
 conda config --set auto_activate_base false
 # <<< conda initialize <<<
 
-# chrome config
+# chrome path config
 export PATH=$PATH:/opt/google/chrome
 
 # editor config
 export EDITOR="/usr/bin/vim"
 
 
-# CUDA config
+# CUDA path config
 export PATH=/usr/local/cuda-11.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
@@ -69,7 +68,7 @@ export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
 export PATH=${JAVA_HOME}/bin:$PATH 
 
-# alias config
+# personal alias settings 
 eval $(thefuck --alias)
 alias fd="fdfind"
 alias ls="exa"
@@ -92,6 +91,7 @@ alias ns="nvidia-smi"
 alias update="sudo apt update && sudo apt upgrade"
 alias autoclean="sudo apt autoremove && sudo apt clean && sudo apt autoclean"
 alias nv="nvim"
+alias sz="source ~/.zshrc"
 
 # alias for conda
 alias condaa="conda activate"
