@@ -21,7 +21,6 @@ plugins=(git zsh-autosuggestions z sudo extract zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -64,7 +63,7 @@ export PATH=/usr/local/cuda-11.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 # oracle jdk environment confid
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64  ## 这里要注意目录要换成自己解压的jdk 目录
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64  
 export JRE_HOME=${JAVA_HOME}/jre  
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
 export PATH=${JAVA_HOME}/bin:$PATH 
@@ -159,7 +158,6 @@ bindkey -M vicmd "G" vi-end-of-line
 bindkey -M vicmd "j" down-line-or-history
 bindkey -M vicmd "k" up-line-or-history
 bindkey -M vicmd "u" undo
-#bindkey -M vicmd "-" vi-rev-repeat-search
 bindkey -M vicmd "=" vi-repeat-search
 bindkey -M vicmd "w" vi-forward-word-end
 
@@ -171,3 +169,4 @@ function zle-keymap-select {
   fi
 }
 zle -N zle-keymap-select
+
