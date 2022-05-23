@@ -199,7 +199,7 @@ colors:
 
    # Bright colors
    bright:
-     black:   '#D8BFD8'  # default color #4C566A
+     black:   '#658A98'  # default color #4C566A
      red:     '#BF616A'
      green:   '#A3BE8C'
      yellow:  '#EBCB8B'
