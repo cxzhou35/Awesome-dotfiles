@@ -162,3 +162,12 @@ bindkey -M vicmd "u" undo
 #bindkey -M vicmd "-" vi-rev-repeat-search
 bindkey -M vicmd "=" vi-repeat-search
 bindkey -M vicmd "w" vi-forward-word-end
+
+function zle-keymap-select {
+	if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+		echo -ne '\e[1 q'
+	elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
+		echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
