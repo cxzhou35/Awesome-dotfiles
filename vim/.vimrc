@@ -42,18 +42,6 @@ set clipboard^=unnamed,unnamedplus
 
 " plugins
 call plug#begin()
-" The default plugin directory will be as follows:
-"   - Vim (Linux/macOS): '~/.vim/plugged'
-"   - Vim (Windows): '~/vimfiles/plugged'
-"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
-" You can specify a custom plugin directory by passing it as the argument
-"   - e.g. `call plug#begin('~/.vim/plugged')`
-"   - Avoid using standard Vim directory names like 'plugin'
-
-" Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-" Plug 'junegunn/vim-easy-align'
 
 " Any valid git URL is allowed
 Plug 'git@github.com:junegunn/vim-github-dashboard.git'
@@ -134,7 +122,6 @@ if !exists('g:airline_symbols')
 let g:airline_symbols = {}
 endif
 
-
 " 快捷键
 map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
@@ -178,6 +165,4 @@ vmap <C-SPACE> <Plug>(wildfire-water)
 " map config for fzf
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
-
-" map config for tabs
 
