@@ -116,16 +116,57 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " command line config
 set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
-let g:airline#extensions#tabline#enabled = 1  
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
 endif
 
 " 快捷键
+" nerdtree config
 map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
+
+" tabs & buffers
 map <C-n> :tabnew<CR>
+map <C-c> :tabc<CR>
+map <C-j> :bp<CR>
+map <C-k> :bn<CR>
+map <C-z> :bdelete<CR>
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+
+" file save & quit
+nmap fw     :w<CR>
+nmap fq     :q<CR>
+nmap fwq    :wq<CR>
+
+"snips 快捷键
+"设置tab键为触发键
+let g:UltiSnipsExpandTrigger = '<tab>'
+"设置向后跳转键
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+"设置向前跳转键
+let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
+"设置文件目录
+let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
+
+" wildfire config
+" This selects the next closest text object.
+map <SPACE> <Plug>(wildfire-fuel)
+vmap <C-SPACE> <Plug>(wildfire-water)
+
+" map config for fzf
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
 
 " markdown preview config
 nmap <silent> <F7> <Plug>MarkdownPreview
@@ -146,23 +187,5 @@ augroup END
 let g:user_completion_chain = ['emoji#complete', 'HTMLTagComplete']
 set completefunc=CompletionChain
 
-"设置tab键为触发键
-let g:UltiSnipsExpandTrigger = '<tab>'
-"设置向后跳转键
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-"设置向前跳转键
-let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
-"设置文件目录
-let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
-
 au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
-
-" wildfire config
-" This selects the next closest text object.
-map <SPACE> <Plug>(wildfire-fuel)
-vmap <C-SPACE> <Plug>(wildfire-water)
-
-" map config for fzf
-nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <C-b> :Buffers<CR>
 
