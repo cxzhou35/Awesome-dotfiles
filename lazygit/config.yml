@@ -9,12 +9,12 @@ gui:
   theme:
     lightTheme: false # For terminals with a light background
     activeBorderColor:
-      - green
+      - cyan
       - bold
     inactiveBorderColor:
       - white
     optionsTextColor:
-      - blue
+      - yellow 
     selectedLineBgColor:
       - default
     selectedRangeBgColor:
