@@ -21,6 +21,7 @@ plugins=(git zsh-autosuggestions z sudo extract zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -146,3 +147,18 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow -E ".git" -E "node_modules" . /etc /home
 }
 
+# vi-mod
+bindkey '^v' edit-command-line
+bindkey -v
+bindkey -M vicmd "i" vi-insert
+bindkey -M vicmd "I" vi-insert-bol
+bindkey -M vicmd "h" vi-backward-char
+bindkey -M vicmd "l" vi-forward-char
+bindkey -M vicmd "gg" vi-beginning-of-line
+bindkey -M vicmd "G" vi-end-of-line
+bindkey -M vicmd "j" down-line-or-history
+bindkey -M vicmd "k" up-line-or-history
+bindkey -M vicmd "u" undo
+#bindkey -M vicmd "-" vi-rev-repeat-search
+bindkey -M vicmd "=" vi-repeat-search
+bindkey -M vicmd "w" vi-forward-word-end
