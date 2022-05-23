@@ -33,6 +33,7 @@ let s:nord12_gui = "#D08770"
 let s:nord13_gui = "#EBCB8B"
 let s:nord14_gui = "#A3BE8C"
 let s:nord15_gui = "#B48EAD"
+let s:nord16_gui = "#E6E6FA"
 
 let s:nord1_term = "0"
 let s:nord3_term = "8"
@@ -47,6 +48,7 @@ let s:nord12_term = "11"
 let s:nord13_term = "3"
 let s:nord14_term = "2"
 let s:nord15_term = "5"
+let s:nordmy_term = "16"
 
 let s:nord3_gui_brightened = [
   \ s:nord3_gui,
@@ -134,7 +136,7 @@ call s:hi("Underline", "", "", "", "", s:underline, "")
 "+--- Editor ---+
 call s:hi("ColorColumn", "", s:nord1_gui, "NONE", s:nord1_term, "", "")
 call s:hi("Cursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
-call s:hi("CursorLine", "", s:nord1_gui, "NONE", s:nord10_term, "NONE", "")
+" call s:hi("CursorLine", "", s:nord1_gui, "NONE", s:nord13_term, "NONE", "")
 call s:hi("Error", s:nord4_gui, s:nord11_gui, "", s:nord11_term, "", "")
 call s:hi("iCursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
 call s:hi("LineNr", s:nord3_gui, "NONE", s:nord3_term, "NONE", "", "")
