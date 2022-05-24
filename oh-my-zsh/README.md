@@ -3,6 +3,7 @@
 #### This folder contains zsh config file below:
 - `.zshrc`: the zsh config file.
 - `my-magic.zsh-theme`: the zsh theme(self-defined af-magic) config file.
+- `scripts`: this folder contains the scripts for zsh.
 
 #### How to install plugin in your PC ?
 ```bash

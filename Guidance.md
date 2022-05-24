@@ -311,8 +311,6 @@ sudo apt install lazygit
 echo "alias lg="lazygit"" >> ~/.zshrc
 ```
 
-```
-
 ### 番外：
 #### 1. 一些有意思的终端工具
 ```bash
@@ -328,6 +326,5 @@ neofetch | lolcat
 sudo apt install figlet  # 字符串转字符画
 
 ```
-
 
 Continue to update...  📆 
