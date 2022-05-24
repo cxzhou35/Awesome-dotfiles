@@ -167,6 +167,7 @@ vmap <C-SPACE> <Plug>(wildfire-water)
 " map config for fzf
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
+nnoremap <silent> <C-r> :Rg<CR>
 
 " markdown preview config
 nmap <silent> <F7> <Plug>MarkdownPreview
