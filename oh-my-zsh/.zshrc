@@ -74,9 +74,9 @@ export PATH=${JAVA_HOME}/bin:$PATH
 # personal alias settings 
 eval $(thefuck --alias)
 alias fd="fdfind"
-alias ls="exa"
-alias ll="exa -l"
-alias la="exa -la"
+alias ls="exa --icons"
+alias ll="exa -l --icons"
+alias la="exa -la --icons"
 alias rs="roscore"
 alias cg="chrome"
 alias ws="wireshark"
