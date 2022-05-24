@@ -146,7 +146,7 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 
 " file save & quit
 nmap fw     :w<CR>
-nmap fq     :q<CR>
+nmap fq     :q!<CR>
 nmap fwq    :wq<CR>
 
 "snips 快捷键
