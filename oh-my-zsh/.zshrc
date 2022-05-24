@@ -19,7 +19,10 @@ ENABLE_CORRECTION="false"
 
 plugins=(git zsh-autosuggestions z sudo extract zsh-syntax-highlighting)
 
+# my config file
 source $ZSH/oh-my-zsh.sh
+source $ZSH/scripts/fe.zsh
+source $ZSH/scripts/fcd.zsh
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -145,6 +148,7 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --hidden --follow -E ".git" -E "node_modules" . /etc /home
 }
+
 
 # vi-mod
 bindkey '^v' edit-command-line
