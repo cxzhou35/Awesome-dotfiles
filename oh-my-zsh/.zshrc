@@ -23,6 +23,7 @@ plugins=(git zsh-autosuggestions z sudo extract zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 source $ZSH/scripts/fe.zsh
 source $ZSH/scripts/fcd.zsh
+source $ZSH/scripts/rcd.zsh
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -82,6 +83,7 @@ alias cg="chrome"
 alias ws="wireshark"
 alias py="python3"
 alias jp="jupyter notebook"
+alias jl="jupyter-lab"
 alias landrop="/home/vercent/Downloads/LANDrop/LANDrop-latest-linux.AppImage"
 alias rl="roslaunch"
 alias pdfview="evince-previewer"
