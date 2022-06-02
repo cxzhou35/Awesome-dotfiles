@@ -14,7 +14,7 @@ gui:
     inactiveBorderColor:
       - white
     optionsTextColor:
-      - yellow 
+      - yellow
     selectedLineBgColor:
       - default
     selectedRangeBgColor:
@@ -60,7 +60,7 @@ git:
   allBranchesLogCmd: 'git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium'
   overrideGpg: false # prevents lazygit from spawning a separate process when using GPG
   disableForcePushing: false
-  parseEmoji: false
+  parseEmoji: true
   diffContextSize: 3 # how many lines of context are shown around a change in diffs
 os:
   editCommand: 'vim' # see 'Configuring File Editing' section
