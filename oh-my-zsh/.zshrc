@@ -23,7 +23,7 @@ plugins=(git zsh-autosuggestions z sudo extract zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 source $ZSH/scripts/fe.zsh
 source $ZSH/scripts/fcd.zsh
-source $ZSH/scripts/rcd.zsh
+source $ZSH/scripts/racd.zsh
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"

@@ -17,7 +17,7 @@ set cindent
 set tabstop=2
 " 匹配括号高亮的时间（单位是十分之一秒）
 set matchtime=1
-"去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  
+"去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 set nocompatible
 "设置编码
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -183,6 +183,9 @@ augroup emoji_complete
   autocmd!
   autocmd FileType markdown setlocal completefunc=emoji#complete
 augroup END
+
+" nerdcommenter
+let g:NERDSpaceDelims = 1
 
 
 let g:user_completion_chain = ['emoji#complete', 'HTMLTagComplete']
