@@ -2,7 +2,7 @@
 
 #### This folder contains neovim config files below:
 - `init.vim`: the nvim config file.
-- `nord.vim`: the nvim theme(nord) config file.
+- `themes`: this folder contains the nvim theme files.
 
 #### How to use my neovim config in your PC ?
 ```bash
@@ -16,4 +16,4 @@ nvim
 # :PlugInstall
 ```
 
-Now you can enjoy your neovim !
+Now you can enjoy your neovim ! 
