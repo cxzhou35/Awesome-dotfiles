@@ -6,12 +6,12 @@ let s:gui00 = "#1c1c1c" " ANSI Black
 let s:gui01 = "#68808E" " ANSI Red
 let s:gui02 = "#3A2E50" " ANSI Green
 let s:gui03 = "#AE9AB8" " ANSI Yellow
-let s:gui04 = "#af5f5f" " ANSI Blue
+let s:gui04 = "#F279D6" " ANSI Blue
 let s:gui05 = "#875f5f" " ANSI Magenta
 let s:gui06 = "#87afaf" " ANSI Cyan
 let s:gui07 = "#ffdf87" " ANSI White
 let s:gui08 = "#71AC7F"
-let s:gui09 = "#af1600"
+let s:gui09 = "#C1CD70"
 let s:gui0A = "#F1B273"
 let s:gui0B = "#BC9EC2"
 let s:gui0C = "#F0D5B5"
@@ -46,12 +46,12 @@ let s:ctermDarkGray = "240"
 let s:ctermAlmostBlack = "235"
 
 let g:airline#themes#alduin#palette = {}
-let s:modified = { 'airline_c': [s:gui07, '', s:cterm07, '', ''] }
+let s:modified = { 'airline_c': [s:gui02, '', s:cterm05, '', ''] }
 
 " Normal mode
 let s:N1 = [s:gui07, s:gui0D, s:cterm07, s:cterm0D]
 let s:N2 = [s:guiWhite, s:gui01, s:ctermWhite, s:cterm01]
-let s:N3 = [s:gui02, s:guiDarkGray, s:cterm02, s:ctermDarkGray]
+let s:N3 = [s:gui02, s:guiDarkGray, s:cterm02, s:ctermGray]
 let g:airline#themes#alduin#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 let g:airline#themes#alduin#palette.normal_modified = s:modified
 

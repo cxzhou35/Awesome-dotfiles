@@ -86,6 +86,9 @@ Plug 'mbbill/undotree'
 " preview the rgb olor in nvim
 Plug 'KabbAmine/vCoolor.vim'
 
+" lazygit plugin in neovim
+Plug 'kdheepak/lazygit.nvim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -174,6 +177,7 @@ vmap <C-SPACE> <Plug>(wildfire-water)
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
 nnoremap <silent> <C-r> :Rg<CR>
+nnoremap <silent> <C-l> :LazyGit<CR>
 
 " markdown preview config
 nmap <silent> <F7> <Plug>MarkdownPreview
