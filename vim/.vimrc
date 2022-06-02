@@ -80,6 +80,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'preservim/nerdcommenter'
+Plug 'mbbill/undotree'
 
 " Initialize plugin system
 call plug#end()
@@ -186,6 +187,9 @@ augroup END
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
+
+" undotree map config
+nnoremap <F5> :UndotreeToggle<CR>
 
 
 let g:user_completion_chain = ['emoji#complete', 'HTMLTagComplete']
