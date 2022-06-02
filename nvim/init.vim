@@ -17,7 +17,7 @@ set cindent
 set tabstop=2
 " 匹配括号高亮的时间（单位是十分之一秒）
 set matchtime=1
-"去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  
+"去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 set nocompatible
 "设置编码
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -32,7 +32,7 @@ set selectmode=mouse,key
 " 显示行号
 set number
 
-set backspace=indent,start
+set backspace=indent,start,eol
 
 " 设置空白字符的视觉提示
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
@@ -45,6 +45,9 @@ call plug#begin()
 
 " Any valid git URL is allowed
 Plug 'git@github.com:junegunn/vim-github-dashboard.git'
+ 
+" Multiple Plug commands can be written in a single line using | separators
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
 Plug 'preservim/nerdtree' |
@@ -56,14 +59,6 @@ Plug 'tpope/vim-surround'
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go', { 'tag': '*' }
 
-" lazygit
-Plug 'kdheepak/lazygit.nvim'
-
-Plug 'nvim-lua/plenary.nvim'
-
-" Plugin options
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -71,7 +66,10 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'gcmt/wildfire.vim'
 Plug 'jameslawson/sandwich.vim'
-Plug 'junegunn/vim-emoji'
+
+" theme
+" Plug 'arcticicestudio/nord-vim'
+Plug 'EdenEast/nightfox.nvim'
 
 " markdown preview
 Plug 'iamcco/mathjax-support-for-mkdp'
@@ -80,13 +78,19 @@ Plug 'iamcco/markdown-preview.vim'
 " command line 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'preservim/nerdcommenter'
+Plug 'mbbill/undotree'
 
+" preview the rgb olor in nvim
+Plug 'KabbAmine/vCoolor.vim'
+
+" Initialize plugin system
 call plug#end()
 
 " theme
-" colorscheme nightfox
+colorscheme nordfox
 
 " NERDTree config
 " 显示行号
@@ -117,38 +121,41 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " command line config
 set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
-let g:airline#extensions#tabline#enabled = 1  
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline_theme='alduin'
 
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
 endif
 
-
 " 快捷键
+" nerdtree config
 map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
+
+" tabs & buffers
 map <C-n> :tabnew<CR>
+map <C-c> :tabc<CR>
+map <C-j> :bp<CR>
+map <C-k> :bn<CR>
+map <C-z> :bdelete<CR>
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
 
-" markdown preview config
-nmap <silent> <F7> <Plug>MarkdownPreview
-imap <silent> <F7> <Plug>MarkdownPreview
-nmap <silent> <F8> <Plug>StopMarkdownPreview
-imap <silent> <F8> <Plug>StopMarkdownPreview
-let g:vim_markdown_math = 1
-let g:mkdp_refresh_slow = 0
-let g:mkdp_markdown_css = '/home/vercent/.config/Typora/themes/purple.css'
-set completefunc=emoji#complete
+" file save & quit
+nmap fw     :w<CR>
+nmap fq     :q!<CR>
+nmap fwq    :wq<CR>
 
-augroup emoji_complete
-  autocmd!
-  autocmd FileType markdown setlocal completefunc=emoji#complete
-augroup END
-
-
-let g:user_completion_chain = ['emoji#complete', 'HTMLTagComplete']
-set completefunc=CompletionChain
-
+"snips 快捷键
 "设置tab键为触发键
 let g:UltiSnipsExpandTrigger = '<tab>'
 "设置向后跳转键
@@ -158,16 +165,38 @@ let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
 "设置文件目录
 let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
 
-au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
-
 " wildfire config
 " This selects the next closest text object.
 map <SPACE> <Plug>(wildfire-fuel)
 vmap <C-SPACE> <Plug>(wildfire-water)
 
-" mapping for lazygit -- alt + g
-noremap <M-g> :new<CR>:term lazygit<CR>i
-let g:lazygit_floating_window_winblend = 0 " transparency of floating window
-let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
-let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters<F11><F11>
-let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available
+" map config for fzf
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
+nnoremap <silent> <C-r> :Rg<CR>
+
+" markdown preview config
+nmap <silent> <F7> <Plug>MarkdownPreview
+imap <silent> <F7> <Plug>MarkdownPreview
+nmap <silent> <F8> <Plug>StopMarkdownPreview
+imap <silent> <F8> <Plug>StopMarkdownPreview
+let g:vim_markdown_math = 1
+let g:mkdp_refresh_slow = 0
+set completefunc=emoji#complete
+
+augroup emoji_complete
+  autocmd!
+  autocmd FileType markdown setlocal completefunc=emoji#complete
+augroup END
+
+" nerdcommenter
+let g:NERDSpaceDelims = 1
+
+" undotree map config
+nnoremap <F5> :UndotreeToggle<CR>
+
+
+let g:user_completion_chain = ['emoji#complete', 'HTMLTagComplete']
+set completefunc=CompletionChain
+
+au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
