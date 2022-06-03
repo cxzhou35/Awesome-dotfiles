@@ -21,6 +21,7 @@ The config list is below:
 - `gedit`
 - `fzf`
 - `ulauncher`
+- `btop`
 
 If you want to use the whole config in your PC, maybe this page would be help. ➡️ [Wiki](https://github.com/Xuer04/Mydotfiles/wiki/Wiki "Wiki")
 
