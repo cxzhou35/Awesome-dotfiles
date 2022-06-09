@@ -16,9 +16,6 @@ cp ~/Mydotfiles/nvim/init.vim ~/.config/nvim
 # relaunch neovim
 # :PlugInstall
 
-# update theme config
-cp -r ~/Mydotfiles/nvim/themes/nord/ ~/.local/share/nvim/plugged/nord.vim/lua/nord
-
 ```
 
 Now you can enjoy your neovim on your PC!

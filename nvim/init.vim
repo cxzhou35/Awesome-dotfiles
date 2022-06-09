@@ -68,9 +68,9 @@ Plug 'gcmt/wildfire.vim'
 Plug 'jameslawson/sandwich.vim'
 
 " theme
-" Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'EdenEast/nightfox.nvim'
-Plug 'shaunsingh/nord.nvim'
+" Plug 'shaunsingh/nord.nvim'
 
 " markdown preview
 Plug 'iamcco/mathjax-support-for-mkdp'
@@ -132,7 +132,7 @@ set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline_theme='alduin'
+" let g:airline_theme='alduin'
 
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
