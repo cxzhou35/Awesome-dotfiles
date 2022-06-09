@@ -90,11 +90,15 @@ Plug 'KabbAmine/vCoolor.vim'
 " lazygit plugin in neovim
 Plug 'kdheepak/lazygit.nvim'
 
+" bufferline
+Plug 'kyazdani42/nvim-web-devicons'
+
 " Initialize plugin system
 call plug#end()
 
 " theme
 let g:nord_disable_background = v:true
+
 colorscheme nord
 
 " NERDTree config
