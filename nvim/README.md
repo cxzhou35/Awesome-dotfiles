@@ -11,9 +11,14 @@ git clone https://github.com/Xuer04/Mydotfiles.git
 mkdir -p ~/.config/nvim/autoload
 cp ~/Mydotfiles/nvim/autoload/plug.vim ~/.config/nvim/autoload
 cp ~/Mydotfiles/nvim/init.vim ~/.config/nvim
-nvim
 
+
+# relaunch neovim
 # :PlugInstall
+
+# update theme config
+cp -r ~/Mydotfiles/nvim/themes/nord/ ~/.local/share/nvim/plugged/nord.vim/lua/nord
+
 ```
 
-Now you can enjoy your neovim ! 
+Now you can enjoy your neovim on your PC!

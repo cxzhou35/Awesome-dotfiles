@@ -70,6 +70,7 @@ Plug 'jameslawson/sandwich.vim'
 " theme
 " Plug 'arcticicestudio/nord-vim'
 Plug 'EdenEast/nightfox.nvim'
+Plug 'shaunsingh/nord.nvim'
 
 " markdown preview
 Plug 'iamcco/mathjax-support-for-mkdp'
@@ -93,7 +94,8 @@ Plug 'kdheepak/lazygit.nvim'
 call plug#end()
 
 " theme
-colorscheme nordfox
+let g:nord_disable_background = v:true
+colorscheme nord
 
 " NERDTree config
 " 显示行号
