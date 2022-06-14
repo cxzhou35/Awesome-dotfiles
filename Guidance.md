@@ -21,17 +21,17 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted univer
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
 
 # 保存退出(vim)
-:wq 
+:wq
 
 # 更新一下源
-sudo apt update 
+sudo apt update
 sudo apt upgrade   # 有提示输出 Y
 ```
 
 ### 2. 安装基本环境
 
 ```bash
-sudo apt install gcc gdb cmake build-essential 
+sudo apt install gcc gdb cmake build-essential
 sudo apt install wget htop aptitude neofetch
 sudo apt install curl perl zip unzip
 ```
@@ -61,10 +61,10 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 
 # 下载完之后配置文件在.zshrc, 主目录下会有一个.oh-my-zsh 的文件夹
 cd
-vim .zshrc  
+vim .zshrc
 
 # 修改主题
-ZSH_THEME="ys"  
+ZSH_THEME="ys"
 
 # 配置插件
 # 1. zsh-syntax-highlighting
@@ -91,15 +91,15 @@ source .zshrc
 sudo apt install git
 
 # 添加git信息
-git config --global user.name "Xuer04"      (换成自己的github账户)
-git config --global user.email "zjajzcx3566@163.com"     (换成自己的github邮箱)
+git config --global user.name "xxxxx"      (换成自己的github账户)
+git config --global user.email "xxxxx@163.com"     (换成自己的github邮箱)
 
 # 重置 ssh
 cd ~/.ssh
 rm known_hosts
 
 # 配置 ssh-key
-ssh-keygen -t rsa -C "zjajzcx3566@163.com"      (换成自己的github邮箱)
+ssh-keygen -t rsa -C "xxxxx@163.com"      (换成自己的github邮箱)
 # 一直回车就可以
 
 # 打开 github  https://github.com/
@@ -193,7 +193,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # 更换miniconda的源
-cd .conda 
+cd .conda
 vim .condarc
 
 # 添加以下内容
@@ -227,7 +227,7 @@ rm fd_8.3.2_amd64.deb
 # 3. bat
 cd ~/Downloads
 wget https://github.com/sharkdp/bat/releases/download/v0.21.0/bat_0.21.0_amd64.deb
-sudo dpkg -i bat_0.21.0_amd64.deb   
+sudo dpkg -i bat_0.21.0_amd64.deb
 ## ubuntu18.04 用musl版本的
 wget https://github.com/sharkdp/bat/releases/download/v0.21.0/bat-musl_0.21.0_amd64.deb
 rm bat_0.21.0_amd64.deb
@@ -239,7 +239,7 @@ source .zshrc
 # 4. fzf (结合vim使用无敌)
 ## 通过git安装
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-cd ~/.fzf/ 
+cd ~/.fzf/
 ./install
 
 ## 通过dpkg安装
@@ -260,7 +260,7 @@ git clone https://github.com/jarun/nnn.git
 cd nnn
 sudo make O_NERD=1
 ./nnn
-sudo mv ~/Downloads/nnn/nnn /bin/ 
+sudo mv ~/Downloads/nnn/nnn /bin/
 
 # 7. tldr
 sudo apt install tldr
@@ -277,7 +277,7 @@ sudo mv exa /usr/local/bin/
 exa -v
 # 替换ls
 vim .zshrc
-alias ls="exa" 
+alias ls="exa"
 source .zshrc
 
 # 9. ranger
@@ -327,4 +327,4 @@ sudo apt install figlet  # 字符串转字符画
 
 ```
 
-Continue to update...  📆 
+Continue to update...  📆
