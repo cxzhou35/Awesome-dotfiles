@@ -97,9 +97,11 @@ alias neo="neofetch"
 alias ns="nvidia-smi"
 alias update="sudo apt update && sudo apt upgrade"
 alias autoclean="sudo apt autoremove && sudo apt clean && sudo apt autoclean"
-alias nv="nvim"
+alias ni="nvim"
 alias sz="source ~/.zshrc"
 alias fm="nautilus"
+alias top="btop"
+alias st="shutdown now"
 
 # alias for conda
 alias condaa="conda activate"
@@ -151,7 +153,6 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow -E ".git" -E "node_modules" . /etc /home
 }
 
-
 # vi-mod
 bindkey '^v' edit-command-line
 bindkey -v
@@ -176,3 +177,4 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
+echo "Welcome to zsh :)"
