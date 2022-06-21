@@ -14,7 +14,9 @@ set syntax=on
 set autoindent
 set cindent
 " Tab键的宽度
-set tabstop=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 " 匹配括号高亮的时间（单位是十分之一秒）
 set matchtime=1
 "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
