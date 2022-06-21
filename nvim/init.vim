@@ -45,7 +45,7 @@ call plug#begin()
 
 " Any valid git URL is allowed
 Plug 'git@github.com:junegunn/vim-github-dashboard.git'
- 
+
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
@@ -76,7 +76,10 @@ Plug 'EdenEast/nightfox.nvim'
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
 
-" command line 
+" markdown emoji
+Plug 'junegunn/vim-emoji'
+
+" command line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
@@ -192,12 +195,6 @@ nmap <silent> <F8> <Plug>StopMarkdownPreview
 imap <silent> <F8> <Plug>StopMarkdownPreview
 let g:vim_markdown_math = 1
 let g:mkdp_refresh_slow = 0
-set completefunc=emoji#complete
-
-augroup emoji_complete
-  autocmd!
-  autocmd FileType markdown setlocal completefunc=emoji#complete
-augroup END
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
@@ -205,8 +202,12 @@ let g:NERDSpaceDelims = 1
 " undotree map config
 nnoremap <F5> :UndotreeToggle<CR>
 
-
-let g:user_completion_chain = ['emoji#complete', 'HTMLTagComplete']
-set completefunc=CompletionChain
-
 au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
+
+" vim emoji
+let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+let g:gitgutter_sign_modified_removed = emoji#for('collision')
+set completefunc=emoji#complete
+
