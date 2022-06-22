@@ -148,8 +148,6 @@ endif
 map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
 
-map <F4> :!gcc % & ./a.out<CR>
-
 " tabs & buffers
 map <C-n> :tabnew<CR>
 map <C-c> :tabc<CR>
@@ -215,3 +213,15 @@ let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
 set completefunc=emoji#complete
 
+" c compile settings
+nmap <F4> :call CompileRunGcc()<CR>
+function! CompileRunGcc()
+  execute "w"
+  if &filetype == 'c'
+    if !isdirectory('build')
+      execute "!mkdir build"
+    endif
+    execute "!gcc % -o build/%<"
+    execute "!time ./build/%<"
+  endif
+endfunction
