@@ -14,9 +14,9 @@ set syntax=on
 set autoindent
 set cindent
 " Tab键的宽度
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 " 匹配括号高亮的时间（单位是十分之一秒）
 set matchtime=1
 "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
@@ -147,6 +147,8 @@ endif
 " nerdtree config
 map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
+
+map <F4> :!gcc % & ./a.out<CR>
 
 " tabs & buffers
 map <C-n> :tabnew<CR>
