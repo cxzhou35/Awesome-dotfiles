@@ -213,7 +213,7 @@ let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
 set completefunc=emoji#complete
 
-" c compile settings
+" c/cpp compile settings
 nmap <F4> :call CompileRunGcc()<CR>
 function! CompileRunGcc()
   execute "w"
@@ -221,7 +221,14 @@ function! CompileRunGcc()
     if !isdirectory('build')
       execute "!mkdir build"
     endif
-    execute "!gcc % -o build/%<"
+    execute "!gcc -g % -o build/%<"
+    execute "!time ./build/%<"
+  endif
+  if &filetype == 'cpp'
+    if !isdirectory('build')
+      execute "!mkdir build"
+    endif
+    execute "!g++ -g % -o build/%<"
     execute "!time ./build/%<"
   endif
 endfunction
