@@ -37,7 +37,7 @@ set number
 set backspace=indent,start,eol
 
 " 设置空白字符的视觉提示
-set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
+"set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
 " 剪切板设置
 set clipboard^=unnamed,unnamedplus
@@ -221,12 +221,14 @@ nnoremap <F5> :UndotreeToggle<CR>
 au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
 
 " indentLine settings
-let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
-let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
-let g:indentLine_setColors = 0
-let g:indentLine_color_term = 239
-let g:indentLine_bgcolor_term = 202
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
+let g:indent_guides_start_level = 2  " 从第二层开始可视化显示缩进
+let g:indentLine_color_term = 156
+let g:indentLine_bgcolor_term = 152
+let g:indentLine_char_list = ['¦']
+let g:vim_json_conceal=0
+let g:markdown_syntax_conceal=0
+
 
 " vim emoji
 let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
