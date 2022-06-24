@@ -223,7 +223,7 @@ au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
 " indentLine settings
 let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
 let g:indent_guides_start_level = 2  " 从第二层开始可视化显示缩进
-let g:indentLine_color_term = 156
+let g:indentLine_color_term = 107 
 let g:indentLine_bgcolor_term = 152
 let g:indentLine_char_list = ['¦']
 let g:vim_json_conceal=0
