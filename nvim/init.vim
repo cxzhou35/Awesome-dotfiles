@@ -1,4 +1,4 @@
-set guifont=Courier/20
+" Use release branch (recommend)
 " 折叠设置
 set foldenable
 set foldmethod=syntax       " 设置语法折叠
@@ -98,6 +98,12 @@ Plug 'kdheepak/lazygit.nvim'
 " bufferline
 Plug 'kyazdani42/nvim-web-devicons'
 
+" visual settings
+Plug 'Yggdroot/indentLine'
+
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Initialize plugin system
 call plug#end()
 
@@ -154,15 +160,6 @@ map <C-c> :tabc<CR>
 map <C-j> :bp<CR>
 map <C-k> :bn<CR>
 map <C-z> :bdelete<CR>
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
 
 " file save & quit
 nmap fw     :w<CR>
@@ -198,13 +195,38 @@ imap <silent> <F8> <Plug>StopMarkdownPreview
 let g:vim_markdown_math = 1
 let g:mkdp_refresh_slow = 0
 
-" nerdcommenter
+" coc auto-complete
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+"nerdcommenter
 let g:NERDSpaceDelims = 1
 
 " undotree map config
 nnoremap <F5> :UndotreeToggle<CR>
 
 au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
+
+" indentLine settings
+let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
+let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
+let g:indentLine_setColors = 0
+let g:indentLine_color_term = 239
+let g:indentLine_bgcolor_term = 202
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " vim emoji
 let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
