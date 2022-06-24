@@ -152,7 +152,7 @@ if !exists('g:airline_symbols')
 let g:airline_symbols = {}
 endif
 
-" 快捷键
+" mapping
 " nerdtree config
 map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
@@ -164,7 +164,7 @@ map <C-j> :bp<CR>
 map <C-k> :bn<CR>
 map <C-z> :bdelete<CR>
 
-" file save & quit
+" file save and quit
 nmap fw     :w<CR>
 nmap fq     :q!<CR>
 nmap fwq    :wq<CR>
@@ -198,47 +198,8 @@ imap <silent> <F8> <Plug>StopMarkdownPreview
 let g:vim_markdown_math = 1
 let g:mkdp_refresh_slow = 0
 
-" coc auto-complete
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-"nerdcommenter
-let g:NERDSpaceDelims = 1
-
 " undotree map config
 nnoremap <F3> :UndotreeToggle<CR>
-
-au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
-
-" indentLine settings
-let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
-let g:indent_guides_start_level = 2  " 从第二层开始可视化显示缩进
-let g:indentLine_color_term = 107 
-let g:indentLine_bgcolor_term = 152
-let g:indentLine_char_list = ['¦']
-let g:vim_json_conceal=0
-let g:markdown_syntax_conceal=0
-
-
-" vim emoji
-let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-let g:gitgutter_sign_modified_removed = emoji#for('collision')
-set completefunc=emoji#complete
 
 " c/cpp compile settings
 nmap <F5> :call CompileRunGcc()<CR>
@@ -284,3 +245,44 @@ func! FormatCode()
         return
     endif
 endfunc
+
+" coc auto-complete
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+"nerdcommenter
+let g:NERDSpaceDelims = 1
+
+
+au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
+
+" indentLine settings
+let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
+let g:indent_guides_start_level = 3  " 从第二层开始可视化显示缩进
+let g:indentLine_color_term = 14 
+let g:indentLine_bgcolor_term = 8
+let g:indentLine_char_list = ['¦']
+let g:vim_json_conceal=0
+let g:markdown_syntax_conceal=0
+
+
+" vim emoji
+let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+let g:gitgutter_sign_modified_removed = emoji#for('collision')
+set completefunc=emoji#complete
+
