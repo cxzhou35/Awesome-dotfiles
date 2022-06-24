@@ -248,15 +248,15 @@ function! CompileRunGcc()
     if !isdirectory('build')
       execute "!mkdir build"
     endif
-    execute "!gcc -g % -o build/%<"
-    execute "!time ./build/%<"
+		execute "!gcc -g % -o build/%<"
+		execute "!time ./build/%<"
   endif
   if &filetype == 'cpp'
     if !isdirectory('build')
       execute "!mkdir build"
     endif
-    execute "!g++ -g % -o build/%<"
-    execute "!time ./build/%<"
+    execute "!g++ -g % -o build/%< && ./build/%"
+		execute "!time ./build/%<"
   endif
 endfunction
 
