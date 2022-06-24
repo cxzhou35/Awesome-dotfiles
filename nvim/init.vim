@@ -5,7 +5,7 @@ set foldmethod=syntax       " 设置语法折叠
 set foldcolumn=0            " 设置折叠区域的宽度
 setlocal foldlevel=1        " 设置折叠层数为1
 set foldlevelstart=99       " 打开文件是默认不折叠代码
-set foldclose=all          " 设置为自动关闭折叠
+set foldclose=all           " 设置为自动关闭折叠
 set showcmd
 set shortmess=atI
 " 语法高亮
@@ -103,6 +103,9 @@ Plug 'Yggdroot/indentLine'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" format
+Plug 'vim-autoformat/vim-autoformat'
 
 " Initialize plugin system
 call plug#end()
@@ -216,7 +219,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 let g:NERDSpaceDelims = 1
 
 " undotree map config
-nnoremap <F5> :UndotreeToggle<CR>
+nnoremap <F3> :UndotreeToggle<CR>
 
 au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
 
@@ -238,7 +241,7 @@ let g:gitgutter_sign_modified_removed = emoji#for('collision')
 set completefunc=emoji#complete
 
 " c/cpp compile settings
-nmap <F4> :call CompileRunGcc()<CR>
+nmap <F5> :call CompileRunGcc()<CR>
 function! CompileRunGcc()
   execute "w"
   if &filetype == 'c'
@@ -256,3 +259,28 @@ function! CompileRunGcc()
     execute "!time ./build/%<"
   endif
 endfunction
+
+" format settings
+let g:autoformat_verbosemode=1
+noremap <F4> :call FormatCode()<CR>
+func! FormatCode()
+    exec "w"
+    if &filetype == 'c' || &filetype == 'h'
+        exec "!astyle --style=allman --suffix=none %"
+    elseif &filetype == 'cpp' || &filetype == 'cc' || &filetype == 'hpp'
+        exec "!astyle --style=allman --suffix=none %"
+    elseif &filetype == 'perl'
+        exec "!astyle --style=gnu --suffix=none %"
+    elseif &filetype == 'py'|| &filetype == 'python'
+        exec "!autopep8 --in-place --aggressive %"
+    elseif &filetype == 'java'
+        exec "!astyle --style=java --suffix=none %"
+    elseif &filetype == 'jsp'
+        exec "!astyle --style=gnu --suffix=none %"
+    elseif &filetype == 'xml'
+        exec "!astyle --style=gnu --suffix=none %"
+    else
+        exec "normal gg=G"
+        return
+    endif
+endfunc
