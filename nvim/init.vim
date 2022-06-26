@@ -11,7 +11,7 @@ set shortmess=atI
 " 语法高亮
 set syntax=on
 " 自动缩进
-set autoindent
+" set autoindent
 set cindent
 " Tab键的宽度
 set tabstop=2
@@ -111,6 +111,7 @@ Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
 
 " theme
+" disable default background
 let g:nord_disable_background = v:true
 
 colorscheme nord
