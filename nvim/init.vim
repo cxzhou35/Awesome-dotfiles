@@ -13,12 +13,15 @@ set syntax=on
 " 自动缩进
 " set autoindent
 set cindent
+filetype plugin indent on
 " Tab键的宽度
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 " 匹配括号高亮的时间（单位是十分之一秒）
 set matchtime=1
+" 匹配时显示高亮
+set hlsearch
 "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 set nocompatible
 "设置编码
@@ -35,6 +38,9 @@ set selectmode=mouse,key
 set number
 
 set backspace=indent,start,eol
+
+" 不生成 swap 文件
+setlocal noswapfile
 
 " 设置空白字符的视觉提示
 "set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
