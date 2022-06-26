@@ -279,10 +279,10 @@ cursor:
 #   - (Windows) powershell
 shell:
   program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
+#   args:
+#     - -l
+#     - -c
+#     - "tmux attach || tmux"
 
 # Startup directory
 #
