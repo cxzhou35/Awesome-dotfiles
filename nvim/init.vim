@@ -223,10 +223,10 @@ function! CompileRunGcc()
     if !isdirectory('build')
       execute "!mkdir build"
     endif
-    execute "!g++ -g % -o build/%< && ./build/%"
+    execute "!g++ -g % -o build/%<"
 		execute "!time ./build/%<"
   endif
-	if &filetype == 'py'
+	if &filetype == 'py' || &filetype == 'python' || &filetype == 'python3'
 		execute "!python3 %"
 	endif
 endfunction
