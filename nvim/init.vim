@@ -226,6 +226,9 @@ function! CompileRunGcc()
     execute "!g++ -g % -o build/%< && ./build/%"
 		execute "!time ./build/%<"
   endif
+	if &filetype == 'py'
+		execute "!python3 %"
+	endif
 endfunction
 
 " format settings
