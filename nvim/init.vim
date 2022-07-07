@@ -39,13 +39,22 @@ set number
 
 set backspace=indent,start,eol
 
+" 设置只能换行
+set smartindent
+
 " 不生成 swap 文件
 setlocal noswapfile
+
+" 覆盖时不备份
+set nobackup
 
 " 设置空白字符的视觉提示
 "set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
-" 剪切板设置
+" 突出显示当前行
+set cursorline
+
+"剪切板设置
 set clipboard^=unnamed,unnamedplus
 
 " plugins
