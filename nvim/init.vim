@@ -15,10 +15,14 @@ set syntax=on
 set cindent
 filetype plugin indent on
 " Tab键的宽度
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-" 匹配括号高亮的时间（单位是十分之一秒）
+set tabstop=8 "2
+set softtabstop=0 "2
+set shiftwidth=4 "2
+set expandtab
+set smarttab
+" 浮动窗预览在下方
+set splitbelow
+"匹配括号高亮的时间（单位是十分之一秒）
 set matchtime=1
 " 匹配时显示高亮
 set hlsearch
@@ -49,7 +53,7 @@ setlocal noswapfile
 set nobackup
 
 " 设置空白字符的视觉提示
-" set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
+set list listchars=extends:❯,precedes:❮,trail:·
 
 " 突出显示当前行
 set cursorline
