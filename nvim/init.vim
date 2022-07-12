@@ -49,7 +49,7 @@ setlocal noswapfile
 set nobackup
 
 " 设置空白字符的视觉提示
-"set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
+" set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
 " 突出显示当前行
 set cursorline
@@ -122,6 +122,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " format
 Plug 'vim-autoformat/vim-autoformat'
 
+" highlight yank area
+Plug 'machakann/vim-highlightedyank'
+
 " Initialize plugin system
 call plug#end()
 
@@ -167,6 +170,9 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
 endif
+
+" set highlight duration time to 1000 ms, i.e., 1 second
+let g:highlightedyank_highlight_duration = 1000
 
 " mapping
 " nerdtree config
@@ -217,6 +223,10 @@ let g:mkdp_refresh_slow = 0
 " undotree map config
 nnoremap <F3> :UndotreeToggle<CR>
 
+" python config
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
 " c/cpp compile settings
 nmap <F5> :call CompileRunGcc()<CR>
 function! CompileRunGcc()
@@ -225,14 +235,14 @@ function! CompileRunGcc()
     if !isdirectory('build')
       execute "!mkdir build"
     endif
-		execute "!gcc -g % -o build/%<"
+		execute "!gcc -g % -Wall -o build/%<"
 		execute "!time ./build/%<"
   endif
   if &filetype == 'cpp'
     if !isdirectory('build')
       execute "!mkdir build"
     endif
-    execute "!g++ -g % -o build/%<"
+    execute "!g++ -g % -Wall -o build/%<"
 		execute "!time ./build/%<"
   endif
 	if &filetype == 'py' || &filetype == 'python' || &filetype == 'python3'
