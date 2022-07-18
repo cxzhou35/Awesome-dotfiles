@@ -15,9 +15,9 @@ set syntax=on
 set cindent
 filetype plugin indent on
 " Tab键的宽度
-set tabstop=8 "2
-set softtabstop=0 "2
-set shiftwidth=4 "2
+set tabstop=8
+set softtabstop=0
+set shiftwidth=4
 set expandtab
 set smarttab
 " 浮动窗预览在下方
@@ -129,9 +129,8 @@ Plug 'vim-autoformat/vim-autoformat'
 " highlight yank area
 Plug 'machakann/vim-highlightedyank'
 
-" ranger config
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
+" ranger
+Plug 'kevinhwang91/rnvimr'
 
 " Initialize plugin system
 call plug#end()
@@ -324,7 +323,9 @@ let g:gitgutter_sign_modified_removed = emoji#for('collision')
 set completefunc=emoji#complete
 
 " ranger config
-let g:ranger_map_keys = 0
-let g:NERDTreeHijackNetrw = 0  " add this line if you use NERDTree
-let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
-nnoremap <F6> :Ranger<CR>
+let g:rnvimr_enable_ex = 1
+let g:rnvimr_enable_picker = 1
+let g:rnvimr_hide_gitignore = 1
+let g:rnvimr_border_attr = {'fg': 12, 'bg': -1}
+highlight link RnvimrNormal CursorLine
+nnoremap <F6> :RnvimrToggle<CR>
