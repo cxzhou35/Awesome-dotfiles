@@ -325,4 +325,6 @@ set completefunc=emoji#complete
 
 " ranger config
 let g:ranger_map_keys = 0
+let g:NERDTreeHijackNetrw = 0  " add this line if you use NERDTree
+let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
 nnoremap <F6> :Ranger<CR>
