@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/vercent/.oh-my-zsh"
 
-# ZSH_THEME="ys"
 ZSH_THEME="my-magic"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
@@ -37,6 +36,10 @@ export TERM="xterm-256color"
 export MANPATH=${MANPATH}:/usr/local/texlive/2021/texmf-dist/doc/man
 export INFOPATH=${INFOPATH}:/usr/local/texlive/2021/texmf-dist/doc/info
 export PATH=${PATH}:/usr/local/texlive/2021/bin/x86_64-linux
+
+# ccache config
+export USE_CCACHE=1
+export PATH=/usr/lib/ccache:$PATH
 
 # conda config
 # >>> conda initialize >>>
@@ -82,6 +85,7 @@ alias rs="roscore"
 alias cg="chrome"
 alias ws="wireshark"
 alias py="python3"
+alias pdt="python3 -m doctest -v"
 alias jp="jupyter notebook"
 alias jl="jupyter-lab"
 alias landrop="/home/vercent/Downloads/LANDrop/LANDrop-latest-linux.AppImage"
@@ -124,7 +128,7 @@ alias gitd="git diff"
 export LD_LIBRARY_PATH=/usr/local/ffmpeg/lib:$LD_LIBRARY_PATH
 
 # bat config
-export BAT_THEME="Solarized (light)"
+export BAT_THEME="Nord"
 
 source /home/vercent/.config/broot/launcher/bash/br
 
@@ -178,3 +182,8 @@ function zle-keymap-select {
 zle -N zle-keymap-select
 
 echo "🌈  Welcome to zsh."
+
+# setting the variable path of ics2021
+source /home/vercent/.config/broot/launcher/bash/br
+export NEMU_HOME=/home/vercent/Res/Course/OS/nju-ics-2021spring/ics2021/nemu
+export AM_HOME=/home/vercent/Res/Course/OS/nju-ics-2021spring/ics2021/abstract-machine
