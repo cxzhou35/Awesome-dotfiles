@@ -129,6 +129,10 @@ Plug 'vim-autoformat/vim-autoformat'
 " highlight yank area
 Plug 'machakann/vim-highlightedyank'
 
+" ranger config
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -153,16 +157,16 @@ let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 " 显示书签列表
 let NERDTreeShowBookmarks=1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+            \ "Modified"  : "✹",
+            \ "Staged"    : "✚",
+            \ "Untracked" : "✭",
+            \ "Renamed"   : "➜",
+            \ "Unmerged"  : "═",
+            \ "Deleted"   : "✖",
+            \ "Dirty"     : "✗",
+            \ "Clean"     : "✔︎",
+            \ "Unknown"   : "?"
+            \ }
 
 " command line config
 set laststatus=2  "永远显示状态栏
@@ -172,7 +176,7 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 " let g:airline_theme='alduin'
 
 if !exists('g:airline_symbols')
-let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 
 " set highlight duration time to 1000 ms, i.e., 1 second
@@ -234,24 +238,24 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " c/cpp compile settings
 nmap <F5> :call CompileRunGcc()<CR>
 function! CompileRunGcc()
-  execute "w"
-  if &filetype == 'c'
-    if !isdirectory('build')
-      execute "!mkdir build"
+    execute "w"
+    if &filetype == 'c'
+        if !isdirectory('build')
+            execute "!mkdir build"
+        endif
+        execute "!gcc -g % -Wall -o build/%<"
+        execute "!time ./build/%<"
     endif
-		execute "!gcc -g % -Wall -o build/%<"
-		execute "!time ./build/%<"
-  endif
-  if &filetype == 'cpp'
-    if !isdirectory('build')
-      execute "!mkdir build"
+    if &filetype == 'cpp'
+        if !isdirectory('build')
+            execute "!mkdir build"
+        endif
+        execute "!g++ -g % -Wall -o build/%<"
+        execute "!time ./build/%<"
     endif
-    execute "!g++ -g % -Wall -o build/%<"
-		execute "!time ./build/%<"
-  endif
-	if &filetype == 'py' || &filetype == 'python' || &filetype == 'python3'
-		execute "!python3 %"
-	endif
+    if &filetype == 'py' || &filetype == 'python' || &filetype == 'python3'
+        execute "!python3 %"
+    endif
 endfunction
 
 " format settings
@@ -281,20 +285,20 @@ endfunc
 
 " coc auto-complete
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 "nerdcommenter
 let g:NERDSpaceDelims = 1
@@ -319,3 +323,6 @@ let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
 set completefunc=emoji#complete
 
+" ranger config
+let g:ranger_map_keys = 0
+nnoremap <F6> :Ranger<CR>
