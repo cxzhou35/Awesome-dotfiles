@@ -53,7 +53,7 @@ setlocal noswapfile
 set nobackup
 
 " 设置空白字符的视觉提示
-set list listchars=extends:❯,precedes:❮,trail:·,tab:\ \ 
+set list listchars=extends:❯,precedes:❮,trail:·,tab:▸\ 
 
 " 突出显示当前行
 set cursorline
