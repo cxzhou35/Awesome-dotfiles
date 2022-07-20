@@ -75,6 +75,9 @@ Plug 'tpope/vim-surround'
 " using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go', { 'tag': '*' }
 
+" terminal
+Plug 'voldikss/vim-floaterm'
+
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -203,6 +206,12 @@ let g:rnvimr_hide_gitignore = 1
 let g:rnvimr_border_attr = {'fg': 12, 'bg': -1}
 highlight link RnvimrNormal CursorLine
 
+" float terminal
+let g:floaterm_position='center'
+let g:floaterm_width=0.8
+let g:floaterm_height=0.6
+let g:floaterm_rootmarkers=['.project', '.git', '.hg', '.svn', '.root', '.gitignore']
+
 
 "------------------------"
 "    Mapping Settings    "
@@ -262,6 +271,18 @@ nnoremap <F6> :RnvimrToggle<CR>
 
 " python-coc
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" float terminal
+nmap <silent> <M-+> :FloatermNew<cr>
+nmap <silent> <M-=> :FloatermToggle<cr>
+tnoremap <silent> <M-+> <c-\><c-n>:FloatermNew<cr>
+tnoremap <silent> <M-=> <c-\><c-n>:FloatermToggle<cr>
+
+augroup vime_floaterm_group
+    autocmd!
+    au FileType floaterm tnoremap <buffer> <silent> <M-h> <c-\><c-n>:FloatermPrev<CR>
+    au FIleType floaterm tnoremap <buffer> <silent> <M-l> <c-\><c-n>:FloatermNext<CR>
+augroup END
 
 " c/cpp compile
 nmap <F5> :call CompileRunGcc()<CR>
