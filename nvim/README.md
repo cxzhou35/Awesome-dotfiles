@@ -18,4 +18,6 @@ cp ~/Mydotfiles/nvim/init.vim ~/.config/nvim
 
 ```
 
-Now you can enjoy your neovim on your PC!
+If you meet some issues when using this config file, please contact [Zicx](https://github.com/Xuer04) or create the [issues](https://github.com/Xuer04/Mydotfiles/issues).
+
+Hope you can enjoy your neovim on your PC! 😺
