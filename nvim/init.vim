@@ -1,106 +1,88 @@
-" Use release branch (recommend)
-" 折叠设置
+" fold settings
 set foldenable
-set foldmethod=syntax       " 设置语法折叠
-set foldcolumn=0            " 设置折叠区域的宽度
-setlocal foldlevel=1        " 设置折叠层数为1
-set foldlevelstart=99       " 打开文件是默认不折叠代码
-set foldclose=all           " 设置为自动关闭折叠
+set foldmethod=syntax
+set foldcolumn=0
+setlocal foldlevel=1
+set foldlevelstart=99
+set foldclose=all
 set showcmd
 set shortmess=atI
-" 语法高亮
-set syntax=on
-" 自动缩进
-" set autoindent
-set cindent
-filetype plugin indent on
-" Tab键的宽度
+
+" tab settings
 set tabstop=8
 set softtabstop=0
 set shiftwidth=4
 set expandtab
 set smarttab
-" 浮动窗预览在下方
-set splitbelow
-"匹配括号高亮的时间（单位是十分之一秒）
-set matchtime=1
-" 匹配时显示高亮
-set hlsearch
-"去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
-set nocompatible
-"设置编码
+
+" encoding settings
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
-" 括号匹配
+
+set number
+set syntax=on
+set cursorline
+set cindent
+set smartindent
+filetype plugin indent on
+set backspace=indent,start,eol
+set splitbelow
+set matchtime=1
+set hlsearch
+set nocompatible
 set showmatch
-" 鼠标
+set list listchars=extends:❯,precedes:❮,trail:·,tab:▸\
+set clipboard^=unnamed,unnamedplus
+
+" mouse settings
 set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
-" 显示行号
-set number
 
-set backspace=indent,start,eol
-
-" 设置只能换行
-set smartindent
-
-" 不生成 swap 文件
+" backup settings
 setlocal noswapfile
-
-" 覆盖时不备份
 set nobackup
 
-" 设置空白字符的视觉提示
-set list listchars=extends:❯,precedes:❮,trail:·,tab:▸\ 
-
-" 突出显示当前行
-set cursorline
-
-"剪切板设置
-set clipboard^=unnamed,unnamedplus
 
 " plugins
 call plug#begin()
 
-" Any valid git URL is allowed
+" any valid git URL is allowed
 Plug 'git@github.com:junegunn/vim-github-dashboard.git'
 
-" Multiple Plug commands can be written in a single line using | separators
+" multiple plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-" On-demand loading
+" on-demand loading
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+" using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go', { 'tag': '*' }
 
+" fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'godlygeek/tabular'
-Plug 'preservim/vim-markdown'
 Plug 'gcmt/wildfire.vim'
 Plug 'jameslawson/sandwich.vim'
 
 " theme
 Plug 'arcticicestudio/nord-vim'
 Plug 'EdenEast/nightfox.nvim'
-" Plug 'shaunsingh/nord.nvim'
 
-" markdown preview
+" markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
-
-" markdown emoji
+Plug 'preservim/vim-markdown'
 Plug 'junegunn/vim-emoji'
 
-" command line
+" airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
@@ -108,22 +90,22 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdcommenter'
 Plug 'mbbill/undotree'
 
-" preview the rgb olor in nvim
+" preview the rgb color in nvim
 Plug 'KabbAmine/vCoolor.vim'
 
-" lazygit plugin in neovim
+" lazygit
 Plug 'kdheepak/lazygit.nvim'
 
 " bufferline
 Plug 'kyazdani42/nvim-web-devicons'
 
-" visual settings
+" indent
 Plug 'Yggdroot/indentLine'
 
-" Use release branch (recommend)
+" coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" format
+" autoformat
 Plug 'vim-autoformat/vim-autoformat'
 
 " highlight yank area
@@ -132,28 +114,22 @@ Plug 'machakann/vim-highlightedyank'
 " ranger
 Plug 'kevinhwang91/rnvimr'
 
-" Initialize plugin system
 call plug#end()
 
-" theme
-" disable default background
-let g:nord_disable_background = v:true
 
+" theme
+let g:nord_disable_background = v:true
 colorscheme nord
 
-" NERDTree config
-" 显示行号
+
+" NERDTree settings
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
-" 是否显示隐藏文件
 let NERDTreeShowHidden=0
-" 设置宽度
 let NERDTreeWinSize=32
-" 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=0
-" 忽略一下文件的显示
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-" 显示书签列表
+let g:NERDSpaceDelims = 1
+let NERDTreeIgnore=['\.pyc','\~$','\.swp','\.git','\.gitignore']
 let NERDTreeShowBookmarks=1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
             \ "Modified"  : "✹",
@@ -167,22 +143,57 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
             \ "Unknown"   : "?"
             \ }
 
-" command line config
-set laststatus=2  "永远显示状态栏
-let g:airline_powerline_fonts = 1  " 支持 powerline 字体
+
+" airline settings
+set laststatus=2
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-" let g:airline_theme='alduin'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" set highlight duration time to 1000 ms, i.e., 1 second
+
+" highlight yank settings
 let g:highlightedyank_highlight_duration = 1000
 
-" mapping
-" nerdtree config
+" markdown
+let g:vim_markdown_math = 1
+let g:mkdp_refresh_slow = 0
+let g:markdown_syntax_conceal=0
+
+" autoformat
+let g:autoformat_verbosemode=1
+
+" autopairs
+au Filetype FILETYPE let b:AutoPairs = {"(": ")","{":"}","[",:"]"}
+
+" indentLine
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 3
+let g:indentLine_color_term = 14
+let g:indentLine_bgcolor_term = 8
+let g:indentLine_char_list = ['¦']
+let g:vim_json_conceal=0
+
+" emoji
+let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+let g:gitgutter_sign_modified_removed = emoji#for('collision')
+set completefunc=emoji#complete
+
+" ranger
+let g:rnvimr_enable_ex = 1
+let g:rnvimr_enable_picker = 1
+let g:rnvimr_hide_gitignore = 1
+let g:rnvimr_border_attr = {'fg': 12, 'bg': -1}
+highlight link RnvimrNormal CursorLine
+
+
+" mapping settings
+" nerdtree
 map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
 
@@ -191,50 +202,53 @@ map <C-n> :tabnew<CR>
 map <C-c> :tabc<CR>
 map <C-j> :bp<CR>
 map <C-k> :bn<CR>
-map <C-z> :bdelete<CR>
+map <C-q> :bdelete<CR>
 
 " file save and quit
 nmap fw     :w<CR>
 nmap fq     :q!<CR>
 nmap fwq    :wq<CR>
 
-"snips 快捷键
-"设置tab键为触发键
+" select all
+map <C-A> ggVG
+map! <C-A> <Esc>ggVG
+
+" undo
+map <C-Z> :u<CR>
+map! <C-Z> <C-O>:u<CR>
+
+" snips
 let g:UltiSnipsExpandTrigger = '<tab>'
-"设置向后跳转键
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
-"设置向前跳转键
 let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
-"设置文件目录
 let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
 
-" wildfire config
-" This selects the next closest text object.
+" wildfire 
 map <SPACE> <Plug>(wildfire-fuel)
 vmap <C-SPACE> <Plug>(wildfire-water)
 
-" map config for fzf
+" fzf
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
 nnoremap <silent> <C-r> :Rg<CR>
 nnoremap <silent> <C-l> :LazyGit<CR>
 
-" markdown preview config
+" markdown
 nmap <silent> <F7> <Plug>MarkdownPreview
 imap <silent> <F7> <Plug>MarkdownPreview
 nmap <silent> <F8> <Plug>StopMarkdownPreview
 imap <silent> <F8> <Plug>StopMarkdownPreview
-let g:vim_markdown_math = 1
-let g:mkdp_refresh_slow = 0
 
-" undotree map config
+" undotree
 nnoremap <F3> :UndotreeToggle<CR>
 
-" python config
-" Use tab for trigger completion with characters ahead and navigate.
+" ranger
+nnoremap <F6> :RnvimrToggle<CR>
+
+" python-coc
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-" c/cpp compile settings
+" c/cpp compile
 nmap <F5> :call CompileRunGcc()<CR>
 function! CompileRunGcc()
     execute "w"
@@ -257,8 +271,7 @@ function! CompileRunGcc()
     endif
 endfunction
 
-" format settings
-let g:autoformat_verbosemode=1
+" format
 noremap <F4> :call FormatCode()<CR>
 func! FormatCode()
     exec "w"
@@ -282,7 +295,7 @@ func! FormatCode()
     endif
 endfunc
 
-" coc auto-complete
+" auto-complete
 inoremap <silent><expr> <TAB>
             \ pumvisible() ? "\<C-n>" :
             \ <SID>check_back_space() ? "\<TAB>" :
@@ -294,38 +307,6 @@ function! s:check_back_space() abort
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
             \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-"nerdcommenter
-let g:NERDSpaceDelims = 1
-
-
-au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
-
-" indentLine settings
-let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
-let g:indent_guides_start_level = 3  " 从第二层开始可视化显示缩进
-let g:indentLine_color_term = 14 
-let g:indentLine_bgcolor_term = 8
-let g:indentLine_char_list = ['¦']
-let g:vim_json_conceal=0
-let g:markdown_syntax_conceal=0
-
-
-" vim emoji
-let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-let g:gitgutter_sign_modified_removed = emoji#for('collision')
-set completefunc=emoji#complete
-
-" ranger config
-let g:rnvimr_enable_ex = 1
-let g:rnvimr_enable_picker = 1
-let g:rnvimr_hide_gitignore = 1
-let g:rnvimr_border_attr = {'fg': 12, 'bg': -1}
-highlight link RnvimrNormal CursorLine
-nnoremap <F6> :RnvimrToggle<CR>
