@@ -160,6 +160,47 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
             \ "Unknown"   : "?"
             \ }
 
+" undotree
+if !exists('g:undotree_WindowLayout')
+    let g:undotree_WindowLayout = 3
+endif
+
+if !exists('g:undotree_ShortIndicators')
+    let g:undotree_ShortIndicators = 0
+endif
+
+if !exists('g:undotree_DiffAutoOpen')
+    let g:undotree_DiffAutoOpen = 1
+endif
+
+if !exists('g:undotree_TreeNodeShape')
+    let g:undotree_TreeNodeShape = '*'
+endif
+
+if !exists('g:undotree_TreeVertShape')
+    let g:undotree_TreeVertShape = '|'
+endif
+
+if !exists('g:undotree_TreeSplitShape')
+    let g:undotree_TreeSplitShape = '/'
+endif
+
+if !exists('g:undotree_TreeReturnShape')
+    let g:undotree_TreeReturnShape = '\'
+endif
+
+if !exists('g:undotree_DiffCommand')
+    let g:undotree_DiffCommand = "diff"
+endif
+
+if !exists('g:undotree_HighlightChangedText')
+    let g:undotree_HighlightChangedText = 1
+endif
+
+if !exists('g:undotree_CursorLine')
+    let g:undotree_CursorLine = 1
+endif
+
 " airline settings
 set laststatus=2
 let g:airline_powerline_fonts = 1
