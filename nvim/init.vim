@@ -1,4 +1,8 @@
-" fold settings
+"------------------------"
+"   Essential Settings   "
+"------------------------"
+
+" fold
 set foldenable
 set foldmethod=syntax
 set foldcolumn=0
@@ -8,14 +12,14 @@ set foldclose=all
 set showcmd
 set shortmess=atI
 
-" tab settings
+" tab
 set tabstop=8
 set softtabstop=0
 set shiftwidth=4
 set expandtab
 set smarttab
 
-" encoding settings
+" encoding
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
@@ -23,29 +27,36 @@ set encoding=utf-8
 set number
 set syntax=on
 set cursorline
+set ruler
 set cindent
 set smartindent
+set nowrap
 filetype plugin indent on
+filetype plugin on
 set backspace=indent,start,eol
 set splitbelow
 set matchtime=1
 set hlsearch
 set nocompatible
 set showmatch
-set list listchars=extends:❯,precedes:❮,trail:·,tab:▸\
+set list listchars=extends:❯,precedes:❮,trail:·,tab:▸\ 
 set clipboard^=unnamed,unnamedplus
+set ttyfast
 
-" mouse settings
+" mouse
 set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
 
-" backup settings
+" backup
 setlocal noswapfile
 set nobackup
 
 
-" plugins
+"------------------------"
+"    Plugins Settings    "
+"------------------------"
+
 call plug#begin()
 
 " any valid git URL is allowed
@@ -117,10 +128,13 @@ Plug 'kevinhwang91/rnvimr'
 call plug#end()
 
 
+"------------------------"
+"     Style Settings     "
+"------------------------"
+
 " theme
 let g:nord_disable_background = v:true
 colorscheme nord
-
 
 " NERDTree settings
 let NERDTreeShowLineNumbers=1
@@ -143,7 +157,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
             \ "Unknown"   : "?"
             \ }
 
-
 " airline settings
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -153,7 +166,6 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
 
 " highlight yank settings
 let g:highlightedyank_highlight_duration = 1000
@@ -192,7 +204,10 @@ let g:rnvimr_border_attr = {'fg': 12, 'bg': -1}
 highlight link RnvimrNormal CursorLine
 
 
-" mapping settings
+"------------------------"
+"    Mapping Settings    "
+"------------------------"
+
 " nerdtree
 map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
@@ -217,13 +232,13 @@ map! <C-A> <Esc>ggVG
 map <C-Z> :u<CR>
 map! <C-Z> <C-O>:u<CR>
 
-" snips
+" UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
 let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
 
-" wildfire 
+" wildfire
 map <SPACE> <Plug>(wildfire-fuel)
 vmap <C-SPACE> <Plug>(wildfire-water)
 
