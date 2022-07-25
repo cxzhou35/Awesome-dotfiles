@@ -270,13 +270,16 @@ map <C-k> :bn<CR>
 map <C-q> :bdelete<CR>
 
 " file save and quit
-nmap fw     :w<CR>
-nmap fq     :q!<CR>
-nmap fwq    :wq<CR>
+nmap fw :w<CR>
+nmap fq :q!<CR>
+nmap fwq :wq<CR>
 
 " select all
 map <C-A> ggVG
 map! <C-A> <Esc>ggVG
+
+" unselect highlight
+map <C-h> :noh<CR>
 
 " undo
 map <C-Z> :u<CR>
