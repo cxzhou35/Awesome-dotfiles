@@ -279,7 +279,7 @@ map <C-A> ggVG
 map! <C-A> <Esc>ggVG
 
 " unselect highlight
-map <C-h> :noh<CR>
+map <C-i> :noh<CR>
 
 " undo
 map <C-Z> :u<CR>
@@ -321,6 +321,14 @@ nmap <silent> <M-+> :FloatermNew<cr>
 nmap <silent> <M-=> :FloatermToggle<cr>
 tnoremap <silent> <M-+> <c-\><c-n>:FloatermNew<cr>
 tnoremap <silent> <M-=> <c-\><c-n>:FloatermToggle<cr>
+
+" fix home/end key in all modes
+map <esc>OH <home>
+cmap <esc>OH <home>
+imap <esc>OH <home>
+map <esc>OF <end>
+cmap <esc>OF <end>
+imap <esc>OF <end>
 
 augroup vime_floaterm_group
     autocmd!
