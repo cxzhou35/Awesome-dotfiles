@@ -263,7 +263,6 @@ map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
 
 " tabs & buffers
-map <C-n> :tabnew<CR>
 map <C-c> :tabc<CR>
 map <C-j> :bp<CR>
 map <C-k> :bn<CR>
@@ -309,6 +308,7 @@ imap <silent> <F8> <Plug>StopMarkdownPreview
 
 " undotree
 nnoremap <F3> :UndotreeToggle<CR>
+inoremap <F3> :UndotreeToggle<CR>
 
 " ranger
 nnoremap <F6> :RnvimrToggle<CR>
@@ -335,6 +335,35 @@ augroup vime_floaterm_group
     au FileType floaterm tnoremap <buffer> <silent> <M-h> <c-\><c-n>:FloatermPrev<CR>
     au FIleType floaterm tnoremap <buffer> <silent> <M-l> <c-\><c-n>:FloatermNext<CR>
 augroup END
+
+" coc autocomplete
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-n>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+
+" trigger completion
+if has('nvim')
+  inoremap <silent><expr> <c-@> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
 " c/cpp compile
 nmap <F5> :call CompileRunGcc()<CR>
@@ -382,19 +411,4 @@ func! FormatCode()
         return
     endif
 endfunc
-
-" auto-complete
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
