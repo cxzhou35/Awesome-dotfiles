@@ -107,9 +107,6 @@ Plug 'mbbill/undotree'
 " preview the rgb color in nvim
 Plug 'KabbAmine/vCoolor.vim'
 
-" lazygit
-Plug 'kdheepak/lazygit.nvim'
-
 " bufferline
 Plug 'kyazdani42/nvim-web-devicons'
 
@@ -124,9 +121,6 @@ Plug 'vim-autoformat/vim-autoformat'
 
 " highlight yank area
 Plug 'machakann/vim-highlightedyank'
-
-" ranger
-Plug 'kevinhwang91/rnvimr'
 
 call plug#end()
 
@@ -223,7 +217,7 @@ let g:markdown_syntax_conceal=0
 let g:autoformat_verbosemode=1
 
 " autopairs
-au Filetype FILETYPE let b:AutoPairs = {"(": ")","{":"}","[",:"]","<",:">"}
+au Filetype FILETYPE let b:AutoPairs = {"(": ")","{": "}","[": "]","<": ">"}
 
 " indentLine
 let g:indent_guides_guide_size = 1
@@ -239,13 +233,6 @@ let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
 let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
 set completefunc=emoji#complete
-
-" ranger
-let g:rnvimr_enable_ex = 1
-let g:rnvimr_enable_picker = 1
-let g:rnvimr_hide_gitignore = 1
-let g:rnvimr_border_attr = {'fg': 12, 'bg': -1}
-highlight link RnvimrNormal CursorLine
 
 " float terminal
 let g:floaterm_position='center'
@@ -282,9 +269,6 @@ nnoremap <silent> <C-l> :LazyGit<CR>
 imap <silent> <C-f> :Files<CR>
 imap <silent> <C-b> :Buffers<CR>
 imap <silent> <C-l> :LazyGit<CR>
-
-" ranger
-nnoremap <C-r> :RnvimrToggle<CR>
 
 " file save and quit
 nmap fw :w<CR>
@@ -367,11 +351,11 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " float terminal
 map <silent> <C-t> :FloatermNew<CR>
-map <silent> <C-=> :FloatermToggle<CR>
+map <silent> <C-l> :FloatermNew lazygit<CR>
+map <silent> <C-r> :FloatermNew ranger<CR>
 map <silent> <C-c> :FloatermNew --autoclose=0 --wintype=split gcc -g % -Wall -o build/%< && ./build/%<<CR>
 map <silent> <C-p> :FloatermNew --autoclose=0 --wintype=split python3 %<CR>
 tnoremap <silent> <C-t> <c-\><c-n>:FloatermNew<CR>
-tnoremap <silent> <C-=> <c-\><c-n>:FloatermToggle<CR>
 
 augroup vime_floaterm_group
     autocmd!
