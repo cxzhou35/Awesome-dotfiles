@@ -223,7 +223,7 @@ let g:markdown_syntax_conceal=0
 let g:autoformat_verbosemode=1
 
 " autopairs
-au Filetype FILETYPE let b:AutoPairs = {"(": ")","{":"}","[",:"]"}
+au Filetype FILETYPE let b:AutoPairs = {"(": ")","{":"}","[",:"]","<",:">"}
 
 " indentLine
 let g:indent_guides_guide_size = 1
@@ -249,8 +249,8 @@ highlight link RnvimrNormal CursorLine
 
 " float terminal
 let g:floaterm_position='center'
-let g:floaterm_width=0.8
-let g:floaterm_height=0.6
+let g:floaterm_width=0.95
+let g:floaterm_height=0.8
 let g:floaterm_rootmarkers=['.project', '.git', '.hg', '.svn', '.root', '.gitignore']
 
 
@@ -258,20 +258,11 @@ let g:floaterm_rootmarkers=['.project', '.git', '.hg', '.svn', '.root', '.gitign
 "    Mapping Settings    "
 "------------------------"
 
-" nerdtree
-map <F2> :NERDTreeMirror<CR>
-map <F2> :NERDTreeToggle<CR>
-
 " tabs & buffers
-map <C-c> :tabc<CR>
+map <C-n> :tabnew<CR>
 map <C-j> :bp<CR>
 map <C-k> :bn<CR>
 map <C-q> :bdelete<CR>
-
-" file save and quit
-nmap fw :w<CR>
-nmap fq :q!<CR>
-nmap fwq :wq<CR>
 
 " select all
 map <C-A> ggVG
@@ -284,6 +275,22 @@ map <C-i> :noh<CR>
 map <C-Z> :u<CR>
 map! <C-Z> <C-O>:u<CR>
 
+" fzf
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
+nnoremap <silent> <C-l> :LazyGit<CR>
+imap <silent> <C-f> :Files<CR>
+imap <silent> <C-b> :Buffers<CR>
+imap <silent> <C-l> :LazyGit<CR>
+
+" ranger
+nnoremap <C-r> :RnvimrToggle<CR>
+
+" file save and quit
+nmap fw :w<CR>
+nmap fq :q!<CR>
+nmap fwq :wq<CR>
+
 " UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
@@ -294,99 +301,13 @@ let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
 map <SPACE> <Plug>(wildfire-fuel)
 vmap <C-SPACE> <Plug>(wildfire-water)
 
-" fzf
-nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <C-b> :Buffers<CR>
-nnoremap <silent> <C-r> :Rg<CR>
-nnoremap <silent> <C-l> :LazyGit<CR>
-
-" markdown
-nmap <silent> <F7> <Plug>MarkdownPreview
-imap <silent> <F7> <Plug>MarkdownPreview
-nmap <silent> <F8> <Plug>StopMarkdownPreview
-imap <silent> <F8> <Plug>StopMarkdownPreview
+" nerdtree
+map <F2> :NERDTreeMirror<CR>
+map <F2> :NERDTreeToggle<CR>
 
 " undotree
 nnoremap <F3> :UndotreeToggle<CR>
 inoremap <F3> :UndotreeToggle<CR>
-
-" ranger
-nnoremap <F6> :RnvimrToggle<CR>
-
-" python-coc
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-" float terminal
-nmap <silent> <M-+> :FloatermNew<cr>
-nmap <silent> <M-=> :FloatermToggle<cr>
-tnoremap <silent> <M-+> <c-\><c-n>:FloatermNew<cr>
-tnoremap <silent> <M-=> <c-\><c-n>:FloatermToggle<cr>
-
-" fix home/end key in all modes
-map <esc>OH <home>
-cmap <esc>OH <home>
-imap <esc>OH <home>
-map <esc>OF <end>
-cmap <esc>OF <end>
-imap <esc>OF <end>
-
-augroup vime_floaterm_group
-    autocmd!
-    au FileType floaterm tnoremap <buffer> <silent> <M-h> <c-\><c-n>:FloatermPrev<CR>
-    au FIleType floaterm tnoremap <buffer> <silent> <M-l> <c-\><c-n>:FloatermNext<CR>
-augroup END
-
-" coc autocomplete
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ CheckBackspace() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-n>"
-
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-
-" trigger completion
-if has('nvim')
-  inoremap <silent><expr> <c-@> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" c/cpp compile
-nmap <F5> :call CompileRunGcc()<CR>
-function! CompileRunGcc()
-    execute "w"
-    if &filetype == 'c'
-        if !isdirectory('build')
-            execute "!mkdir build"
-        endif
-        execute "!gcc -g % -Wall -o build/%<"
-        execute "!time ./build/%<"
-    endif
-    if &filetype == 'cpp'
-        if !isdirectory('build')
-            execute "!mkdir build"
-        endif
-        execute "!g++ -g % -Wall -o build/%<"
-        execute "!time ./build/%<"
-    endif
-    if &filetype == 'py' || &filetype == 'python' || &filetype == 'python3'
-        execute "!python3 %"
-    endif
-endfunction
 
 " format
 noremap <F4> :call FormatCode()<CR>
@@ -411,4 +332,86 @@ func! FormatCode()
         return
     endif
 endfunc
+
+" c/cpp compile
+nmap <F5> :call CompileRunGcc()<CR>
+function! CompileRunGcc()
+    execute "w"
+    if &filetype == 'c'
+        if !isdirectory('build')
+            execute "!mkdir build"
+        endif
+        execute "!gcc -g % -Wall -o build/%<"
+        execute "!time ./build/%<"
+    endif
+    if &filetype == 'cpp'
+        if !isdirectory('build')
+            execute "!mkdir build"
+        endif
+        execute "!g++ -g % -Wall -o build/%<"
+        execute "!time ./build/%<"
+    endif
+    if &filetype == 'py' || &filetype == 'python' || &filetype == 'python3'
+        execute "!python3 %"
+    endif
+endfunction
+
+" markdown
+nmap <silent> <F7> <Plug>MarkdownPreview
+imap <silent> <F7> <Plug>MarkdownPreview
+nmap <silent> <F8> <Plug>StopMarkdownPreview
+imap <silent> <F8> <Plug>StopMarkdownPreview
+
+" python-coc
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" float terminal
+map <silent> <C-T> :FloatermNew<CR>
+map <silent> <C-=> :FloatermToggle<CR>
+map <silent> <C-c> :FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
+tnoremap <silent> <C-+> <c-\><c-n>:FloatermNew<CR>
+tnoremap <silent> <C-=> <c-\><c-n>:FloatermToggle<CR>
+
+augroup vime_floaterm_group
+    autocmd!
+    au FileType floaterm tnoremap <buffer> <silent> <M-h> <c-\><c-n>:FloatermPrev<CR>
+    au FIleType floaterm tnoremap <buffer> <silent> <M-l> <c-\><c-n>:FloatermNext<CR>
+augroup END
+
+" coc autocomplete
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-n>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" fix home/end key in all modes
+map <esc>OH <home>
+cmap <esc>OH <home>
+imap <esc>OH <home>
+map <esc>OF <end>
+cmap <esc>OF <end>
+imap <esc>OF <end>
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" trigger completion
+if has('nvim')
+  inoremap <silent><expr> <c-@> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
 
