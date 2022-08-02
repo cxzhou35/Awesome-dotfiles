@@ -12,10 +12,6 @@ DISABLE_AUTO_TITLE="true"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="false"
 
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 plugins=(git zsh-autosuggestions z sudo extract zsh-syntax-highlighting)
 
 # my config file
@@ -61,21 +57,17 @@ conda config --set auto_activate_base false
 # chrome path config
 export PATH=$PATH:/opt/google/chrome
 
-# editor config
-export EDITOR="/usr/bin/vim"
-
-
 # CUDA path config
 export PATH=/usr/local/cuda-11.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
-# oracle jdk environment confid
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64  
-export JRE_HOME=${JAVA_HOME}/jre  
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
-export PATH=${JAVA_HOME}/bin:$PATH 
+# oracle jdk environment config
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
 
-# personal alias settings 
+# personal alias settings
 eval $(thefuck --alias)
 alias fd="fdfind"
 alias ls="exa --icons"
@@ -147,7 +139,7 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_OPTS='--height 90% --layout=reverse --bind=alt-j:down,alt-k:up,alt-i:toggle+down --border --preview "echo {} | ~/share/fzf_preview.py" '
+export FZF_DEFAULT_OPTS='--height 90% --layout=reverse --bind=alt-j:down,alt-k:up --border --preview "echo {} | ~/share/fzf_preview.py" '
 
 _fzf_compgen_path() {
   fd --hidden --follow -E ".git" -E "node_modules" . /etc /home
@@ -181,9 +173,10 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
-echo "🌈  Welcome to zsh."
-
 # setting the variable path of ics2021
 source /home/vercent/.config/broot/launcher/bash/br
 export NEMU_HOME=/home/vercent/Res/Course/OS/nju-ics-2021spring/ics2021/nemu
 export AM_HOME=/home/vercent/Res/Course/OS/nju-ics-2021spring/ics2021/abstract-machine
+
+echo "🌈  Welcome to zsh."
+
