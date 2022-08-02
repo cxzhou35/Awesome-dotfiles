@@ -368,8 +368,8 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " float terminal
 map <silent> <C-t> :FloatermNew<CR>
 map <silent> <C-=> :FloatermToggle<CR>
-map <silent> <C-c> :FloatermNew --autoclose=0 gcc -g % -Wall -o build/%< && ./build/%<<CR>
-map <silent> <C-p> :FloatermNew --autoclose=0 python3 %<CR>
+map <silent> <C-c> :FloatermNew --autoclose=0 --wintype=split gcc -g % -Wall -o build/%< && ./build/%<<CR>
+map <silent> <C-p> :FloatermNew --autoclose=0 --wintype=split python3 %<CR>
 tnoremap <silent> <C-t> <c-\><c-n>:FloatermNew<CR>
 tnoremap <silent> <C-=> <c-\><c-n>:FloatermToggle<CR>
 
