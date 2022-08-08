@@ -116,6 +116,9 @@ Plug 'Yggdroot/indentLine'
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" copilot
+Plug 'github/copilot.vim'
+
 " autoformat
 Plug 'vim-autoformat/vim-autoformat'
 
@@ -265,21 +268,13 @@ map! <C-Z> <C-O>:u<CR>
 " fzf
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
-nnoremap <silent> <C-l> :LazyGit<CR>
 imap <silent> <C-f> :Files<CR>
 imap <silent> <C-b> :Buffers<CR>
-imap <silent> <C-l> :LazyGit<CR>
 
 " file save and quit
 nmap fw :w<CR>
 nmap fq :q!<CR>
 nmap fwq :wq<CR>
-
-" UltiSnips
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
-let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
 
 " wildfire
 map <SPACE> <Plug>(wildfire-fuel)
@@ -290,11 +285,11 @@ map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
 
 " undotree
-nnoremap <F3> :UndotreeToggle<CR>
-inoremap <F3> :UndotreeToggle<CR>
+nnoremap <F4> :UndotreeToggle<CR>
+inoremap <F4> :UndotreeToggle<CR>
 
 " format
-noremap <F4> :call FormatCode()<CR>
+noremap <F5> :call FormatCode()<CR>
 func! FormatCode()
     exec "w"
     if &filetype == 'c' || &filetype == 'h'
@@ -318,7 +313,7 @@ func! FormatCode()
 endfunc
 
 " c/cpp compile
-nmap <F5> :call CompileRunGcc()<CR>
+nmap <F6> :call CompileRunGcc()<CR>
 function! CompileRunGcc()
     execute "w"
     if &filetype == 'c'
@@ -346,15 +341,12 @@ imap <silent> <F7> <Plug>MarkdownPreview
 nmap <silent> <F8> <Plug>StopMarkdownPreview
 imap <silent> <F8> <Plug>StopMarkdownPreview
 
-" python-coc
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
 " float terminal
 map <silent> <C-t> :FloatermNew<CR>
 map <silent> <C-l> :FloatermNew lazygit<CR>
 map <silent> <C-r> :FloatermNew ranger<CR>
 map <silent> <C-c> :FloatermNew --autoclose=0 --wintype=split gcc -g % -Wall -o build/%< && ./build/%<<CR>
-map <silent> <C-p> :FloatermNew --autoclose=0 --wintype=split python3 %<CR>
+map <silent> <C-y> :FloatermNew --autoclose=0 --wintype=split python3 %<CR>
 tnoremap <silent> <C-t> <c-\><c-n>:FloatermNew<CR>
 
 augroup vime_floaterm_group
@@ -364,39 +356,21 @@ augroup vime_floaterm_group
 augroup END
 
 " coc autocomplete
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ CheckBackspace() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-n>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-function! CheckBackspace() abort
+function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+" enter to complete
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" fix home/end key in all modes
-map <esc>OH <home>
-cmap <esc>OH <home>
-imap <esc>OH <home>
-map <esc>OF <end>
-cmap <esc>OF <end>
-imap <esc>OF <end>
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-" trigger completion
-if has('nvim')
-  inoremap <silent><expr> <c-@> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
 
