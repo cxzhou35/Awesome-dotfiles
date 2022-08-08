@@ -1,5 +1,5 @@
 # My dotfiles for Linux
-Here are some config dotfiles for my OS(Ubuntu 20.04). 🖥️
+Here are some config dotfiles for my OS(Ubuntu 20.04 && Mac). 🖥️
 
 I put them here for handy and portable use.
 
