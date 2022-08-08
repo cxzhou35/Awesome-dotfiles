@@ -1,7 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/vercent/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
+# Theme
 ZSH_THEME="my-magic"
+
+# Plugins
+plugins=(git z sudo extract zsh-syntax-highlighting zsh-autosuggestions git-open)
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -12,7 +16,10 @@ DISABLE_AUTO_TITLE="true"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="false"
 
-plugins=(git zsh-autosuggestions z sudo extract zsh-syntax-highlighting)
+export PATH="/usr/local/bin:$PATH"
+export TERM="xterm-256color"
+export EDITOR="/opt/homebrew/bin/nvim"
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 
 # my config file
 source $ZSH/oh-my-zsh.sh
@@ -20,84 +27,61 @@ source $ZSH/scripts/fe.zsh
 source $ZSH/scripts/fcd.zsh
 source $ZSH/scripts/racd.zsh
 
-# User configuration
-# export MANPATH="/usr/local/man:$MANPATH"
+source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# bat config
+export BAT_THEME="Nord"
 
-# Compilation flags
+# ranger config
+export RANGER_LOAD_DEFAULT_RC=FALSE
 
-export TERM="xterm-256color"
-export MANPATH=${MANPATH}:/usr/local/texlive/2021/texmf-dist/doc/man
-export INFOPATH=${INFOPATH}:/usr/local/texlive/2021/texmf-dist/doc/info
-export PATH=${PATH}:/usr/local/texlive/2021/bin/x86_64-linux
+# fzf config
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# ccache config
-export USE_CCACHE=1
-export PATH=/usr/lib/ccache:$PATH
+export FZF_DEFAULT_OPTS='--height 90% --layout=reverse --bind=alt-j:down,alt-k:up --border --preview "echo {} | ~/share/fzf_preview.py" '
 
-# conda config
+_fzf_compgen_path() {
+  fd --hidden --follow -E ".git" -E "node_modules" . /etc /home
+}
+
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow -E ".git" -E "node_modules" . /etc /home
+}
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/vercent/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/vercent/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/vercent/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/vercent/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/vercent/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/vercent/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/vercent/anaconda3/bin:$PATH"
+        export PATH="/Users/vercent/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-conda config --set auto_activate_base false
 # <<< conda initialize <<<
-
-# chrome path config
-export PATH=$PATH:/opt/google/chrome
-
-# CUDA path config
-export PATH=/usr/local/cuda-11.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-# oracle jdk environment config
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export PATH=${JAVA_HOME}/bin:$PATH
 
 # personal alias settings
 eval $(thefuck --alias)
-alias fd="fdfind"
 alias ls="exa --icons"
 alias ll="exa -l --icons"
 alias la="exa -la --icons"
-alias rs="roscore"
-alias cg="chrome"
 alias ws="wireshark"
 alias py="python3"
 alias pdt="python3 -m doctest -v"
 alias jp="jupyter notebook"
 alias jl="jupyter-lab"
-alias landrop="/home/vercent/Downloads/LANDrop/LANDrop-latest-linux.AppImage"
-alias rl="roslaunch"
-alias pdfview="evince-previewer"
 alias nc="netcat"
-alias df="pydf"
 alias ra="ranger"
 alias cat="bat"
 alias lg="lazygit"
 alias f="fzf"
 alias neo="neofetch"
-alias ns="nvidia-smi"
-alias update="sudo apt update && sudo apt upgrade"
-alias autoclean="sudo apt autoremove && sudo apt clean && sudo apt autoclean"
 alias vi="nvim"
 alias sz="source ~/.zshrc"
-alias fm="nautilus"
 alias top="btop"
-alias st="shutdown now"
 
 # alias for conda
 alias condaa="conda activate"
@@ -115,39 +99,6 @@ alias gitu="git remote -v"
 alias gitl="git pull"
 alias gith="git push"
 alias gitd="git diff"
-
-# ffmpeg config
-export LD_LIBRARY_PATH=/usr/local/ffmpeg/lib:$LD_LIBRARY_PATH
-
-# bat config
-export BAT_THEME="Nord"
-
-source /home/vercent/.config/broot/launcher/bash/br
-
-# ros environment config
-source /opt/ros/noetic/setup.zsh
-source /home/vercent/code/ros_code/workpage1/devel/setup.zsh
-source /home/vercent/code/ros_code/workpage2/devel/setup.zsh
-source /home/vercent/code/ros_code/workpage3/devel/setup.zsh
-source /home/vercent/code/ros_code/workpage4/devel/setup.zsh
-source /home/vercent/code/ros_code/workpage5/devel/setup.zsh
-
-# ranger config
-export RANGER_LOAD_DEFAULT_RC=FALSE
-
-
-# fzf config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export FZF_DEFAULT_OPTS='--height 90% --layout=reverse --bind=alt-j:down,alt-k:up --border --preview "echo {} | ~/share/fzf_preview.py" '
-
-_fzf_compgen_path() {
-  fd --hidden --follow -E ".git" -E "node_modules" . /etc /home
-}
-
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow -E ".git" -E "node_modules" . /etc /home
-}
 
 # vi-mod
 bindkey '^v' edit-command-line
@@ -173,10 +124,4 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
-# setting the variable path of ics2021
-source /home/vercent/.config/broot/launcher/bash/br
-export NEMU_HOME=/home/vercent/Res/Course/OS/nju-ics-2021spring/ics2021/nemu
-export AM_HOME=/home/vercent/Res/Course/OS/nju-ics-2021spring/ics2021/abstract-machine
-
 echo "🌈  Welcome to zsh."
-
