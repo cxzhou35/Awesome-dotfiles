@@ -222,6 +222,12 @@ let g:autoformat_verbosemode=1
 " autopairs
 au Filetype FILETYPE let b:AutoPairs = {"(": ")","{": "}","[": "]","<": ">"}
 
+" copilot
+let g:copilot_filetypes = {
+      \ '*': v:false
+      \ 'python': v:true
+      \ }
+
 " indentLine
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 3
@@ -253,6 +259,12 @@ map <C-n> :tabnew<CR>
 map <C-j> :bp<CR>
 map <C-k> :bn<CR>
 map <C-q> :bdelete<CR>
+
+" cursor
+map H ^
+map J 5j
+map K 5k
+map L g_
 
 " select all
 map <C-A> ggVG
@@ -287,6 +299,9 @@ map <F2> :NERDTreeToggle<CR>
 " undotree
 nnoremap <F4> :UndotreeToggle<CR>
 inoremap <F4> :UndotreeToggle<CR>
+
+map oc :Copilot enable
+map dc :Copilot disable
 
 " format
 noremap <F5> :call FormatCode()<CR>
