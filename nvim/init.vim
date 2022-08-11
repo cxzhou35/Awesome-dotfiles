@@ -218,19 +218,6 @@ let g:highlightedyank_highlight_duration = 1000
 let g:vim_markdown_math = 1
 let g:mkdp_refresh_slow = 0
 let g:markdown_syntax_conceal=0
-let g:mkdp_open_ip = ''
-let g:mkdp_browser = 'safari'
-let g:mkdp_echo_preview_url = 0
-let g:mkdp_browserfunc = ''
-let g:mkdp_preview_options = {
-    \ 'mkit': {},
-    \ 'katex': {},
-    \ 'uml': {},
-    \ 'maid': {},
-    \ 'disable_sync_scroll': 0,
-    \ 'sync_scroll_type': 'middle',
-    \ 'hide_yaml_meta': 1
-    \ }
 
 " autoformat
 let g:autoformat_verbosemode=1
