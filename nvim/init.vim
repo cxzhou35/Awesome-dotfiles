@@ -319,6 +319,10 @@ map sj :set splitbelow<CR>:split<CR>
 map sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
 map sl :set splitright<CR>:vsplit<CR>
 
+" window preview change
+noremap f <nop>
+map f <C-w>
+
 " wildfire
 map <SPACE> <Plug>(wildfire-fuel)
 vmap <C-SPACE> <Plug>(wildfire-water)
