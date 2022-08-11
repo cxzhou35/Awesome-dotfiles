@@ -7,7 +7,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 ```
-
 `method 2:`
 ```bash
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }

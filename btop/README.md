@@ -6,7 +6,12 @@
 snap install btop
 ```
 
-2. github
+2. brew
+
+brew install btop
+
+
+3. github
 ```bash
 cd ~/Downloads
 curl https://github.com/aristocratos/btop/releases/download/v1.2.7/btop-x86_64-linux-musl.tbz
@@ -17,7 +22,7 @@ cd btop-x86_64-linux-musl
 ```
 	ps: x is the zsh plug for extraction, if you don't install it, using the command tar.
 
-3. themes
+4. themes
 
 	copy the theme file to the default btop theme folder, launch btop and press `ESC` to choose the theme you want.
 
