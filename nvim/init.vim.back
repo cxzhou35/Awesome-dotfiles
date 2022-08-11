@@ -95,7 +95,7 @@ Plug 'EdenEast/nightfox.nvim'
 
 " markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
-Plug 'iamcco/markdown-preview.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'preservim/vim-markdown'
 Plug 'junegunn/vim-emoji'
 
@@ -217,7 +217,27 @@ let g:highlightedyank_highlight_duration = 1000
 " markdown
 let g:vim_markdown_math = 1
 let g:mkdp_refresh_slow = 0
+let g:mkdp_auto_start = 0
+let g:mkdp_auto_close = 1
 let g:markdown_syntax_conceal=0
+let g:mkdp_markdown_css = '/Users/vercent/share/purple.css'
+let g:mkdp_page_title = '「${name}」'
+let g:mkdp_filetypes = ['markdown']
+let g:mkdp_theme = 'light'
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 0,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {},
+    \ 'content_editable': v:false,
+    \ 'disable_filename': 0,
+    \ 'toc': {}
+    \ }
 
 " autoformat
 let g:autoformat_verbosemode=1
@@ -368,8 +388,8 @@ endfunction
 " markdown
 nmap <silent> <F7> <Plug>MarkdownPreview
 imap <silent> <F7> <Plug>MarkdownPreview
-nmap <silent> <F8> <Plug>StopMarkdownPreview
-imap <silent> <F8> <Plug>StopMarkdownPreview
+nmap <silent> <F8> <Plug>MarkdownPreviewStop
+imap <silent> <F8> <Plug>MarkdownPreviewStop
 
 " float terminal
 map <silent> <C-t> :FloatermNew<CR>
