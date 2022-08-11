@@ -333,17 +333,15 @@ func! FormatCode()
         exec "!astyle --style=gnu --suffix=none %"
     elseif &filetype == 'xml'
         exec "!astyle --style=gnu --suffix=none %"
-    elseif &filetype == 'markdown'
-        exec "MarkdownPreview"
     else
         exec "normal gg=G"
         return
     endif
 endfunc
 
-" c/cpp compile
-nmap <F6> :call CompileRunGcc()<CR>
-function! CompileRunGcc()
+" compile
+nmap <F6> :call CompileRun()<CR>
+function! CompileRun()
     execute "w"
     if &filetype == 'c'
         if !isdirectory('build')
@@ -361,6 +359,9 @@ function! CompileRunGcc()
     endif
     if &filetype == 'py' || &filetype == 'python' || &filetype == 'python3'
         execute "!python3 %"
+    endif
+    if &filetype == 'markdown'
+        execute "MarkdownPreview"
     endif
 endfunction
 
