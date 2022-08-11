@@ -96,7 +96,6 @@ Plug 'EdenEast/nightfox.nvim'
 " markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'preservim/vim-markdown'
 Plug 'junegunn/vim-emoji'
 
 " airline
