@@ -224,7 +224,7 @@ au Filetype FILETYPE let b:AutoPairs = {"(": ")","{": "}","[": "]","<": ">"}
 
 " copilot
 let g:copilot_filetypes = {
-      \ '*': v:false
+      \ '*': v:false,
       \ 'python': v:true
       \ }
 
