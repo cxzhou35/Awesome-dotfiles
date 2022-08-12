@@ -23,7 +23,7 @@ set smarttab
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
-
+j
 " other
 set number
 set smartcase
@@ -306,6 +306,12 @@ map J 5j
 map K 5k
 map L g_
 
+" move cursor
+inoremap <C-g> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
 " select all
 map <C-A> ggVG
 map! <C-A> <Esc>ggVG
@@ -336,8 +342,8 @@ map sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
 map sl :set splitright<CR>:vsplit<CR>
 
 " window preview change
-noremap f <nop>
-map f <C-w>
+noremap ; <nop>
+map ; <C-w>
 
 " wildfire
 map <SPACE> <Plug>(wildfire-fuel)
