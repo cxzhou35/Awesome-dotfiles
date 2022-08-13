@@ -18,6 +18,8 @@ ENABLE_CORRECTION="false"
 
 export PATH="/usr/local/bin:$PATH"
 export TERM="xterm-256color"
+
+# homobrew config(only for mac)
 export EDITOR="/opt/homebrew/bin/nvim"
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 
@@ -26,8 +28,6 @@ source $ZSH/oh-my-zsh.sh
 source $ZSH/scripts/fe.zsh
 source $ZSH/scripts/fcd.zsh
 source $ZSH/scripts/racd.zsh
-
-source $ZSH/oh-my-zsh.sh
 
 # bat config
 export BAT_THEME="Nord"
@@ -48,8 +48,7 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow -E ".git" -E "node_modules" . /etc /home
 }
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
+# conda config
 __conda_setup="$('/Users/vercent/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
@@ -61,9 +60,8 @@ else
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
 
-# personal alias settings
+# alias for my os
 eval $(thefuck --alias)
 alias ls="exa --icons"
 alias ll="exa -l --icons"
@@ -82,6 +80,9 @@ alias neo="neofetch"
 alias vi="nvim"
 alias sz="source ~/.zshrc"
 alias top="btop"
+alias rd="reveal-md --highlight-theme nord "
+alias rs="reveal-md --static site"
+alias t="tmux"
 
 # alias for conda
 alias condaa="conda activate"
@@ -125,3 +126,4 @@ function zle-keymap-select {
 zle -N zle-keymap-select
 
 echo "🌈  Welcome to zsh."
+
