@@ -23,7 +23,7 @@ set smarttab
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
-j
+
 " other
 set number
 set smartcase
@@ -32,7 +32,7 @@ set syntax=on
 set cursorline
 set ruler
 set cindent
-set smartindent
+set autoindent
 set nowrap
 filetype plugin indent on
 filetype plugin on
@@ -75,7 +75,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
-" using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+" using a tagged release
 Plug 'fatih/vim-go', { 'tag': '*' }
 
 " terminal
@@ -336,10 +336,13 @@ nmap fwq :wq<CR>
 
 " window split
 noremap s <nop>
-map sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-map sj :set splitbelow<CR>:split<CR>
-map sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
-map sl :set splitright<CR>:vsplit<CR>
+map ss :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+map sv :set splitbelow<CR>:split<CR>
+
+map sh <C-w>h
+map sj <C-w>j
+map sk <C-w>k
+map sl <C-w>l
 
 " window preview change
 noremap ; <nop>
