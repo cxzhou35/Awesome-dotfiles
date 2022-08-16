@@ -1,4 +1,4 @@
-# My dotfiles for Linux
+# My dotfiles for public.
 Here are some config dotfiles for my OS(Ubuntu 20.04 && Mac). 🖥️
 
 I put them here for handy and portable use.
