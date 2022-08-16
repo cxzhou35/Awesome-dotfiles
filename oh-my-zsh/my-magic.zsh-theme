@@ -2,6 +2,7 @@
 # Repo: https://github.com/andyfleming/oh-my-zsh
 # Direct Link: https://github.com/andyfleming/oh-my-zsh/blob/master/themes/af-magic.zsh-theme
 
+PREFIX="♥"
 
 # original settings
 typeset +H return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
@@ -26,7 +27,7 @@ function afmagic_dashes {
 
 # primary prompt
 PS1='
- $FG[051]%~$(git_prompt_info)$(hg_prompt_info) $FG[075][%*] $FG[105]%(!.#.»)%{$reset_color%} '
+ %{$fg_bold[cyan]%}$PREFIX $FG[051]%~$(git_prompt_info)$(hg_prompt_info) $FG[075][%*] $FG[105]%(!.#.»)%{$reset_color%} '
 PS2='%{$fg[red]%}\ %{$reset_color%}'
 RPS1='${return_code}'
 
