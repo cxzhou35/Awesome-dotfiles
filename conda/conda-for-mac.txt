@@ -1,0 +1,10 @@
+# the anaconda config for mac
+auto_activate_base: false
+ssl_verify: true
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - default
+show_channel_urls: true
+
