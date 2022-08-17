@@ -1,5 +1,5 @@
 ## Here is the fzf config for Zicx
-#### How to install fzf in your PC ?
+#### How to install fzf on your PC ?
 `method 1:`
 
 ```bash
