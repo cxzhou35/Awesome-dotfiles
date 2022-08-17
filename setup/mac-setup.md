@@ -1,11 +1,11 @@
-# Configure Your Awesome Mac
+## Configure Your Awesome Mac
 
-### 1.  install homebrew
+### 1.  Install homebrew
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### 2.  download dotfiles
+### 2.  Download dotfiles
 
 ```bash
 cd ~
@@ -13,7 +13,7 @@ cd ~
 git clone https://github.com/Xuer04/Awesome-dotfiles ~/dotfiles
 ```
 
-### 3.  install applications
+### 3.  Install applications
 ```bash
 git clone https://github.com/Xuer04/Awesome-applications ~/applications
 
@@ -22,7 +22,7 @@ xargs brew install < ~/applications/Mac/brew-formulae.txt
 xargs brew install --cask < ~/applications/Mac/brew-casks.txt
 ```
 
-###  4. configure oh-my-zsh
+###  4. Configure oh-my-zsh
 ```bash
 cd ~
 
@@ -42,7 +42,7 @@ cp ~/dotfiles/oh-my-zsh/my-magic.zsh-theme ~/.oh-my-zsh/themes
 cp -r ~/dotfiles/oh-my-zsh/scripts ~/.oh-my-zsh/
 ```
 
-### 5. install nerd font
+### 5. Install nerd font
 ```bash
 brew tap homebrew/cask-fonts
 
@@ -55,7 +55,7 @@ wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003
 # unzip and double click to install the fonts
 ```
 
-### 6. configure nvim
+### 6. Configure nvim
 ```bash
 mkdir -p ~/.config/nvim/autoload
 
@@ -76,7 +76,7 @@ pip3 install ranger-fm
 # relaunch nvim and :checkhealth
 ```
 
-### 7. install miniconda
+### 7. Install miniconda
 
 ```bash
 cd ~/Downloads
@@ -93,7 +93,7 @@ mkdir .conda
 cp ~/dotfiles/conda/conda-for-mac.txt ~/.conda/.condarc
 ```
 
-### 8. configure cli tools
+### 8. Configure cli tools
 
 ```bash
 # git
@@ -131,11 +131,11 @@ cp ~/dotfiles/fzf/fzf_preview.py ~/share
 cp -r ~/dotfiles/lazygit ~/.config
 ```
 
-### 9. create folders
+### 9. Create folders
 ```bash
 mkdir -p ~/Code/c ~/Code/cpp ~/Code/python ~/Code/go ~/Code/rust ~/Code/shll
 ```
-### 10. configure system settings
+### 10. Configure system settings
 
 ```bash
 # enable any source for install
@@ -149,3 +149,5 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 ```
+
+#### Continuously updated...... 👻
