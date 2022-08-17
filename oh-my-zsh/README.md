@@ -13,7 +13,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/paulirish/git-open.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open
 
-# edit eht .zshrc file by adding the line below
+# edit the .zshrc file by adding the line below
 plugins=(git z sudo extract zsh-syntax-highlighting zsh-autosuggestions git-open)
 
 source ~/.zshrc
