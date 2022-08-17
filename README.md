@@ -1,9 +1,8 @@
 # Awesome dotfiles for public.
-Here are some config dotfiles for my OS(Ubuntu 20.04 && Mac OS 🖥️). 
 
-I put them here for handy and portable use.
+This repo contains some config dotfiles for my OS(Ubuntu 20.04 && Mac OS 🖥️).  I put them here for handy and portable use.
 
-The config list is below:
+The whole config list is below:
 - `conda`
 - `fusuma`
 - `lazygit`
@@ -29,3 +28,4 @@ If you want to use this config on your PC, maybe this page would be helpful. ➡
 
 Continuously updated...... 🍀
 
+Interested in any other resource? Welcome to my [profile page](https://github.com/Xuer04) 😜
