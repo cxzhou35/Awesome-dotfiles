@@ -1,5 +1,5 @@
-# My dotfiles for public.
-Here are some config dotfiles for my OS(Ubuntu 20.04 && Mac). 🖥️
+# Awesome dotfiles for public.
+Here are some config dotfiles for my OS(Ubuntu 20.04 && Mac OS). 🖥️
 
 I put them here for handy and portable use.
 
@@ -25,7 +25,7 @@ The config list is below:
 - `typora`
 - `iterm`
 
-If you want to use the whole config in your PC, maybe this page would be help. ➡️ [Wiki](https://github.com/Xuer04/Mydotfiles/wiki/Wiki "Wiki")
+If you want to use the this config on your PC, maybe this page would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki/Wiki "Wiki")
 
 Continue to update...  🍀
 
