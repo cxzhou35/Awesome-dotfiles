@@ -27,7 +27,7 @@ deb http://mirrors.aliyun.com/ubuntu/ focal-security multiverse
 
 # 更新一下源
 sudo apt update 
-sudo apt upgrade   # 有提示输出 Y
+sudo apt upgrade   # 有提示输入 Y
 ```
 
 ### 2. 安装基本环境
