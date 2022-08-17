@@ -27,5 +27,5 @@ The config list is below:
 
 If you want to use the this config on your PC, maybe this page would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki)
 
-Continue to update...  🍀
+Continuously updated...... 🍀
 
