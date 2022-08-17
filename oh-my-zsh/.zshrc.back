@@ -61,7 +61,7 @@ else
 fi
 unset __conda_setup
 
-# alias for os
+# alias for my os
 eval $(thefuck --alias)
 alias ls="exa --icons"
 alias ll="exa -l --icons"
@@ -83,6 +83,8 @@ alias top="btop"
 alias rd="reveal-md --highlight-theme nord "
 alias rs="reveal-md --static site"
 alias t="tmux"
+alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+alias love="echo \" I love XZQ \" | figlet -f univers"
 
 # alias for conda
 alias condaa="conda activate"
@@ -100,9 +102,8 @@ alias gitu="git remote -v"
 alias gitl="git pull"
 alias gith="git push"
 alias gitd="git diff"
-alias gitb="git checkout -b"
 
-# vi-mod bindings
+# vi-mod
 bindkey '^v' edit-command-line
 bindkey -v
 bindkey -M vicmd "i" vi-insert
