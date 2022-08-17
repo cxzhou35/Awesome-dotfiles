@@ -3,7 +3,9 @@
 `Ubuntu/Debian`
 ```bash
 sudo add-apt-repository ppa:mmstick76/alacritty 
+
 sudo apt update
+
 sudo apt install alacritty
 ```
 
@@ -14,10 +16,12 @@ brew install alacritty
 
 Then
 ```bash
+cd ~
+
 mkdir -p .config/alacritty
-cd
-git clone https://github.com/Xuer04/Mydotfiles.git ~/dotfiles
-cd ~/dotfiles
-cp ./alacritty/alacritty.yml ~/.config/alacritty
+
+git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/dotfiles
+
+cp ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty
 ```
 Now you can refresh your terminal and enjoy the alacritty! 
