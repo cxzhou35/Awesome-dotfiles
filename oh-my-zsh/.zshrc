@@ -28,6 +28,8 @@ source $ZSH/oh-my-zsh.sh
 source $ZSH/scripts/fe.zsh
 source $ZSH/scripts/fcd.zsh
 source $ZSH/scripts/racd.zsh
+source $ZSH/scripts/mkcd.zsh
+source $ZSH/scripts/gp.zsh
 
 # bat config
 export BAT_THEME="Nord"
@@ -38,7 +40,7 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_OPTS='--height 90% --layout=reverse --bind=alt-j:down,alt-k:up --border --preview "echo {} | ~/share/fzf_preview.py" '
+export FZF_DEFAULT_OPTS='--height 90% --layout=reverse --bind=alt-j:down,alt-k:up --border --preview "echo {} | '${HOME}'/share/fzf_preview.py" '
 
 _fzf_compgen_path() {
   fd --hidden --follow -E ".git" -E "node_modules" . /etc /home
@@ -61,7 +63,7 @@ else
 fi
 unset __conda_setup
 
-# alias for os
+# alias for my os
 eval $(thefuck --alias)
 alias ls="exa --icons"
 alias ll="exa -l --icons"
@@ -83,6 +85,9 @@ alias top="btop"
 alias rd="reveal-md --highlight-theme nord "
 alias rs="reveal-md --static site"
 alias t="tmux"
+alias yg="you-get"
+alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+alias love="echo \" I love XZQ \" | figlet -f univers"
 
 # alias for conda
 alias condaa="conda activate"
@@ -100,9 +105,8 @@ alias gitu="git remote -v"
 alias gitl="git pull"
 alias gith="git push"
 alias gitd="git diff"
-alias gitb="git checkout -b"
 
-# vi-mod bindings
+# vi-mod
 bindkey '^v' edit-command-line
 bindkey -v
 bindkey -M vicmd "i" vi-insert
