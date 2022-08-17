@@ -1,5 +1,6 @@
 ## Here is the gnome theme config for Zicx.
-#### This lists some pretty config:
+
+### Gnome:
 - `Cursor`: Future-cursors.
 - `Icon`: WhiteSur-icon-theme.
 - `Shell`: WhiteSur-dark.
