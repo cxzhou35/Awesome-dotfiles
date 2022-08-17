@@ -83,6 +83,8 @@ alias top="btop"
 alias rd="reveal-md --highlight-theme nord "
 alias rs="reveal-md --static site"
 alias t="tmux"
+alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+alias love="echo \" I love XZQ \" | figlet -f univers"
 
 # alias for conda
 alias condaa="conda activate"
