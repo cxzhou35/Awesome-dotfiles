@@ -6,6 +6,7 @@
 - `snippiets.vim`: a file contains the snippiets.
 - `autoload`: thie folder contains the nvim pluh config file.
 - `themes`: this folder contains the nvim theme files.
+- `snippets`: the snippets config file.
 
 #### How to use my neovim config on your PC ?
 ```bash
