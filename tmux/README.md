@@ -8,7 +8,6 @@ ln -s -f ~/.tmux/.tmux.conf
 cp ~/dotfiles/tmux/.tmux.conf.local ~
 ```
 
-#### Tips:
-Some symbols and icons are based on Nerd Font. You need to setup these fonts in your terminal.
+**Tips:** Some symbols and icons are based on Nerd Font. You need to setup these fonts in your terminal.
 
-Recommend FiraCode NerdFont.
+I recommend [FiraCode NerdFont](https://github.com/tonsky/FiraCode).
