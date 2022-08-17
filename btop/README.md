@@ -1,6 +1,6 @@
 ## Here is the btop config file for Zicx
 
-#### How to install btop in your PC ?
+#### How to install btop on your PC ?
 1. snap
 ```bash
 snap install btop
