@@ -25,7 +25,7 @@ The config list is below:
 - `typora`
 - `iterm`
 
-If you want to use the this config on your PC, maybe this page would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki/Wiki "Wiki")
+If you want to use the this config on your PC, maybe this page would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki)
 
 Continue to update...  🍀
 
