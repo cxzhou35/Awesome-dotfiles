@@ -7,21 +7,17 @@
 - `autoload`: thie folder contains the nvim pluh config file.
 - `themes`: this folder contains the nvim theme files.
 
-#### How to use my neovim config in your PC ?
+#### How to use my neovim config on your PC ?
 ```bash
-cd
+cd ~
+
 git clone https://github.com/Xuer04/Mydotfiles.git ~/dotfiles
-mkdir -p ~/.config/nvim/autoload
-cp ~/dotfiles/nvim/autoload/plug.vim ~/.config/nvim/autoload
-cp ~/dotfiles/nvim/init.vim ~/.config/nvim
-cp ~/dotfiles/nvim/snippiets.vim ~/.config/nvim
 
+cp ~/dotfiles/nvim ~/.config
 
-# relaunch neovim
-# :PlugInstall
-
+# relaunch neovim and type :PlugInstall
 ```
 
-If you meet some issues when using this config file, please contact [Zicx](https://github.com/Xuer04) or create the [issues](https://github.com/Xuer04/Mydotfiles/issues).
+If you meet some issues when using this config file, please contact [Zicx](https://github.com/Xuer04) or mention a [issues](https://github.com/Xuer04/Mydotfiles/issues).
 
-Hope you can enjoy your neovim on your PC! 😺
+Hoping you can enjoy neovim on your PC! 😺
