@@ -22,6 +22,7 @@ The whole config list is below:
 - [btop](https://github.com/Xuer04/Awesome-dotfiles/tree/main/btop)
 - [typora](https://github.com/Xuer04/Awesome-dotfiles/tree/main/typora)
 - [iterm](https://github.com/Xuer04/Awesome-dotfiles/tree/main/iterm)
+- [jetbrains](https://github.com/Xuer04/Awesome-dotfiles/tree/main/jetbrains)
 
 If you want to use this config on your PC, maybe this page would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki)
 

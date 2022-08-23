@@ -1,0 +1,5 @@
+IdeaVIM
+com.arcticicestudio.nord.jetbrains
+com.intellij.zh
+com.mallowigi
+izhangzhihao.rainbow.brackets
