@@ -1,0 +1,22 @@
+[user]
+    email = zjajzcx3566@163.com
+    name = Xuer04
+[core]
+    editor = nvim
+    ignorecase = false
+    excludesfile = ~/.gitignore
+[init]
+    defaultBranch = main
+[color]
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+    grep = auto
+    ui = auto
+[pull]
+    rebase = false
+[github]
+    user = Xuer04
+[diff]
+    tool = nvimdiff
