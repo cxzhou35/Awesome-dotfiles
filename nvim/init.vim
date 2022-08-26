@@ -75,9 +75,6 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
-" using a tagged release
-Plug 'fatih/vim-go', { 'tag': '*' }
-
 " terminal
 Plug 'voldikss/vim-floaterm'
 
@@ -262,7 +259,8 @@ au Filetype FILETYPE let b:AutoPairs = {"(": ")","{": "}","[": "]","<": ">"}
 
 " copilot
 let g:copilot_filetypes = {
-      \ '*': v:false
+      \ '*': v:false,
+      \ 'python': v:false,
       \ }
 
 " indentLine
@@ -408,6 +406,9 @@ function! CompileRun()
     if &filetype == 'py' || &filetype == 'python' || &filetype == 'python3'
         execute "!python3 %"
     endif
+    if &filetype == 'go'
+        execute "!go run %"
+    endif
     if &filetype == 'markdown'
         execute "MarkdownPreview"
     endif
@@ -425,6 +426,7 @@ map <silent> <C-l> :FloatermNew lazygit<CR>
 map <silent> <C-r> :FloatermNew ranger<CR>
 map <silent> <C-c> :FloatermNew --autoclose=0 --wintype=split gcc -g % -Wall -o build/%< && ./build/%<<CR>
 map <silent> <C-y> :FloatermNew --autoclose=0 --wintype=split python3 %<CR>
+map <silent> <C-g> :FloatermNew --autoclose=0 --wintype=split go run %<CR>
 tnoremap <silent> <C-t> <c-\><c-n>:FloatermNew<CR>
 
 augroup vime_floaterm_group
