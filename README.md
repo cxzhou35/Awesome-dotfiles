@@ -30,3 +30,4 @@ If you want to use this config on your PC, maybe this page would be helpful. ➡
 Continuously updated...... 🍀
 
 Interested in any other resource? Welcome to my [profile page](https://github.com/Xuer04) 😜
+
