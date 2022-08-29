@@ -1,4 +1,4 @@
-## Here is the nvim config for Zicx
+## Here is the nvim config based on vimscript for Zicx
 
 #### This folder contains neovim config files below:
 - `init.vim`: the nvim config file.
@@ -14,7 +14,7 @@ cd ~
 
 git clone https://github.com/Xuer04/Mydotfiles.git ~/dotfiles
 
-cp ~/dotfiles/nvim ~/.config
+cp ~/dotfiles/nvim/vimscript ~/.config/nvim
 
 # relaunch neovim and type :PlugInstall
 ```
