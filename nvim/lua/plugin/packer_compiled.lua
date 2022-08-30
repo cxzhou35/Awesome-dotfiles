@@ -69,15 +69,35 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["CodeRunner.nvim"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/CodeRunner.nvim",
+    url = "https://github.com/Pu-gayhub/CodeRunner.nvim"
+  },
   ["Comment.nvim"] = {
     loaded = true,
     path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["HighStr.nvim"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/HighStr.nvim",
+    url = "https://github.com/Pocco81/HighStr.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["autosave.nvim"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/autosave.nvim",
+    url = "https://github.com/nullishamy/autosave.nvim"
+  },
+  ["battery.vim"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/battery.vim",
+    url = "https://github.com/lambdalisue/battery.vim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -88,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   ["colorbuddy.nvim"] = {
     loaded = true,
@@ -104,10 +129,10 @@ _G.packer_plugins = {
     path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  indentLine = {
+  ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/indentLine",
-    url = "https://github.com/Yggdroot/indentLine"
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -118,11 +143,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
-  },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
@@ -215,10 +235,29 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0" },
     loaded = true,
     path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
+  },
+  ["vim-devicons"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
+  },
+  ["vim-highlightedyank"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/vim-highlightedyank",
+    url = "https://github.com/machakann/vim-highlightedyank"
   },
   ["wildfire.vim"] = {
     loaded = true,
@@ -228,10 +267,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

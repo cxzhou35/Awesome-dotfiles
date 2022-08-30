@@ -7,6 +7,6 @@ comment.setup({
         ---Line-comment toggle keymap
         line = '<Leader>cc',
         ---Block-comment toggle keymap
-        block = 'gb',
+        block = '<Leader>cb',
     },
 })

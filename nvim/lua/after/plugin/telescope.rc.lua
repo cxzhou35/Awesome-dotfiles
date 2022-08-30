@@ -31,6 +31,8 @@ telescope.setup {
           -- your custom normal mode mappings
           ["N"] = fb_actions.create,
           ["H"] = fb_actions.goto_parent_dir,
+          ["D"] = fb_actions.remove,
+          ["R"] = fb_actions.rename,
           ["/"] = function()
             vim.cmd('startinsert')
           end
@@ -54,6 +56,9 @@ vim.keymap.set('n', ';r', function()
 end)
 vim.keymap.set('n', ';b', function()
   builtin.buffers()
+end)
+vim.keymap.set('n', ';o', function()
+  builtin.oldfiles()
 end)
 vim.keymap.set('n', ';t', function()
   builtin.help_tags()

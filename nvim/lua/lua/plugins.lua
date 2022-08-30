@@ -13,11 +13,12 @@ packer.startup(function(use)
     'tjdevries/colorbuddy.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
     }
-    use 'nvim-lualine/lualine.nvim' -- Statusline
+    -- use 'nvim-lualine/lualine.nvim' -- Statusline
     use 'nvim-lua/plenary.nvim' -- Common utilities
     use 'onsails/lspkind-nvim' -- vscode-like pictograms
     use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
     use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+    use 'hrsh7th/cmp-path' -- nvim-cmp source for neovim's built-in LSP
     use 'hrsh7th/nvim-cmp' -- Completion
     use 'neovim/nvim-lspconfig' -- LSP
     use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
@@ -37,7 +38,7 @@ packer.startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'norcalli/nvim-colorizer.lua'
     use({
-      "iamcco/markdown-preview.nvim",
+      'iamcco/markdown-preview.nvim',
       run = function() vim.fn["mkdp#util#install"]() end,
     })
     use 'akinsho/nvim-bufferline.lua'
@@ -51,13 +52,17 @@ packer.startup(function(use)
     use 'gcmt/wildfire.vim' -- Select content
     use 'numToStr/Comment.nvim' -- Comment
     use {
-        "akinsho/toggleterm.nvim",
+        'akinsho/toggleterm.nvim',
         tag = 'v2.*',
-        config = function()
-            require("toggleterm").setup()
-        end
     }
-    use "lukas-reineke/indent-blankline.nvim"
-    use "Pu-gayhub/CodeRunner.nvim"
+    use 'lukas-reineke/indent-blankline.nvim'
+    use 'Pu-gayhub/CodeRunner.nvim'
+    use 'vim-airline/vim-airline'
+    use 'vim-airline/vim-airline-themes'
+    use 'ryanoasis/vim-devicons'
+    use 'Pocco81/HighStr.nvim'
+    use 'machakann/vim-highlightedyank'
+    use 'lambdalisue/battery.vim'
+    use 'glepnir/dashboard-nvim' -- Dashboard
 end)
 

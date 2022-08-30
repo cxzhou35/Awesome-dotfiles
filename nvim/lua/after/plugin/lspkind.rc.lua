@@ -16,7 +16,6 @@ lspkind.init({
 
   -- override preset symbols
   --
-  -- default: {}
   symbol_map = {
     Text = "",
     Method = "",

@@ -16,7 +16,11 @@ bufferline.setup({
     close_icon = '',
     left_trunc_marker = '',
     right_trunc_marker = '',
-    tab_size = 18,
+    tab_size = 15,
+    numbers = function(opts)
+        return string.format('%s.', opts.ordinal)
+    end,
+    diagnostics = "nvim_lsp",
     diagnostics_indicator = function(count, level)
         local icon = level:match("error") and " " or ""
         return " " .. icon .. count
@@ -41,11 +45,7 @@ bufferline.setup({
     },
     buffer_selected = {
       fg = '#fdf6e3',
-      bg = '#304758',
       bold = true,
     },
-    fill = {
-      bg = '#483D8B'
-    }
   },
 })

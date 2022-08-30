@@ -1,7 +1,7 @@
 -- Zicx's config for neovim(lua based)
 require('base')
-require('color')
+require('colorscheme')
 require('highlights')
-require('maps')
+require('keymaps')
 require('plugins')
 

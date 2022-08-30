@@ -1,8 +1,20 @@
-local status, saga = pcall(require, 'lspsaga')
+local status, lspsaga = pcall(require, 'lspsaga')
 if (not status) then return end
 local keymap = vim.keymap.set
 
-saga.init_lsp_saga()
+
+lspsaga.init_lsp_saga({
+    -- diagnostic sign
+    diagnostic_header = { " ", " ", " ", "ﴞ " },
+    -- code action title icon
+    code_action_icon = "🫧 ",
+    -- finder icons
+    finder_icons = {
+    def = '  ',
+    ref = '諭 ',
+    link = '  ',
+    },
+})
 
 -- Code action
 keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
@@ -33,17 +45,19 @@ keymap("n", "]E", function()
 end, { silent = true })
 
 -- Outline
-keymap("n","<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
+keymap("n","go", "<cmd>LSoutlineToggle<CR>",{ silent = true })
 
 -- Hover Doc
 keymap("n", "gh", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 
 local action = require("lspsaga.action")
--- scroll in hover doc or  definition preview window
+
+-- scroll in hover doc or definition preview window
 vim.keymap.set("n", "gf", function()
     action.smart_scroll_with_saga(1)
 end, { silent = true })
--- scroll in hover doc or  definition preview window
+
+-- scroll in hover doc or definition preview window
 vim.keymap.set("n", "gb", function()
     action.smart_scroll_with_saga(-1)
 end, { silent = true })

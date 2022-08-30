@@ -32,6 +32,16 @@ set.tabstop = 2
 set.shiftwidth = 4
 set.smarttab = true
 
+-- Airline
+vim.g.airline_theme = 'base16_nord'
+vim.g.airline_powerline_fonts = 1
+vim.opt.laststatus = 2
+vim.g.airline_extensions = {'branch', 'battery', 'nvimlsp'}
+vim.g['airline#extensions#battery#enabled'] = 1
+vim.g['airline#extensions#nvimlsp#enabled'] = 1
+vim.g['airline#extensions#branch#enabled'] = 1
+vim.g['battery#update_statusline'] = 1
+
 -- Clipboard
 set.clipboard = { 'unnamed', 'unnamedplus' }
 
@@ -53,3 +63,11 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 -- Add asterisks in block comments
 set.formatoptions:append { 'r' }
+
+-- Highlight yank
+vim.g.highlightedyank_highlight_duration = 500
+vim.g.highlightedyank_highlight_in_visual = 1
+
+-- Dashboard
+vim.g.indentLine_fileTypeExclude = {'dashboard'}
+
