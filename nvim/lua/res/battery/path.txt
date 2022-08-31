@@ -1,1 +1,1 @@
-/Users/vercent/.local/share/nvim/site/pack/packer/start/battery.vim/autoload/
+~/.local/share/nvim/site/pack/packer/start/battery.vim/autoload/
