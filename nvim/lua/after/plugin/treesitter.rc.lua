@@ -20,7 +20,8 @@ ts.setup {
     "go",
     "latex",
     "markdown",
-    "cmake"
+    "cmake",
+    "rust"
   },
   autotag = {
     enable = true,

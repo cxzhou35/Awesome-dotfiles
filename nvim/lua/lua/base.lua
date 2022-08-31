@@ -29,7 +29,7 @@ set.smartindent = true
 set.breakindent = true
 set.expandtab = true
 set.tabstop = 2
-set.shiftwidth = 4
+set.shiftwidth = 2
 set.smarttab = true
 
 -- Airline
@@ -44,6 +44,9 @@ vim.g['battery#update_statusline'] = 1
 
 -- Clipboard
 set.clipboard = { 'unnamed', 'unnamedplus' }
+
+-- Spell Check
+set.spell = true
 
 -- Coding
 vim.scriptencoding = 'utf-8'

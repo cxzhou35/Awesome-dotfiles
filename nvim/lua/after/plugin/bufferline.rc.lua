@@ -17,21 +17,22 @@ bufferline.setup({
     left_trunc_marker = '',
     right_trunc_marker = '',
     tab_size = 15,
+    max_name_length = 25,
     numbers = function(opts)
-        return string.format('%s.', opts.ordinal)
+      return string.format('%s.', opts.ordinal)
     end,
     diagnostics = "nvim_lsp",
     diagnostics_indicator = function(count, level)
-        local icon = level:match("error") and " " or ""
-        return " " .. icon .. count
+      local icon = level:match("error") and " " or ""
+      return " " .. icon .. count
     end,
     offsets = {
-     {
+      {
         filetype = "NvimTree",
         text = "File Explorer",
         text_align = "left",
         separator = true,
-     }
+      }
     },
   },
   highlights = {

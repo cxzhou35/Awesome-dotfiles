@@ -31,7 +31,7 @@ keymap.set('n', '<C-q>', ':bdelete<CR>')
 keymap.set('n', '<S-h>', '^')
 keymap.set('n', '<S-j>', '5j')
 keymap.set('n', '<S-k>', '5k')
-keymap.set('n', '<S-l>', 'g_')
+keymap.set('n', '<S-l>', '$')
 
 -- No highlight
 keymap.set('', '<C-i>', ':noh<CR>')
@@ -43,9 +43,10 @@ keymap.set('n', '<C-z>', ':u<CR>')
 keymap.set('n', ';n', ':DashboardNewFile<CR>')
 
 -- File
-keymap.set('n', 'fw', ':w<CR>')
+keymap.set('n', '<S-s>', ':wa<CR>')
 keymap.set('n', 'fq', ':q!<CR>')
-keymap.set('n', 'fwq', ':wq<CR>')
+keymap.set('n', '<S-q>', ':q!<CR>')
+keymap.set('n', 'fwq', ':wqa<CR>')
 
 -- Nvim-tree
 keymap.set('n', '<F2>', ':NvimTreeFindFileToggle<CR>')
