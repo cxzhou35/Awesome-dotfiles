@@ -21,7 +21,7 @@ export TERM="xterm-256color"
 
 # homobrew config(only for mac)
 export EDITOR="/opt/homebrew/bin/nvim"
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 # my config file
 source $ZSH/oh-my-zsh.sh
@@ -30,6 +30,7 @@ source $ZSH/scripts/fcd.zsh
 source $ZSH/scripts/racd.zsh
 source $ZSH/scripts/mkcd.zsh
 source $ZSH/scripts/gp.zsh
+source $ZSH/scripts/reload.zsh
 
 # bat config
 export BAT_THEME="Nord"
@@ -82,12 +83,14 @@ alias neo="neofetch"
 alias vi="nvim"
 alias sz="source ~/.zshrc"
 alias top="btop"
-alias rd="reveal-md --highlight-theme nord "
-alias rs="reveal-md --static site"
+alias rd="reveal-md"
+alias rdsite="reveal-md --static site"
 alias t="tmux"
 alias yg="you-get"
+alias deploy="brew update && brew upgrade"
 alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
 alias love="echo \" I love XZQ \" | figlet -f univers"
+alias hs="hugo server -D"
 
 # alias for conda
 alias condaa="conda activate"
@@ -99,7 +102,7 @@ alias condac="conda clean -a"
 # alias for git
 alias gita="git add ."
 alias gits="git status"
-alias gitg="git log"
+alias gitg="git reflog"
 alias gitm="git commit -m"
 alias gitu="git remote -v"
 alias gitl="git pull"
