@@ -34,7 +34,7 @@ keymap.set('n', '<S-k>', '5k')
 keymap.set('n', '<S-l>', '$')
 
 -- No highlight
-keymap.set('', '<C-i>', ':noh<CR>')
+keymap.set('', '<C-h>', ':noh<CR>')
 
 -- Undo
 keymap.set('n', '<C-z>', ':u<CR>')
