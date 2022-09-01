@@ -45,9 +45,6 @@ vim.g['battery#update_statusline'] = 1
 -- Clipboard
 set.clipboard = { 'unnamed', 'unnamedplus' }
 
--- Spell Check
-set.spell = true
-
 -- Coding
 vim.scriptencoding = 'utf-8'
 set.encoding = 'utf-8'

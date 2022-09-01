@@ -4,4 +4,3 @@ require('colorscheme')
 require('highlights')
 require('keymaps')
 require('plugins')
-

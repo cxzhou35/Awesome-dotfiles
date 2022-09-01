@@ -7,6 +7,6 @@ git.setup({
     blame = "<Leader>b",
     quit_blame = "q",
     -- Open file/folder in git repository
-    browse = "<Leader>go",
+    browse = "<Leader>o",
   }
 })

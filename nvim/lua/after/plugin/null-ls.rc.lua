@@ -1,18 +1,24 @@
 local status, null_ls = pcall(require, 'null-ls')
 if (not status) then return end
 
+-- diagnostic sources
+local diagnostics = null_ls.builtins.diagnostics
+
+-- formatting sources
+local formatting = null_ls.builtins.formatting
+
+
+
+local sources = {
+  diagnostics.markdownlint,
+  diagnostics.zsh,
+  -- foamat
+  formatting.autopep8,
+  formatting.cmake_format,
+  formatting.markdownlint,
+}
+
 null_ls.setup({
-    -- formatting
-    on_attach = function(client, bufnr)
-    if client.server_capabilities.documentFormattingProvider then
-      vim.cmd("nnoremap <silent><buffer> ff :lua vim.lsp.buf.formatting()<CR>")
-
-      -- format on save
-      vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
-    end
-
-    if client.server_capabilities.documentRangeFormattingProvider then
-      vim.cmd("xnoremap <silent><buffer> ff :lua vim.lsp.buf.range_formatting({})<CR>")
-    end
-  end,
+    sources = sources,
 })
+

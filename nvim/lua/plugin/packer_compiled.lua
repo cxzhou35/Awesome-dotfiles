@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
-  ["galaxyline.nvim"] = {
-    loaded = true,
-    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
-    url = "https://github.com/glepnir/galaxyline.nvim"
-  },
   ["git.nvim"] = {
     loaded = true,
     path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/git.nvim",
@@ -243,6 +238,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/Users/vercent/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
   },
   ["vim-devicons"] = {
     loaded = true,

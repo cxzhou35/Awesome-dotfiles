@@ -6,9 +6,6 @@ local keymap = vim.keymap.set
 lspsaga.init_lsp_saga({
   -- diagnostic sign
   diagnostic_header = { " ", " ", " ", "ﴞ " },
-  custom_kind = {
-    Field = { " ", " ", " ", "ﴞ " },
-  },
   -- code action title icon
   code_action_icon = "🫧 ",
   show_diagnostic_source = true,
@@ -24,7 +21,7 @@ lspsaga.init_lsp_saga({
     quit = "q",
     exec = "<CR>",
   },
-  rename_action_quit = "<Esc>",
+  rename_action_quit = "q",
   rename_in_select = true,
   definition_preview_icon = "  ",
   -- show outline
@@ -82,7 +79,7 @@ keymap("n", "gS", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { silent = true }
 keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { silent = true })
 
 -- Format
-keymap("n", "gf", "<cmd>lua vim.lsp.buf.format()<CR>", { silent = true })
+keymap("n", "gf", "<cmd>lua vim.lsp.buf.formatting()<CR>", { silent = true })
 
 -- References
 keymap("n", "gR", "<cmd>lua vim.lsp.buf.references()<CR>", { silent = true })
