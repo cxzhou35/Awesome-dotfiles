@@ -60,6 +60,5 @@ packer.startup(function(use)
   use 'lambdalisue/battery.vim'
   use 'glepnir/dashboard-nvim' -- Dashboard
   use 'Xuyuanp/scrollbar.nvim' -- Scrollbar
-  use 'lewis6991/spellsitter.nvim' -- Spell checker
   use 'itchyny/vim-cursorword'
 end)

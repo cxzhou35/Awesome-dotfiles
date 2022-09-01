@@ -82,7 +82,7 @@ keymap("n", "gS", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { silent = true }
 keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { silent = true })
 
 -- Format
-keymap("n", "gf", "<cmd>lua vim.lsp.buf.foamat()<CR>", { silent = true })
+keymap("n", "gf", "<cmd>lua vim.lsp.buf.format()<CR>", { silent = true })
 
 -- References
 keymap("n", "gR", "<cmd>lua vim.lsp.buf.references()<CR>", { silent = true })
