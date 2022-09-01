@@ -25,7 +25,7 @@ The whole config list is below:
 - [jetbrains](https://github.com/Xuer04/Awesome-dotfiles/tree/main/jetbrains)
 - [git](https://github.com/Xuer04/Awesome-dotfiles/tree/main/git)
 
-If you want to use this config on your PC, maybe this page would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki)
+If you want to use this config on your PC, maybe this wiki would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki)
 
 Continuously updated...... 🍀
 
