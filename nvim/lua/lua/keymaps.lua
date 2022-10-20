@@ -51,6 +51,9 @@ keymap.set('n', 'fwq', ':wqa<CR>')
 -- Nvim-tree
 keymap.set('n', '<F2>', ':NvimTreeFindFileToggle<CR>')
 
+-- Match
+keymap.set('', 'm', '%')
+
 -- Wildfire
 keymap.set('', '<Space>', '<Plug>(wildfire-fuel)')
 

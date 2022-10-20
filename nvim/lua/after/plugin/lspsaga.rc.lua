@@ -7,10 +7,7 @@ lspsaga.init_lsp_saga({
   -- diagnostic sign
   diagnostic_header = { " ", " ", " ", "ﴞ " },
   -- code action title icon
-  code_action_icon = "🫧 ",
-  show_diagnostic_source = true,
   border_style = "rounded",
-  diagnostic_source_bracket = {},
   -- finder icons
   finder_icons = {
     def = '  ',
@@ -23,7 +20,6 @@ lspsaga.init_lsp_saga({
   },
   rename_action_quit = "q",
   rename_in_select = true,
-  definition_preview_icon = "  ",
   -- show outline
   show_outline = {
     win_position = 'right',
