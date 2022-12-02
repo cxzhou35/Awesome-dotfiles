@@ -28,7 +28,7 @@ set encoding=utf-8
 set number
 set smartcase
 set ignorecase
-set syntax=on
+syntax on
 set cursorline
 set ruler
 set cindent
