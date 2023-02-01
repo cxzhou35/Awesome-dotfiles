@@ -14,6 +14,6 @@ mason.setup({
 })
 
 lspconfig.setup {
-  ensure_installed = {"clangd", "gopls", "cmake", "sumneko_lua", "marksman", "pyright", "texlab", "vimls", "jsonls"},
+  ensure_installed = {"clangd", "gopls", "sumneko_lua", "vimls", "jsonls", "pyright"},
 }
 

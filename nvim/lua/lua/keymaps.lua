@@ -31,7 +31,7 @@ keymap.set('n', '<C-q>', ':bdelete<CR>')
 keymap.set('n', '<S-h>', '^')
 keymap.set('n', '<S-j>', '5j')
 keymap.set('n', '<S-k>', '5k')
-keymap.set('n', '<S-l>', '$')
+keymap.set('n', '<S-l>', 'g_')
 
 -- No highlight
 keymap.set('', '<C-h>', ':noh<CR>')
@@ -59,6 +59,20 @@ keymap.set('', '<Space>', '<Plug>(wildfire-fuel)')
 
 -- Markdown priview
 keymap.set('', '<C-m>', '<Plug>MarkdownPreviewToggle')
+
+-- Lspsga
+keymap.set('', '<S-t>', ':LspStop<CR>')
+keymap.set('', '<S-a>', ':LspStart<CR>')
+
+-- Lightspeed jump
+keymap.set('n', 'q', '<nop>')
+keymap.set('n', 'qh', '<Plug>Lightspeed_s')
+keymap.set('n', 'ql', '<Plug>Lightspeed_S')
+
+-- Noice history
+keymap.set("n", "<leader>nh", function()
+  require("noice").cmd("history")
+end)
 
 -- Highlight string
 vim.api.nvim_set_keymap(

@@ -2,7 +2,7 @@ local status, highstr = pcall(require, 'high-str')
 if (not status) then return end
 
 highstr.setup({
-    verbosity = 0,
+  verbosity = 0,
 	saving_path = "/tmp/highstr/",
 	highlight_colors = {
 		color_0 = {"#0c0d0e", "smart"},	-- Cosmic charcoal

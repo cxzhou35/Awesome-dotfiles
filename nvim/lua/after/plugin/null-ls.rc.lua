@@ -1,39 +1,36 @@
-local status, null_ls = pcall(require, 'null-ls')
+local status, null_ls = pcall(require, "null-ls")
 if (not status) then return end
 
--- diagnostic sources
-local diagnostics = null_ls.builtins.diagnostics
-
--- formatting sources
-local formatting = null_ls.builtins.formatting
-
-
-
-local sources = {
-  diagnostics.markdownlint,
-  diagnostics.zsh,
-  -- foamat
-  formatting.autopep8,
-  formatting.cmake_format,
-  formatting.markdownlint,
-}
-
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-null_ls.setup({
-    sources = sources,
-    -- you can reuse a shared lspconfig on_attach callback here
+
+local lsp_formatting = function(bufnr)
+    vim.lsp.buf.format({
+        filter = function(client) return client.name == "null-ls" end,
+        bufnr = bufnr
+    })
+end
+
+null_ls.setup {
+    sources = {
+        null_ls.builtins.formatting.cmake_format, -- cmake formatting
+        null_ls.builtins.formatting.astyle, -- c/cpp formatting
+        null_ls.builtins.formatting.gofumpt, -- go formatting
+        null_ls.builtins.formatting.autopep8, -- python formatting
+        null_ls.builtins.formatting.rustfmt, -- rust formatting
+        null_ls.builtins.formatting.lua_format -- lua formatting
+    },
     on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
-            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+            vim.api.nvim_clear_autocmds({group = augroup, buffer = bufnr})
             vim.api.nvim_create_autocmd("BufWritePre", {
                 group = augroup,
                 buffer = bufnr,
-                callback = function()
-                    -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-                    vim.lsp.buf.formatting()
-                end,
+                callback = function() lsp_formatting(bufnr) end
             })
         end
-    end,
-})
+    end
+}
 
+vim.api.nvim_create_user_command('DisableLspFormatting', function()
+    vim.api.nvim_clear_autocmds({group = augroup, buffer = 0})
+end, {nargs = 0})

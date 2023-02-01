@@ -17,6 +17,9 @@ telescope.setup {
         ["q"] = actions.close
       },
     },
+    layout_config = {
+      horizontal = { width = 80 }
+    }
   },
   extensions = {
     file_browser = {
@@ -66,10 +69,6 @@ vim.keymap.set('n', ';o', function()
   builtin.oldfiles()
 end)
 
-vim.keymap.set('n', ';t', function()
-  builtin.help_tags()
-end)
-
 vim.keymap.set('n', ';;', function()
   builtin.resume()
 end)
@@ -99,6 +98,6 @@ vim.keymap.set("n", "<C-f>", function()
     grouped = true,
     previewer = false,
     initial_mode = "normal",
-    layout_config = { height = 40 }
+    layout_config = { height = 45 }
   })
 end)

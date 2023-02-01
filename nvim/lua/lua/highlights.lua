@@ -1,4 +1,5 @@
 local set = vim.opt
+
 set.cursorline = true
 set.termguicolors = true
 set.winblend = 0

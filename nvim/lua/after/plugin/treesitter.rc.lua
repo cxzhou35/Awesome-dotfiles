@@ -1,7 +1,6 @@
 local status, ts = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
-
 ts.setup {
   highlight = {
     enable = true,
@@ -19,15 +18,12 @@ ts.setup {
     "cpp",
     "python",
     "go",
-    "latex",
     "markdown",
     "cmake",
-    "rust"
+    "rust",
   },
   autotag = {
     enable = true,
   },
 }
-
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 
