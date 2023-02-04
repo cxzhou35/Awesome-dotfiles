@@ -130,7 +130,8 @@ cmp.setup.filetype('gitcommit', {
     }, {{name = 'buffer'}})
 })
 
+vim.opt.completeopt = "menu,menuone,noselect"
+
 vim.cmd [[
-  set completeopt=menuone,noinsert,noselect
   highlight! default link CmpItemKind CmpItemMenuDefault
 ]]

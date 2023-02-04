@@ -3,7 +3,6 @@ local opt = vim.opt
 local g = vim.g
 local api = vim.api
 local wo = vim.wo
-local o = vim.o
 
 -- General
 wo.number = true
@@ -27,6 +26,7 @@ opt.wildignore:append{'*/node_modules/*'}
 opt.list = true
 opt.listchars = {extends = '❯', precedes = '❮', trail = '·', tab = '▸ '}
 opt.mouse = 'a'
+opt.iskeyword:append("-")
 
 -- Tab & Indent
 opt.autoindent = true
@@ -36,6 +36,7 @@ opt.expandtab = true
 opt.smarttab = true
 opt.tabstop = 4
 opt.shiftwidth = 4
+opt.signcolumn = "yes"
 
 -- Airline
 g.airline_theme = 'base16_nord'
@@ -54,7 +55,6 @@ g.bullets_pad_right = 0
 
 -- Markdown
 g.vim_markdown_folding_disabled = 1
--- g.vim_markdown_folding_level = 5
 g.vim_markdown_toc_autofit = 1
 g.vim_markdown_math = 1
 g.vim_markdown_json_frontmatter = 1
