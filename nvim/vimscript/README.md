@@ -1,24 +1,27 @@
-## Here is the nvim config based on vimscript for Zicx
+## Here is the nvim config(based on vimscript) for Zicx
 
-#### This folder contains neovim config files below:
-- `init.vim`: the nvim config file.
-- `init.vim.back`: the nvim config backup file.
-- `snippiets.vim`: a file contains the snippiets.
-- `autoload`: thie folder contains the nvim pluh config file.
-- `themes`: this folder contains the nvim theme files.
-- `snippets`: the snippets config file.
+### Table of contents
 
-#### How to use my neovim config on your PC ?
+- `init.vim`: Include all basic configurations for nvim.
+- `snippets.vim`: Include snippets for markdown.
+- `autoload`: Include vim-plug configurations.
+- `themes`: Include theme configurations modified by Zicx.
+
+### Install Tutorial
+
 ```bash
-cd ~
+cd ~ # or any path you want
 
-git clone https://github.com/Xuer04/Mydotfiles.git ~/dotfiles
+git clone https://github.com/Xuer04/Awesome-dotfiles.git ./dotfiles
+
+mkdir -p ~/.config/nvim
 
 cp ~/dotfiles/nvim/vimscript ~/.config/nvim
 
+# install plugins
 # relaunch neovim and type :PlugInstall
 ```
 
-If you meet some issues when using this config file, please contact [Zicx](https://github.com/Xuer04) or mention a [issues](https://github.com/Xuer04/Mydotfiles/issues).
+If you meet some problems, please contact [Zicx](https://github.com/Xuer04) or raise an [issue](https://github.com/Xuer04/Awesome-dotfiles/issues).
 
-Hoping you can enjoy neovim on your PC! 😺
+Neovim is worth a try! 😺

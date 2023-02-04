@@ -1,4 +1,4 @@
--- Zicx's config for neovim(based on lua)
+--- Zicx's config for neovim(based on lua)
 require('options')
 require('colorscheme')
 require('highlights')
