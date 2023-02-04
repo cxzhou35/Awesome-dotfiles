@@ -1,8 +1,9 @@
 # Awesome dotfiles for public.
 
-This repo contains some config dotfiles for my OS(Ubuntu 20.04 && Mac OS 🖥️).  I put them here for handy and portable use.
+This repo contains some dotfiles for my OS(Ubuntu 20.04 && Mac OS 🖥️).  I put them here for handy and portable use.
 
 The whole config list is below:
+
 - [conda](https://github.com/Xuer04/Awesome-dotfiles/tree/main/conda)
 - [fusuma](https://github.com/Xuer04/Awesome-dotfiles/tree/main/fusuma)
 - [lazygit](https://github.com/Xuer04/Awesome-dotfiles/tree/main/lazygit)
