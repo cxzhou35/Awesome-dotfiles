@@ -79,6 +79,12 @@ opt.termencoding = 'utf-8'
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
+-- Undotree
+g.undotree_WindowLayout = 3
+g.undotree_SplitWidth = 26
+g.undotree_DiffpanelHeight = 10
+g.undotree_SetFocusWhenToggle = 1
+
 -- Turn off paste mode when leaving insert
 api.nvim_create_autocmd("InsertLeave", {pattern = '*', command = "set nopaste"})
 

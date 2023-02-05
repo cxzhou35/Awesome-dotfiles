@@ -1,6 +1,5 @@
 local status, saga = pcall(require, 'lspsaga')
 if (not status) then return end
-local keymap = vim.keymap.set
 
 saga.setup({
     -- ui config
@@ -93,55 +92,3 @@ saga.setup({
     },
     request_timeout = 5000
 })
-
-local opts = {silent = true}
-
--- Code action
-keymap("n", "ga", "<cmd>Lspsaga code_action<CR>", opts)
-
--- Finder
-keymap("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
-
--- Rename
-keymap("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
-
--- Outline
-keymap("n", "go", "<cmd>Lspsaga outline<CR>", opts)
-
--- Hover Doc
-keymap("n", "gh", "<cmd>Lspsaga hover_doc<CR>", opts)
-
--- Definition
-keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>", opts)
-keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
-
--- Show line diagnostics
-keymap("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
-
--- Show cursor diagnostic
-keymap("n", "gs", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
-
--- Diagnsotic jump
-keymap("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-keymap("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
-
--- Only jump to error
-keymap("n", "[e", function()
-    require("lspsaga.diagnostic").goto_prev({
-        severity = vim.diagnostic.severity.ERROR
-    })
-end, opts)
-keymap("n", "]e", function()
-    require("lspsaga.diagnostic").goto_next({
-        severity = vim.diagnostic.severity.ERROR
-    })
-end, opts)
-
--- Signature Help
-keymap("n", "gS", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-
--- Implementation
-keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-
--- Format
--- keymap("n", "gF", "<cmd>lua vim.lsp.buf.format()<CR>", { silent = true })

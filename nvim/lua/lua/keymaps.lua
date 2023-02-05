@@ -82,14 +82,67 @@ keymap.set('', '<C-u>', ':UploadClipboard<CR>')
 keymap.set('', '<C-m>', '<Plug>MarkdownPreviewToggle')
 keymap.set('', '<C-t>', ':Toc<CR>')
 
+-- Undotree
+keymap.set('n', '<leader>ut', ':UndotreeToggle<CR>')
+
 -- Lspsga
 keymap.set('', '<S-t>', ':LspStop<CR>')
 keymap.set('', '<S-a>', ':LspStart<CR>')
 
+-- Telescope
+local builtin = require("telescope.builtin")
+
+keymap.set('n', ';f', function()
+    builtin.find_files({no_ignore = false, hidden = true})
+end)
+keymap.set('n', ';r', function() builtin.live_grep() end)
+keymap.set('n', ';b', function() builtin.buffers() end)
+keymap.set('n', ';o', function() builtin.oldfiles() end)
+keymap.set('n', ';;', function() builtin.resume() end)
+keymap.set('n', ';e', function() builtin.diagnostics() end)
+keymap.set('n', ';c', function() builtin.colorscheme() end)
+keymap.set('n', ';k', function() builtin.keymaps() end)
+keymap.set('n', ';l', function() builtin.reloader() end)
+keymap.set('n', ';g', function() builtin.git_commits() end)
+
+-- Lspsaga
+local opts = {silent = true}
+keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>", opts) -- Code Action
+keymap.set("n", "ge", "<cmd>Lspsaga lsp_finder<CR>", opts) -- Finder
+keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", opts) -- Rename
+keymap.set("n", "go", "<cmd>Lspsaga outline<CR>", opts) -- Outline
+keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>", opts) -- Hover Doc
+keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>", opts) -- Peek Definition
+keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts) -- Goto Definition
+keymap.set("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- Show line diagnostics
+keymap.set("n", "gs", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- Show cursor diagnostic
+keymap.set("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- Diagnsotic jump
+keymap.set("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- Diagnsotic jump
+keymap.set("n", "gS", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts) -- Signature Help
+keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- Implementation
+keymap.set("n", "gf", "<cmd>lua vim.lsp.buf.format()<CR>", {silent = true}) -- Format
+
+-- Only jump to error
+keymap.set("n", "[e", function()
+    require("lspsaga.diagnostic").goto_prev({
+        severity = vim.diagnostic.severity.ERROR
+    })
+end, opts)
+keymap.set("n", "]e", function()
+    require("lspsaga.diagnostic").goto_next({
+        severity = vim.diagnostic.severity.ERROR
+    })
+end, opts)
+
 -- Lightspeed jump
 keymap.set('n', 'q', '<nop>')
-keymap.set('n', 'qh', '<Plug>Lightspeed_s')
-keymap.set('n', 'ql', '<Plug>Lightspeed_S')
+keymap.set('n', '<leader>h', '<Plug>Lightspeed_s')
+keymap.set('n', '<leader>l', '<Plug>Lightspeed_S')
+keymap.set('n', '<leader>j', '<Plug>Lightspeed_f')
+keymap.set('n', '<leader>k', '<Plug>Lightspeed_F')
+
+-- Maximize
+keymap.set('n', 'sm', ':MaximizerToggle<CR>')
 
 -- Noice history
 keymap.set("n", "<leader>nh", function() require("noice").cmd("history") end)
