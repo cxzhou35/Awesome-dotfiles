@@ -2,7 +2,7 @@
 
 ### Screenshots
 
-![ss](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/20230205152436.png)
+<img src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/20230205152436.png" style="zoom:50%" align="center"/>
 
 ### Install Tutorial
 
@@ -15,3 +15,4 @@ mkdir -p ~/.config/neofetch
 
 cp -r ./dotfiles/neofetch ~/.config/neofetch
 ```
+
