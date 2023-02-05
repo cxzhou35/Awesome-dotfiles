@@ -42,7 +42,7 @@ vim.lsp.handlers["textDocument/signatureHelp"] =
     vim.lsp.with(vim.lsp.handlers.signature_help, {border = "rounded"})
 
 -- Diagnostic symbols in the sign column (gutter)
-local signs = {Error = " ", Warn = " ", Hint = " ", Info = " "}
+local signs = {Error = " ", Warn = " ", Hint = "ﴞ ", Info = " "}
 for type, icon in pairs(signs) do
     local hl = "DiagnosticSign" .. type
     vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
@@ -80,13 +80,14 @@ nvim_lsp.sumneko_lua.setup {
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
                 globals = {'vim'}
+            },
+            workspace = {
+                -- make language server aware of runtime files
+                library = {
+                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                    [vim.fn.stdpath("config") .. "/lua"] = true
+                }
             }
-
-            -- workspace = {
-            --   -- Make the server aware of Neovim runtime files
-            --   library = vim.api.nvim_get_runtime_file("", true),
-            --   checkThirdParty = false
-            -- },
         }
     }
 }

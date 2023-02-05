@@ -10,14 +10,17 @@ local lsp_formatting = function(bufnr)
     })
 end
 
+local formatting = null_ls.builtins.formatting
+
 null_ls.setup {
     sources = {
-        null_ls.builtins.formatting.cmake_format, -- cmake formatting
-        null_ls.builtins.formatting.astyle, -- c/cpp formatting
-        null_ls.builtins.formatting.gofumpt, -- go formatting
-        null_ls.builtins.formatting.autopep8, -- python formatting
-        null_ls.builtins.formatting.rustfmt, -- rust formatting
-        null_ls.builtins.formatting.lua_format -- lua formatting
+        formatting.cmake_format, -- cmake formatting
+        formatting.clang_format, -- c/cpp formatting
+        -- formatting.astyle, -- c/cpp formatting
+        formatting.gofumpt, -- go formatting
+        formatting.autopep8, -- python formatting
+        formatting.rustfmt, -- rust formatting
+        formatting.lua_format -- lua formatting
     },
     on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then

@@ -51,10 +51,12 @@ packer.startup(function(use)
     use 'glepnir/lspsaga.nvim' -- LSP UIs
     use 'onsails/lspkind-nvim' -- Vscode-like Pictograms
     use 'folke/lsp-colors.nvim' -- LSP Color
+    use 'folke/trouble.nvim' -- Display LSP diagnostics
 
     -- Mason
     use 'williamboman/mason.nvim' -- Manage LSP Server
     use 'williamboman/mason-lspconfig.nvim'
+    use 'jay-babu/mason-null-ls.nvim'
 
     -- CMP
     use 'hrsh7th/nvim-cmp' -- Completion
@@ -62,6 +64,9 @@ packer.startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
+
+    -- Undotree
+    use 'mbbill/undotree'
 
     -- Formatter
     use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua

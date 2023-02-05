@@ -80,14 +80,14 @@ keymap.set('', '<C-u>', ':UploadClipboard<CR>')
 
 -- Markdown Preview
 keymap.set('', '<C-m>', '<Plug>MarkdownPreviewToggle')
-keymap.set('', '<C-t>', ':Toc<CR>')
 
 -- Undotree
 keymap.set('n', '<leader>ut', ':UndotreeToggle<CR>')
 
 -- Lspsga
-keymap.set('', '<S-t>', ':LspStop<CR>')
-keymap.set('', '<S-a>', ':LspStart<CR>')
+keymap.set('n', '<leader>sp', ':LspStop<CR>')
+keymap.set('n', '<leader>sa', ':LspStart<CR>')
+keymap.set('n', '<leader>rs', ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- Telescope
 local builtin = require("telescope.builtin")
@@ -106,7 +106,7 @@ keymap.set('n', ';l', function() builtin.reloader() end)
 keymap.set('n', ';g', function() builtin.git_commits() end)
 
 -- Lspsaga
-local opts = {silent = true}
+local opts = {silent = true, noremap = true}
 keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>", opts) -- Code Action
 keymap.set("n", "ge", "<cmd>Lspsaga lsp_finder<CR>", opts) -- Finder
 keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", opts) -- Rename
@@ -133,6 +133,15 @@ keymap.set("n", "]e", function()
         severity = vim.diagnostic.severity.ERROR
     })
 end, opts)
+
+-- Troublbe
+keymap.set("n", "t", '<nop>')
+keymap.set("n", "tt", "<cmd>TroubleToggle<cr>", opts)
+keymap.set("n", "tw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+keymap.set("n", "td", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+keymap.set("n", "tl", "<cmd>TroubleToggle loclist<cr>", opts)
+keymap.set("n", "tq", "<cmd>TroubleToggle quickfix<cr>", opts)
+keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
 
 -- Lightspeed jump
 keymap.set('n', 'q', '<nop>')
