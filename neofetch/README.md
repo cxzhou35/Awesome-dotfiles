@@ -2,9 +2,7 @@
 
 ### Screenshots
 
-<center>
 ![ss](https://gitee.com/vercent_zhou/picgo-md/raw/master/image/20230205152436.png)
-</center>
 
 ### Install Tutorial
 
