@@ -1,6 +1,6 @@
 # Awesome dotfiles for public.
 
-This repo contains some dotfiles for my OS(Ubuntu 20.04 && Mac OS 🖥️).  I put them here for handy and portable use.
+This repo contains some dotfiles for my OS(Ubuntu20.04 and MacOS 🖥️).  I put them here for handy and portable use.
 
 The whole config list is below:
 
@@ -25,6 +25,7 @@ The whole config list is below:
 - [iterm](https://github.com/Xuer04/Awesome-dotfiles/tree/main/iterm)
 - [jetbrains](https://github.com/Xuer04/Awesome-dotfiles/tree/main/jetbrains)
 - [git](https://github.com/Xuer04/Awesome-dotfiles/tree/main/git)
+- [clang](https://github.com/Xuer04/Awesome-dotfiles/tree/main/clang)
 
 If you want to use this config on your PC, maybe this wiki would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki)
 
