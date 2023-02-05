@@ -2,7 +2,7 @@
 
 ### Screenshots
 
-<img src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/20230205152436.png" style="zoom:50%" align="center"/>
+<img src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/20230205152436.png" style="zoom:50%" alt="fig" align=center/> 
 
 ### Install Tutorial
 
