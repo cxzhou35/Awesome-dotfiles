@@ -14,6 +14,11 @@ nvim_tree.setup({
         width = 25,
         mappings = {list = {{key = "u", action = "dir_up"}}}
     },
+    diagnostics = {
+        enable = true,
+        show_on_dirs = true,
+        icons = {hint = "", info = "", warning = "", error = ""}
+    },
     renderer = {
         group_empty = false,
         highlight_git = false,
@@ -56,5 +61,4 @@ nvim_tree.setup({
     },
     filters = {dotfiles = false},
     hijack_directories = {enable = true, auto_open = true}
-
 })

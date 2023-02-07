@@ -11,13 +11,11 @@ vim.cmd("highlight IndentBlanklineIndent5 guifg=#DBE7ED gui=nocombine")
 vim.cmd("highlight IndentBlanklineIndent6 guifg=#ADC5CF gui=nocombine")
 
 indentbl.setup({
-  space_char_blankline = " ",
-  char_highlight_list = {
-    "IndentBlanklineIndent1",
-    "IndentBlanklineIndent2",
-    "IndentBlanklineIndent3",
-    "IndentBlanklineIndent4",
-    "IndentBlanklineIndent5",
-    "IndentBlanklineIndent6",
-  },
+    space_char_blankline = " ",
+    show_current_context = true,
+    char_highlight_list = {
+        "IndentBlanklineIndent1", "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3", "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5", "IndentBlanklineIndent6"
+    }
 })

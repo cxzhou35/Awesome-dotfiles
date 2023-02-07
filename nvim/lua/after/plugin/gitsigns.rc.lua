@@ -26,5 +26,13 @@ gitsigns.setup({
     },
     current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>",
     sign_priority = 6,
-    yadm = {enable = false}
+    yadm = {enable = false},
+    preview_config = {
+        -- Options passed to nvim_open_win
+        border = "single",
+        style = "minimal",
+        relative = "cursor",
+        row = 0,
+        col = 1
+    }
 })

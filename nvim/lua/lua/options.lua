@@ -49,6 +49,16 @@ g['airline#extensions#nvimlsp#enabled'] = 1
 g['airline#extensions#branch#enabled'] = 1
 g['battery#update_statusline'] = 1
 
+-- Indentline
+g.indentLine_enabled = 1
+g.indent_blankline_use_treesitter = true
+g.indent_blankline_show_current_context = true
+g.indent_blankline_buftype_exclude = {"terminal", "nofile"}
+g.indent_blankline_filetype_exclude = {
+    "help", "startify", "dashboard", "packer", "neogitstatus", "NvimTree",
+    "Trouble"
+}
+
 -- Bullets
 g.bullets_enabled_file_types = {'markdown', 'text'}
 g.bullets_enable_in_empty_buffers = 0
