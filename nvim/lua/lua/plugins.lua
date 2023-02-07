@@ -4,10 +4,21 @@ if (not status) then
     return
 end
 
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
+
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
+
+    -- Greeter
+    use "goolord/alpha-nvim"
 
     -- Themes
     use 'shaunsingh/nord.nvim' -- Theme: Nord
@@ -90,13 +101,14 @@ packer.startup(function(use)
 
     -- Markdown
     use 'godlygeek/tabular'
-    use 'plasticboy/vim-markdown' -- Markdown Support
-    use 'askfiy/nvim-picgo' -- Picgo
+    use {'plasticboy/vim-markdown', ft = "markdown"} -- Markdown Support
+    use {'askfiy/nvim-picgo', ft = "markdown"} -- Picgo
     use 'dkarter/bullets.vim' -- Better list
     use 'dhruvasagar/vim-table-mode' -- Better Table
     use 'lukas-reineke/headlines.nvim' -- Headlines Highlight
     use({
         'iamcco/markdown-preview.nvim',
+        ft = "markdown",
         run = function() vim.fn["mkdp#util#install"]() end
     })
 

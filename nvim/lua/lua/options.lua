@@ -32,6 +32,7 @@ opt.iskeyword:append("-")
 opt.autoindent = true
 opt.smartindent = true
 opt.breakindent = true
+opt.softtabstop = 0
 opt.expandtab = true
 opt.smarttab = true
 opt.tabstop = 4

@@ -44,10 +44,10 @@
     "body": ["![${1}](${2}) ${0}"],
     "description": "Add images"
   },
-  "Center Images": {
-    "prefix": "ic",
-    "body": ["<center><img src=\"${1}\" width=\"${2}%\" height=\"auto\" /></center> ${0}"],
-    "description": "Add images in center"
+  "Images with html format": {
+    "prefix": "imgc",
+    "body": ["<div align=center><img src=\"${1}\" style=\"zoom:${2}%\" alt=\"${3}\"></div> ${0}"],
+    "description": "Add images with html format"
   },
   "Insert strikethrough": {
     "prefix": "del",
@@ -96,13 +96,24 @@
   },
   "Insert display math": {
     "prefix": "mo",
-    "body": ["$$", "$0", "$$"],
+    "body": [
+			"$$",
+			"${1:math}",
+			"$$",
+			"${0}"
+	],
     "description": "Insert display math"
   },
   "Insert inline math": {
     "prefix": "mi",
     "body": ["$${1}$ $0"],
     "description": "Insert inline math"
+  },
+
+  "Insert fold block": {
+    "prefix": "fb",
+    "body": ["<details>", "<summary>${1:title}</summary>", "${2:content}", "</details>", "$0"],
+    "description": "Insert fold block"
   },
   "Insert unordered list": {
     "prefix": "ul",

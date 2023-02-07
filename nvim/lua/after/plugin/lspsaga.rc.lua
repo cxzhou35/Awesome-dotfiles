@@ -64,7 +64,7 @@ saga.setup({
     outline = {
         win_position = 'right',
         win_with = '',
-        win_width = 20,
+        win_width = 25,
         auto_enter = true,
         auto_preview = false,
         virt_text = '┃',

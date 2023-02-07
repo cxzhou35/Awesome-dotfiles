@@ -30,12 +30,12 @@
     "description": "Add header level 6"
   },
   "Links": {
-    "prefix": ["link", "link"],
+    "prefix": ["l", "link"],
     "body": ["[${1}](${2}) ${0}"],
     "description": "Add links"
   },
   "URLS": {
-    "prefix": ["url", "url"],
+    "prefix": ["u", "url"],
     "body": ["<${1}> ${0}"],
     "description": "Add urls"
   },
@@ -44,9 +44,14 @@
     "body": ["![${1}](${2}) ${0}"],
     "description": "Add images"
   },
+  "Images with html format": {
+    "prefix": "imgc",
+    "body": ["<img src=\"${1}\" style=\"zoom:${2}%\" alt=\"${3}\" align=center/> ${0}"],
+    "description": "Add images with html format"
+  },
   "Insert strikethrough": {
     "prefix": "del",
-    "body": "~~${1}~~ ${0}",
+    "body": ["~~${1}~~ ${0}"],
     "description": "Insert strikethrough"
   },
   "Insert bold text": {
@@ -59,13 +64,23 @@
     "body": "*${1}* $0",
     "description": "Insert italic text"
   },
+  "Insert highlight text": {
+    "prefix": ["h", "hl"],
+    "body": "==${1}== $0",
+    "description": "Insert highlight text"
+  },
+  "Insert wiki text": {
+    "prefix": ["wk", "wiki"],
+    "body": "[[${1}]] $0",
+    "description": "Insert wiki text"
+  },
   "Insert bold and italic text": {
     "prefix": ["bold and italic", "bi"],
     "body": "***${1}*** $0",
     "description": "Insert bold and italic text"
   },
   "Insert quoted text": {
-    "prefix": "quote",
+    "prefix": "qt",
     "body": "> ${1}",
     "description": "Insert quoted text"
   },

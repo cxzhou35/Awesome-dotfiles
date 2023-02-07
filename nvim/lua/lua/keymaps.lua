@@ -9,6 +9,9 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Save with root permission (not working for now)
 -- vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
+-- edit init.lua
+keymap.set('n', ';v', ':e $MYVIMRC<CR>')
+
 -- Split window
 keymap.set('n', 's', '<nop>')
 keymap.set('n', 'ss', ':split<Return><C-w>w', {silent = true})
@@ -30,6 +33,8 @@ keymap.set('n', '<C-q>', ':bdelete<CR>')
 -- Indent
 keymap.set('v', '>', '>gv')
 keymap.set('v', '<', '<gv')
+keymap.set('n', '<', '<<')
+keymap.set('n', '>', '>>')
 
 -- Move cursor
 keymap.set('n', '<S-h>', '^')
@@ -74,6 +79,10 @@ keymap.set('', '<Space>', '<Plug>(wildfire-fuel)')
 keymap.set('n', 'vw', 'vaw')
 keymap.set('n', 'vp', 'vap')
 keymap.set('n', 'vb', 'vab')
+
+-- Yank
+keymap.set('n', 'yp', 'yyp')
+keymap.set('n', 'yw', 'yaw')
 
 -- Picgo
 keymap.set('', '<C-u>', ':UploadClipboard<CR>')
