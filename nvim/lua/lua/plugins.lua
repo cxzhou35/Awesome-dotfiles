@@ -14,6 +14,15 @@ vim.cmd([[
 
 vim.cmd [[packadd packer.nvim]]
 
+-- Have packer use a popup window
+packer.init({
+    display = {
+        open_fn = function()
+            return require("packer.util").float({border = "rounded"})
+        end
+    }
+})
+
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
