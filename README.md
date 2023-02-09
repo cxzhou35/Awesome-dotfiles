@@ -29,9 +29,10 @@ The whole config list is below:
 
 If you want to use this config on your PC, maybe this wiki would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki)
 
-Continuously updated...... 🍀
-
 Interested in any other resource? Welcome to my [profile page](https://github.com/Xuer04) 😜
+
+If this is helpful to you, please give me a star ⭐.
+[![Stars](https://img.shields.io/github/stars/Xuer04/Awesome-dotfiles.svg?label=Stars&style=social)](https://github.com/Xuer04/Awesome-dotfiles)
 
 > **Warning**
 >
