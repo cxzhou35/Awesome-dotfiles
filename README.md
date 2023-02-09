@@ -34,5 +34,7 @@ Continuously updated...... 🍀
 Interested in any other resource? Welcome to my [profile page](https://github.com/Xuer04) 😜
 
 > **Warning**
+>
 > The Vim and Neovim configurations of this repo have been deprecated.
+>
 > The latest content can be obtained by visiting this [repo](https://github.com/Xuer04/Awesome-neovim), if this is helpful to you, please give me a star ⭐️
