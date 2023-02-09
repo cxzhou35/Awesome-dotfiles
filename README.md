@@ -1,8 +1,12 @@
 # Awesome dotfiles for public.
 
-This repo contains some dotfiles for my OS(Ubuntu20.04 and MacOS 🖥️).  I put them here for handy and portable use.
+This repo contains some dotfiles for my OS( Ubuntu20.04 and Mac OS 🖥️ ).
 
-The whole config list is below:
+I put them here for handy and portable use.
+If this is helpful to you, please give me a star ⭐.
+[![Stars](https://img.shields.io/github/stars/Xuer04/Awesome-dotfiles.svg?label=Stars&style=social)](https://github.com/Xuer04/Awesome-dotfiles)
+
+## Table of contents
 
 - [conda](https://github.com/Xuer04/Awesome-dotfiles/tree/main/conda)
 - [fusuma](https://github.com/Xuer04/Awesome-dotfiles/tree/main/fusuma)
@@ -27,15 +31,19 @@ The whole config list is below:
 - [git](https://github.com/Xuer04/Awesome-dotfiles/tree/main/git)
 - [clang](https://github.com/Xuer04/Awesome-dotfiles/tree/main/clang)
 
-If you want to use this config on your PC, maybe this wiki would be helpful. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki)
+## Wiki
 
-Interested in any other resource? Welcome to my [profile page](https://github.com/Xuer04) 😜
+The Wiki Page is Here. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/wiki)
 
-If this is helpful to you, please give me a star ⭐.
-[![Stars](https://img.shields.io/github/stars/Xuer04/Awesome-dotfiles.svg?label=Stars&style=social)](https://github.com/Xuer04/Awesome-dotfiles)
+## Update
 
 > **Warning**
 >
 > The Vim and Neovim configurations of this repo have been deprecated.
 >
 > The latest content can be obtained by visiting this [repo](https://github.com/Xuer04/Awesome-neovim).
+
+----------
+
+Interested in any other resource? Welcome to my [profile page](https://github.com/Xuer04) 😜
+
