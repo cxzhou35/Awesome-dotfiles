@@ -457,11 +457,11 @@
     }
   },
   "Ansi 14 Color" : {
-    "Red Component" : 0.20784313976764679,
+    "Red Component" : 0.4996610339730978,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.48627451062202454,
+    "Blue Component" : 0.66923960884269251,
     "Alpha Component" : 1,
-    "Green Component" : 0.65490198135375977
+    "Green Component" : 0.771942138671875
   },
   "Ansi 2 Color" : {
     "Red Component" : 0.65490198135375977,
