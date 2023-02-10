@@ -1,7 +1,0 @@
-<application>
-  <component name="UISettings">
-    <option name="compactTreeIndents" value="true" />
-    <option name="DISABLE_MNEMONICS_IN_CONTROLS" value="true" />
-    <option name="showTreeIndentGuides" value="true" />
-  </component>
-</application>

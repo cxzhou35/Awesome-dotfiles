@@ -26,10 +26,10 @@ If this is helpful to you, please give me a star ⭐.
 - [ulauncher](https://github.com/Xuer04/Awesome-dotfiles/tree/main/ulauncher)
 - [btop](https://github.com/Xuer04/Awesome-dotfiles/tree/main/btop)
 - [typora](https://github.com/Xuer04/Awesome-dotfiles/tree/main/typora)
-- [iterm](https://github.com/Xuer04/Awesome-dotfiles/tree/main/iterm)
 - [jetbrains](https://github.com/Xuer04/Awesome-dotfiles/tree/main/jetbrains)
 - [git](https://github.com/Xuer04/Awesome-dotfiles/tree/main/git)
 - [clang](https://github.com/Xuer04/Awesome-dotfiles/tree/main/clang)
+- [iterm2](https://github.com/Xuer04/Awesome-dotfiles/tree/main/iterm2)
 
 ## Wiki
 
