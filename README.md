@@ -8,28 +8,27 @@ If this is helpful to you, please give me a star ⭐.
 
 ## Table of contents
 
-- [conda](https://github.com/Xuer04/Awesome-dotfiles/tree/main/conda)
-- [fusuma](https://github.com/Xuer04/Awesome-dotfiles/tree/main/fusuma)
-- [lazygit](https://github.com/Xuer04/Awesome-dotfiles/tree/main/lazygit)
-- [neofetch](https://github.com/Xuer04/Awesome-dotfiles/tree/main/neofetch)
-- [nvim](https://github.com/Xuer04/Awesome-dotfiles/tree/main/nvim)
-- [oh-my-zsh](https://github.com/Xuer04/Awesome-dotfiles/tree/main/oh-my-zsh)
-- [pip](https://github.com/Xuer04/Awesome-dotfiles/tree/main/pip)
-- [ranger](https://github.com/Xuer04/Awesome-dotfiles/tree/main/ranger)
-- [terminator](https://github.com/Xuer04/Awesome-dotfiles/tree/main/terminator)
-- [vim](https://github.com/Xuer04/Awesome-dotfiles/tree/main/vim)
-- [vscode](https://github.com/Xuer04/Awesome-dotfiles/tree/main/vscode)
-- [apt](https://github.com/Xuer04/Awesome-dotfiles/tree/main/apt)
-- [gnome themes](https://github.com/Xuer04/Awesome-dotfiles/tree/main/themes)
-- [gedit](https://github.com/Xuer04/Awesome-dotfiles/tree/main/gedit)
-- [fzf](https://github.com/Xuer04/Awesome-dotfiles/tree/main/fzf)
-- [ulauncher](https://github.com/Xuer04/Awesome-dotfiles/tree/main/ulauncher)
-- [btop](https://github.com/Xuer04/Awesome-dotfiles/tree/main/btop)
-- [typora](https://github.com/Xuer04/Awesome-dotfiles/tree/main/typora)
-- [jetbrains](https://github.com/Xuer04/Awesome-dotfiles/tree/main/jetbrains)
-- [git](https://github.com/Xuer04/Awesome-dotfiles/tree/main/git)
-- [clang](https://github.com/Xuer04/Awesome-dotfiles/tree/main/clang)
-- [iterm2](https://github.com/Xuer04/Awesome-dotfiles/tree/main/iterm2)
+- [Conda](https://github.com/Xuer04/Awesome-dotfiles/tree/main/conda)
+- [Fusuma](https://github.com/Xuer04/Awesome-dotfiles/tree/main/fusuma)
+- [Lazygit](https://github.com/Xuer04/Awesome-dotfiles/tree/main/lazygit)
+- [Neofetch](https://github.com/Xuer04/Awesome-dotfiles/tree/main/neofetch)
+- [Oh-my-zsh](https://github.com/Xuer04/Awesome-dotfiles/tree/main/oh-my-zsh)
+- [Pip](https://github.com/Xuer04/Awesome-dotfiles/tree/main/pip)
+- [Ranger](https://github.com/Xuer04/Awesome-dotfiles/tree/main/ranger)
+- [Terminator](https://github.com/Xuer04/Awesome-dotfiles/tree/main/terminator)
+- [Vscode](https://github.com/Xuer04/Awesome-dotfiles/tree/main/vscode)
+- [Apt](https://github.com/Xuer04/Awesome-dotfiles/tree/main/apt)
+- [Gnome themes](https://github.com/Xuer04/Awesome-dotfiles/tree/main/themes)
+- [Gedit](https://github.com/Xuer04/Awesome-dotfiles/tree/main/gedit)
+- [Fzf](https://github.com/Xuer04/Awesome-dotfiles/tree/main/fzf)
+- [Ulauncher](https://github.com/Xuer04/Awesome-dotfiles/tree/main/ulauncher)
+- [Btop](https://github.com/Xuer04/Awesome-dotfiles/tree/main/btop)
+- [Typora](https://github.com/Xuer04/Awesome-dotfiles/tree/main/typora)
+- [Git](https://github.com/Xuer04/Awesome-dotfiles/tree/main/git)
+- [Clang](https://github.com/Xuer04/Awesome-dotfiles/tree/main/clang)
+- [Iterm2](https://github.com/Xuer04/Awesome-dotfiles/tree/main/iterm2)
+- ~~[Vim](https://github.com/Xuer04/Awesome-dotfiles/tree/main/vim)~~
+- ~~[Neovim](https://github.com/Xuer04/Awesome-dotfiles/tree/main/nvim)~~
 
 ## Wiki
 
@@ -39,9 +38,9 @@ The Wiki Page is Here. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/
 
 > **Warning**
 >
-> The Vim and Neovim configurations of this repo have been deprecated.
+> The [Vim](https://github.com/Xuer04/Awesome-dotfiles/tree/main/vim) and [Neovim](https://github.com/Xuer04/Awesome-dotfiles/tree/main/nvim) configurations in this repo have been deprecated.
 >
-> The latest content can be obtained by visiting this [repo](https://github.com/Xuer04/Awesome-neovim).
+> The latest configurations can be found in this repo. ➡️ [Neovim](https://github.com/Xuer04/Awesome-neovim)
 
 ----------
 
