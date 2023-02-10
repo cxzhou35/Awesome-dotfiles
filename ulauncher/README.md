@@ -1,8 +1,8 @@
-## Here is the ulauncher config for Zicx
+## Ulauncher Themes
 
-#### How to install theme on your PC ?
+### Installation
 
-```bash
+```sh
 # Nord
 git clone https://github.com/KiranWells/ulauncher-nord/ ~/.config/ulauncher/user-themes/nord
 

@@ -1,13 +1,16 @@
-## Here is the tmux config file for Zicx
-#### The setup guidance is below:
-```bash
-cd
-git clone https://github.com/Xuer04/Mydotfiles.git ~/dotfiles 
-cp -r ~/dotfiles/tmux ~/.tmux
+## Tmux
+
+### Installation
+
+```sh
+git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/.dotfiles
+cp -r ~/.dotfiles/tmux ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf
-cp ~/dotfiles/tmux/.tmux.conf.local ~
+cp ~/.dotfiles/tmux/.tmux.conf.local ~
 ```
 
-**Tips:** Some symbols and icons are based on Nerd Font. You need to setup these fonts in your terminal.
-
-I recommend [FiraCode NerdFont](https://github.com/tonsky/FiraCode).
+> **Tips:**
+>
+> Some symbols and icons are based on **Nerd Font**. You need to install corresponding fonts.
+>
+> [Fira Code NerdFont](https://github.com/tonsky/FiraCode) is recommended.

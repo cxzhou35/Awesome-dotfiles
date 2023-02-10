@@ -1,27 +1,25 @@
-## Here is the alacritty config file for Zicx
-#### How to install alacritty and its config on your PC ?
-`Ubuntu/Debian`
-```bash
-sudo add-apt-repository ppa:mmstick76/alacritty 
+## Alacritty
 
-sudo apt update
+### Installation
 
-sudo apt install alacritty
+**Ubuntu/Debian**:
+
+```sh
+sudo add-apt-repository ppa:mmstick76/alacritty # add ppa to apt
+sudo apt update                                 # update apt source
+sudo apt install alacritty                      # install alacritty
 ```
 
-`Mac`
+**Mac**:
 ```bash
 brew install alacritty
 ```
 
-Then
+**After install alacritty, clone the repo to use config**:
 ```bash
-cd ~
+git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/.dotfiles
 
-mkdir -p .config/alacritty
-
-git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/dotfiles
-
-cp ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty
+cp -r ~/dotfiles/alacritty ~/.config/
 ```
-Now you can refresh your terminal and enjoy the alacritty! 
+
+Relaunch alacritty, now you can enjoy it!

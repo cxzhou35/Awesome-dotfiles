@@ -1,15 +1,13 @@
-# Here is the gedit config for Zicx
+# Gedit Themes
 
-### How to install this theme ?
+### Installation
 
-```bash
+```sh
 cd ~
-
 wget https://github.com/arcticicestudio/nord-gedit/blob/develop/src/xml/nord.xml
-
 sudo mv nord.xml /usr/share/gtksourceview-3.0/styles/
 ```
 
-Relaunch gedit, add the nord theme in the settings.
+Relaunch gedit, add the Nord theme into the settings.
 
-Then you can use this nord theme for your gedit.
+Now you can enjoy using Nord theme in gedit.
