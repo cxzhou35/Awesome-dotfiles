@@ -7,7 +7,6 @@ local wo = vim.wo
 -- General
 wo.number = true
 opt.title = true
-opt.title = true
 opt.hlsearch = true
 opt.shell = 'zsh'
 opt.backup = false
