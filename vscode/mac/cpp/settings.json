@@ -1,4 +1,3 @@
 {
-    "C_Cpp.errorSquiggles": "enabled",
-    "cmake.sourceDirectory": "${workspaceFolder}/projects/sort"
+    "C_Cpp.errorSquiggles": "enabled"
 }
