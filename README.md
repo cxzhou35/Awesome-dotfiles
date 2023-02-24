@@ -27,6 +27,7 @@ If this is helpful to you, please give me a star ⭐.
 - [Git](https://github.com/Xuer04/Awesome-dotfiles/tree/main/git)
 - [Clang](https://github.com/Xuer04/Awesome-dotfiles/tree/main/clang)
 - [Iterm2](https://github.com/Xuer04/Awesome-dotfiles/tree/main/iterm2)
+- [Rime](https://github.com/Xuer04/Awesome-dotfiles/tree/main/rime)
 - ~~[Vim](https://github.com/Xuer04/Awesome-dotfiles/tree/main/vim)~~
 - ~~[Neovim](https://github.com/Xuer04/Awesome-dotfiles/tree/main/nvim)~~
 

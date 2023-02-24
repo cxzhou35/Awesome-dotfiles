@@ -1,0 +1,18 @@
+# 碼表各字段以製表符（Tab）分隔
+# 順序爲：文字+編碼+權重（決定重碼的次序、可選）,用tab键间隔
+
+iOS ios
+iPhone  i
+macOS   macos
+Mac mac
+B站  bzhan
+HarmonyOS   hm
+T恤  txu
+U盘  upan
+up主 upzhu
+zjajzcx3566@163.com 163
+zjajzcx3566@gmail.com   gm
+周晨旭 zcx 1
+浙江大学    zjdx
+王一帆 f   2
+成骏焘 tall    1
