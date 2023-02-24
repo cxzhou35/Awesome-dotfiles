@@ -60,3 +60,4 @@ function loadhugo(){
 function vimrc(){
   cd ~/.config/nvim && nvim init.lua
 }
+
