@@ -44,3 +44,11 @@ luac.out
 *.hex
 
 sync.sh
+
+# rime
+rime/sync/*
+rime/opencc/*
+rime/build/*
+rime/easy_en.userdb/*
+rime/luna_pinyin.userdb/*
+

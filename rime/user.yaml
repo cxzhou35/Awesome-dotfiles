@@ -1,5 +1,9 @@
 var:
-  last_build_time: 1677229695
+  last_build_time: 1677231289
+  option:
+    full_shape: false
   previously_selected_schema: luna_pinyin_simp
   schema_access_time:
-    luna_pinyin_simp: 1677222572
+    double_pinyin_flypy: 1677231100
+    luna_pinyin_simp: 1677231137
+    numbers: 1677231117
