@@ -1,6 +1,6 @@
 # Awesome dotfiles for public.
 
-This repo contains some dotfiles for my OS( Ubuntu20.04 and Mac OS 🖥️ ).
+This repo contains some dotfiles for my OS( Ubuntu20.04 and macOS 🖥️ ).
 
 I put them here for handy and portable use.
 If this is helpful to you, please give me a star ⭐.
