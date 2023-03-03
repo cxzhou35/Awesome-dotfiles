@@ -22,7 +22,6 @@
 
 2. Clone the repo:
     ```sh
-    cd ~
     git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/.dotfiles
     ```
 
