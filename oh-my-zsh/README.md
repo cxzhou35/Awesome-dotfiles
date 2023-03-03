@@ -27,7 +27,8 @@
 
 3. Load configs:
     ```sh
-    cp ~/.dotfiles/oh-my-zsh/* ~/.oh-my-zsh/custom/
+    cp ~/.dotfiles/oh-my-zsh/custom/* ~/.oh-my-zsh/custom/
+    cp ~/.dotfiles/oh-my-zsh/themes/* ~/.oh-my-zsh/themes/
     cp ~/.dotfiles/oh-my-zsh/.zshrc ~
     ```
 
