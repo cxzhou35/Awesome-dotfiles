@@ -4,11 +4,12 @@
 
 ```sh
 .
-├── .zshrc
-├── alias.zsh
-├── config.zsh
-├── script.zsh
-└── my-magic.zsh-theme
+├── custom
+│   ├── alias.zsh
+│   ├── config.zsh
+│   └── script.zsh
+└── themes
+    └── my-magic.zsh-theme
 ```
 
 ### Installation
