@@ -54,12 +54,14 @@
     },
     // editor settings
     "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
     "editor.accessibilitySupport": "on",
-    "editor.wordWrap": "on",
     "editor.wordWrapColumn": 200,
     "editor.inlineSuggest.enabled": true,
     "editor.detectIndentation": false,
     "editor.minimap.enabled": false,
+    "editor.wordWrap": "wordWrapColumn",
     "editor.fontFamily": "Source Code Pro Regular",
     "editor.fontSize": 16,
     "editor.formatOnSave": true,
@@ -108,13 +110,16 @@
     "extensions.autoUpdate": false,
     // python settings
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-    "python.formatting.provider": "autopep8",
+    "python.formatting.provider": "none",
+    "[python]": {
+        "editor.formatOnType": true
+    },
     // lldb settings
     "lldb.displayFormat": "binary",
     "lldb.launch.terminal": "external",
     // jupyter notebook settings
     "notebook.lineNumbers": "on",
-    "notebook.markup.fontSize": 14,
+    "notebook.markup.fontSize": 16,
     "jupyter.askForKernelRestart": false,
     // cmake settings
     "cmake.configureOnOpen": true,
@@ -127,6 +132,7 @@
     // vim settings
     "vim.easymotion": true,
     "vim.surround": true,
+    "vim.smartRelativeLine": true,
     "vim.sneak": true,
     "vim.autoindent": true,
     "vim.ignorecase": true,
@@ -135,6 +141,7 @@
     "vim.hlsearch": true,
     "vim.incsearch": true,
     "vim.leader": "<space>",
+    "vim.whichwrap": "b,s,e,w",
     "vim.handleKeys": {
         "<C-f>": true,
         "<C-t>": false,
@@ -183,7 +190,7 @@
                 "c"
             ],
             "commands": [
-                "workbench.action.showCommands",
+                "workbench.action.showCommands"
             ],
             "silent": true
         },
@@ -275,7 +282,7 @@
                 "<C-h>"
             ],
             "commands": [
-                ":nohl",
+                ":nohl"
             ]
         },
         // select buffer
@@ -411,6 +418,7 @@
     // latex settings
     "latex-workshop.latex.recipe.default": "xelatex * 2",
     "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.message.error.show": false,
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "[latex]": {
@@ -519,6 +527,7 @@
         "inkscapeCreate": "inkscape-figures create ${selectedText} ${fileDirname}/Figures/",
         "inkscapeEdit": "inkscape-figures edit ${fileDirname}/Figures/",
         "inkscapeStart": "inkscape-figures watch",
+        "quiver": "open -na 'Brave Browser' --args --new-window <path-to-quiver>/quiver/src/index.html"
     },
     // code-runner settings
     "code-runner.runInTerminal": true,
@@ -667,7 +676,7 @@
         "editor.acceptSuggestionOnEnter": "on",
         "editor.defaultFormatter": "yzhang.markdown-all-in-one"
     },
-    "markdown.preview.lineHeight": 1.4,
+    "markdown.preview.lineHeight": 1.2,
     "markdown.extension.preview.autoShowPreviewToSide": false,
     "markdown.extension.print.theme": "dark",
 }

@@ -420,20 +420,6 @@
         "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Visual'"
     },
     {
-        "key": "ctrl+c",
-        "command": "command-runner.run",
-        "args": {
-            "command": "quiver",
-            "terminal": {
-                "name": "runCommand",
-                "shellArgs": [],
-                "autoClear": true,
-                "autoFocus": false
-            }
-        },
-        "when": "editorTextFocus"
-    },
-    {
         "key": "shift+cmd+k",
         "command": "-editor.action.deleteLines",
         "when": "textInputFocus && !editorReadonly"
@@ -442,5 +428,5 @@
         "key": "ctrl+f",
         "command": "-cursorRight",
         "when": "textInputFocus"
-    }
+    },
 ]
