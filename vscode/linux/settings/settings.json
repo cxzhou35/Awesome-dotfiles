@@ -107,6 +107,9 @@
     "audioCues.diffLineInserted": "off",
     "audioCues.notebookCellCompleted": "off",
     "audioCues.notebookCellFailed": "off",
+    "audioCues.diffLineModified": "off",
+    "audioCues.lineHasInlineSuggestion": "off",
+    "audioCues.terminalCommandFailed": "off",
     // debug settings
     "debug.showBreakpointsInOverviewRuler": true,
     "debug.onTaskErrors": "debugAnyway",
