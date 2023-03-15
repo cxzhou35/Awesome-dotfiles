@@ -1,9 +1,10 @@
-# the anaconda config for ubuntu 20.04
+report_errors: true
 auto_activate_base: false
 ssl_verify: true
+show_channel_urls: true
 channels:
   - http://mirrors.aliyun.com/anaconda/pkgs/main
   - http://mirrors.aliyun.com/anaconda/pkgs/r
   - http://mirrors.aliyun.com/anaconda/pkgs/msys2
-show_channel_urls: true
+
 

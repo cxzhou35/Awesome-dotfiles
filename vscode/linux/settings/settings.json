@@ -1,0 +1,757 @@
+{
+    // basic settings
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "window.dialogStyle": "custom",
+    "window.titleBarStyle": "custom",
+    "window.restoreWindows": "none",
+    "window.zoomLevel": 1.2,
+    "window.openFilesInNewWindow": "default",
+    "window.commandCenter": true,
+    "update.showReleaseNotes": false,
+    "update.mode": "start",
+    "security.workspace.trust.untrustedFiles": "open",
+    "vsicons.dontShowNewVersionMessage": true,
+    // file settings
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange",
+    "files.autoGuessEncoding": true,
+    "files.watcherExclude": {
+        "**/node_modules/*/**": false,
+        "**/.git/subtree-cache/**": false
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.conda": true,
+        "**/.ipynb_checkpoints": true,
+        "**/.local": true,
+        "**/.ssh": true,
+        "**/.svn": false,
+        "**/Thumbs.db": false
+    },
+    "search.exclude": {
+        "**/bower_components": false,
+        "**/node_modules": false
+    },
+    // terminal settings
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.gpuAcceleration": "off",
+    "terminal.explorerKind": "external",
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.localEchoExcludePrograms": [
+        "vim",
+        "vi"
+    ],
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    // workbench settings
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.colorTheme": "Nord",
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "none",
+    "workbench.layoutControl.enabled": false,
+    "workbench.editorAssociations": {
+        "*.pdf": "default"
+    },
+    // editor settings
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.formatOnPaste": true,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.foldingMaximumRegions": 10000,
+    "editor.cursorBlinking": "solid",
+    "editor.guides.bracketPairs": "active",
+    "editor.accessibilitySupport": "on",
+    "editor.wordWrapColumn": 200,
+    "editor.inlineSuggest.enabled": true,
+    "editor.detectIndentation": false,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.fontFamily": "Hack Nerd Font",
+    "editor.fontSize": 16,
+    "editor.formatOnSave": true,
+    "editor.tabCompletion": "off", // prevent tab auto completion
+    "editor.unicodeHighlight.includeStrings": false,
+    "diffEditor.wordWrap": "on",
+    "editor.unicodeHighlight.allowedCharacters": {
+        "！": true
+    },
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.smoothScrolling": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.stickyScroll.enabled": true,
+    // audioCues settings
+    "audioCues.lineHasBreakpoint": "off",
+    "audioCues.lineHasInlinSuggestion": "off",
+    "audioCues.noInlayHints": "off",
+    "audioCues.lineHasFoldedArea": "off",
+    "audioCues.onDebugBreak": "off",
+    "audioCues.lineHasError": "off",
+    "audioCues.taskCompleted": "off",
+    "audioCues.taskFailed": "off",
+    "audioCues.terminalQuickFix": "off",
+    "audioCues.diffLineDeleted": "off",
+    "audioCues.diffLineInserted": "off",
+    "audioCues.notebookCellCompleted": "off",
+    "audioCues.notebookCellFailed": "off",
+    "audioCues.diffLineModified": "off",
+    "audioCues.lineHasInlineSuggestion": "off",
+    "audioCues.terminalCommandFailed": "off",
+    // debug settings
+    "debug.showBreakpointsInOverviewRuler": true,
+    "debug.onTaskErrors": "debugAnyway",
+    "debug.terminal.clearBeforeReusing": true,
+    // extensions settings
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    // opacity
+    "glassit.alpha": 240,
+    // latex settings
+    // 设置是否自动编译
+    "latex-workshop.latex.autoBuild.run": "never",
+    //右键菜单
+    "latex-workshop.showContextMenu": true,
+    //从使用的包中自动补全命令和环境
+    "latex-workshop.intellisense.package.enabled": true,
+    //编译出错时设置是否弹出气泡设置
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+    // 编译工具和命令
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    // 用于配置编译链
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "PDFLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "BibTeX",
+            "tools": [
+                "bibtex"
+            ]
+        },
+        {
+            "name": "LaTeXmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xelatex * 2",
+            "tools": [
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    //文件清理。此属性必须是字符串数组
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+        // "*.gz"
+    ],
+    // recipe编译组合
+    "latex-workshop.latex.recipe.default": "xelatex * 2",
+    // 用于反向同步的内部查看器的键绑定。ctrl/cmd +点击(默认)或双击
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    //使用 SumatraPDF 预览编译好的PDF文件
+    // 设置VScode内部查看生成的pdf文件
+    "latex-workshop.view.pdf.viewer": "tab",
+    // PDF查看器用于在\ref上的[View on PDF]链接
+    "latex-workshop.view.pdf.ref.viewer": "auto",
+    // 使用外部查看器时要执行的命令。此功能不受官方支持。
+    "latex-workshop.view.pdf.external.viewer.command": "/usr/bin/evince", // 注意修改路径
+    // 使用外部查看器时，latex-workshop.view.pdf.external.view .command的参数。此功能不受官方支持。%PDF%是用于生成PDF文件的绝对路径的占位符。
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "%PDF%"
+    ],
+    // 将synctex转发到外部查看器时要执行的命令。此功能不受官方支持。
+    "latex-workshop.view.pdf.external.synctex.command": "/usr/bin/evince", // 注意修改路径
+    // latex-workshop.view.pdf.external.synctex的参数。当同步到外部查看器时。%LINE%是行号，%PDF%是生成PDF文件的绝对路径的占位符，%TEX%是触发syncTeX的扩展名为.tex的LaTeX文件路径。
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "-forward-search",
+        "%TEX%",
+        "%LINE%",
+        "-reuse-instance",
+        "-inverse-search",
+        // "\"E:/vscode/Microsoft VS Code/Code.exe\" \"E:/vscode/Microsoft VS Code/resources/app/out/cli.js\" -r -g \"%f:%l\"", // 注意修改路径
+        "%PDF%"
+    ],
+    // "C_Cpp.updateChannel": "Insiders",
+    // "workbench.editorAssociations": {
+    //     "*.ipynb": "jupyter.notebook.ipynb",
+    //     "*.pdf": "default"
+    // },
+    // jupyter notebook settings
+    "notebook.lineNumbers": "on",
+    "notebook.markup.fontSize": 16,
+    "jupyter.askForKernelRestart": false,
+    "jupyter.alwaysTrustNotebooks": true,
+    "notebook.kernelProviderAssociations": [
+        {
+            "viewType": "jupyter-notebook",
+            "kernelProvider": "ms-toolsai.jupyter"
+        }
+    ],
+    "http.proxySupport": "off",
+    "C_Cpp.suggestSnippets": true,
+    "[python]": {
+        "editor.wordBasedSuggestions": false
+    },
+    "extensions.ignoreRecommendations": true,
+    "[shellscript]": {
+        "files.eol": "\n"
+    },
+    "[latex]": {
+        "editor.formatOnPaste": true,
+        "editor.suggestSelection": "recentlyUsedByPrefix"
+    },
+    "files.associations": {
+        "*.ipynb": "python"
+    },
+    // better comments settings
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#F05654",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#574266",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "TODO",
+            "color": "#00E500",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#EEDEB0",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    // markdown settings
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.renderWhitespace": "all",
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "on",
+            "strings": "on"
+        },
+        "editor.acceptSuggestionOnEnter": "on",
+    },
+    "markdown.preview.lineHeight": 1.2,
+    "markdown.extension.preview.autoShowPreviewToSide": false,
+    "markdown.extension.print.theme": "dark",
+    // code-runner settings
+    "code-runner.runInTerminal": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.showExecutionMessage": false,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && open -a terminal $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt -std=c++17 && open -a terminal $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runhaskell",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "sml": "cd $dir && sml $fileName"
+    },
+    "code-runner.executorMapByFileExtension": {
+        ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+        ".vbs": "cscript //Nologo",
+        ".scala": "scala",
+        ".jl": "julia",
+        ".cr": "crystal",
+        ".ml": "ocaml",
+        ".exs": "elixir",
+        ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        ".rkt": "racket",
+        ".scm": "csi -script",
+        ".ahk": "autohotkey",
+        ".au3": "autoit3",
+        ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+        ".kts": "kotlinc -script",
+        ".dart": "dart",
+        ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        ".hs": "runhaskell",
+        ".nim": "nim compile --verbosity:0 --hints:off --run",
+        ".csproj": "dotnet run --project",
+        ".fsproj": "dotnet run --project",
+        ".lisp": "sbcl --script",
+        ".kit": "kitc --run",
+        ".v": "v run",
+        ".vsh": "v run",
+        ".sass": "sass --style expanded",
+        ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        ".ring": "ring",
+        ".sml": "cd $dir && sml $fileName"
+    },
+    "code-runner.temporaryFileName": "crfile",
+    "code-runner.showRunCommandInExplorerContextMenu": false,
+    "code-runner.languageIdToFileExtensionMap": {
+        "bat": ".bat",
+        "powershell": ".ps1",
+        "typescript": ".ts"
+    },
+    // vim settings
+    "vim.easymotion": true,
+    "vim.surround": true,
+    "vim.smartRelativeLine": true,
+    "vim.sneak": true,
+    "vim.autoindent": true,
+    "vim.ignorecase": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.leader": "<space>",
+    "vim.whichwrap": "b,s,e,w",
+    "vim.handleKeys": {
+        "<C-f>": true,
+        "<C-t>": false,
+        "<C-e>": false
+    },
+    "vim.visualModeKeyBindings": [
+        {
+            "after": [
+                "^"
+            ],
+            "before": [
+                "H"
+            ]
+        },
+        {
+            "after": [
+                "g",
+                "_"
+            ],
+            "before": [
+                "L"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // show commands
+        {
+            "before": [
+                "s",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.showCommands"
+            ],
+            "silent": true
+        },
+        // create new file
+        {
+            "before": [
+                "<leader>",
+                "n"
+            ],
+            "commands": [
+                "explorer.newFile"
+            ],
+            "silent": true
+        },
+        // create new directory
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "commands": [
+                "explorer.newFolder"
+            ],
+            "silent": true
+        },
+        // bookmarks
+        {
+            "before": [
+                "<leader>",
+                "b"
+            ],
+            "commands": [
+                "bookmarks.toggle"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "b",
+                "l"
+            ],
+            "commands": [
+                "bookmarks.list"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "b",
+                "p"
+            ],
+            "commands": [
+                "bookmarks.jumpToPrevious"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "b",
+                "n"
+            ],
+            "commands": [
+                "bookmarks.jumpToNext"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "b",
+                "c"
+            ],
+            "commands": [
+                "bookmarks.clear"
+            ],
+            "silent": true
+        },
+        // undo
+        {
+            "before": [
+                "u"
+            ],
+            "commands": [
+                "undo"
+            ]
+        },
+        // no highlight
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        // select buffer
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "p"
+            ],
+            "commands": [
+                "editor.action.peekDefinition"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "d"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ],
+            "silent": true
+        },
+        // jump to the begin of the line
+        {
+            "after": [
+                "^"
+            ],
+            "before": [
+                "H"
+            ]
+        },
+        // jump to the end of the line
+        {
+            "after": [
+                "g",
+                "_"
+            ],
+            "before": [
+                "L"
+            ]
+        },
+        // save file
+        {
+            "commands": [
+                ":wa!"
+            ],
+            "before": [
+                "f",
+                "w"
+            ]
+        },
+        // save and quit file
+        {
+            "commands": [
+                ":wq!"
+            ],
+            "before": [
+                "f",
+                "w",
+                "q"
+            ]
+        },
+        // quit file
+        {
+            "commands": [
+                ":q!"
+            ],
+            "before": [
+                "f",
+                "q"
+            ]
+        }
+    ]
+}
