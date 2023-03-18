@@ -49,19 +49,21 @@
     "workbench.list.smoothScrolling": true,
     "workbench.startupEditor": "none",
     "workbench.layoutControl.enabled": false,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.perEditorGroup": true,
     "workbench.editorAssociations": {
         "*.pdf": "default"
     },
     // editor settings
     "editor.unicodeHighlight.invisibleCharacters": false,
     "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
     "editor.accessibilitySupport": "on",
-    "editor.wordWrapColumn": 200,
     "editor.inlineSuggest.enabled": true,
     "editor.detectIndentation": false,
+    "editor.renderWhitespace": "none",
     "editor.minimap.enabled": false,
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 200,
     "editor.fontFamily": "Source Code Pro Regular",
     "editor.fontSize": 16,
     "editor.formatOnSave": true,
@@ -80,6 +82,9 @@
     "audioCues.lineHasBreakpoint": "off",
     "audioCues.lineHasInlinSuggestion": "off",
     "audioCues.noInlayHints": "off",
+    "audioCues.diffLineModified": "off",
+    "audioCues.lineHasInlineSuggestion": "off",
+    "audioCues.terminalCommandFailed": "off",
     "audioCues.lineHasFoldedArea": "off",
     "audioCues.onDebugBreak": "off",
     "audioCues.lineHasError": "off",
@@ -90,9 +95,6 @@
     "audioCues.diffLineInserted": "off",
     "audioCues.notebookCellCompleted": "off",
     "audioCues.notebookCellFailed": "off",
-    "audioCues.diffLineModified": "off",
-    "audioCues.lineHasInlineSuggestion": "off",
-    "audioCues.terminalCommandFailed": "off",
     // debug settings
     "debug.showBreakpointsInOverviewRuler": true,
     "debug.onTaskErrors": "debugAnyway",
@@ -114,6 +116,8 @@
     // python settings
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "python.formatting.provider": "none",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.logLevel": "Warning",
     "[python]": {
         "editor.formatOnType": true
     },
@@ -134,21 +138,41 @@
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, AllowShortIfStatementsOnASingleLine: false }",
     // vim settings
     "vim.easymotion": true,
+    "vim.easymotionJumpToAnywhereRegex": "\\b[A-Za-z0-9]|[A-Za-z0-9]\\b|_.|#.|=.|[a-z][A-Z]",
+    "vim.leap": true,
+    "vim.leapBidirectionalSearch": true,
+    "vim.leapShowMarkerPosition": "after",
+    "vim.foldfix": true,
     "vim.surround": true,
-    "vim.smartRelativeLine": true,
-    "vim.sneak": true,
+    "vim.smartRelativeLine": false,
+    "vim.sneak": false,
     "vim.autoindent": true,
     "vim.ignorecase": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.incsearch": true,
-    "vim.leader": "<space>",
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors": {
+        "normal": "#393f4c",
+        "insert": "#3a5b52",
+        "visual": "#68699b",
+        "visualline": "#745399",
+        "visualblock": "#2a4073",
+        "replace": "#2b2e4a",
+        "commandlineinprogress": "#283c63",
+        "searchinprogressmode": "#283c63",
+    },
+    "vim.leader": " ",
     "vim.whichwrap": "b,s,e,w",
     "vim.handleKeys": {
-        "<C-f>": true,
         "<C-t>": false,
-        "<C-e>": false
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-e>": false,
+        "<C-h>": false,
+        "<C-l>": false,
+        "<C-\\>": false,
     },
     "vim.visualModeKeyBindings": [
         {
@@ -186,15 +210,92 @@
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "p"
+            ],
+            "commands": [
+                "editor.action.peekDefinition"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "d"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ],
+            "silent": true
+        },
         // show commands
         {
             "before": [
+                "<leader>",
                 "s",
                 "c"
             ],
             "commands": [
                 "workbench.action.showCommands"
             ],
+            "silent": true
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "command": "workbench.action.navigateLeft",
+            "silent": true
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "command": "workbench.action.navigateRight",
             "silent": true
         },
         // create new file
@@ -222,7 +323,7 @@
         // bookmarks
         {
             "before": [
-                "<leader>",
+                "b",
                 "b"
             ],
             "commands": [
@@ -282,7 +383,9 @@
         // no highlight
         {
             "before": [
-                "<C-h>"
+                "<leader>",
+                "n",
+                "h"
             ],
             "commands": [
                 ":nohl"
@@ -304,66 +407,6 @@
             ],
             "commands": [
                 "workbench.action.previousEditor"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "g",
-                "h"
-            ],
-            "commands": [
-                "editor.action.showHover"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "g",
-                "p"
-            ],
-            "commands": [
-                "editor.action.peekDefinition"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "g",
-                "d"
-            ],
-            "commands": [
-                "editor.action.goToTypeDefinition"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "g",
-                "a"
-            ],
-            "commands": [
-                "editor.action.quickFix"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "g",
-                "f"
-            ],
-            "commands": [
-                "editor.action.formatDocument"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "g",
-                "r"
-            ],
-            "commands": [
-                "editor.action.rename"
             ],
             "silent": true
         },
@@ -677,9 +720,13 @@
             "strings": "on"
         },
         "editor.acceptSuggestionOnEnter": "on",
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
     },
     "markdown.preview.lineHeight": 1.2,
     "markdown.extension.preview.autoShowPreviewToSide": false,
     "markdown.extension.print.theme": "dark",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#393f4c",
+        "statusBar.noFolderBackground": "#393f4c",
+        "statusBar.debuggingBackground": "#393f4c"
+    },
 }
