@@ -287,7 +287,7 @@
                 "<leader>",
                 "h"
             ],
-            "command": "workbench.action.navigateLeft",
+            "commands": "workbench.action.navigateLeft",
             "silent": true
         },
         {
@@ -295,7 +295,7 @@
                 "<leader>",
                 "l"
             ],
-            "command": "workbench.action.navigateRight",
+            "commands": "workbench.action.navigateRight",
             "silent": true
         },
         // create new file
@@ -431,33 +431,33 @@
         },
         // save file
         {
-            "commands": [
-                ":wa!"
-            ],
             "before": [
                 "f",
                 "w"
+            ],
+            "commands": [
+                ":wa!"
             ]
         },
         // save and quit file
         {
-            "commands": [
-                ":wq!"
-            ],
             "before": [
                 "f",
                 "w",
                 "q"
+            ],
+            "commands": [
+                ":wq!"
             ]
         },
         // quit file
         {
-            "commands": [
-                ":q!"
-            ],
             "before": [
                 "f",
                 "q"
+            ],
+            "commands": [
+                ":q!"
             ]
         }
     ],
