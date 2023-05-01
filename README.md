@@ -1,4 +1,11 @@
-# Awesome dotfiles for public.
+# Awesome dotfiles for public
+
+<!--toc:start-->
+- [Awesome dotfiles for public](#awesome-dotfiles-for-public)
+  - [Table of contents](#table-of-contents)
+  - [Wiki](#wiki)
+  - [Update](#update)
+<!--toc:end-->
 
 This repo contains some dotfiles for my OS( Ubuntu20.04 and macOS 🖥️ ).
 
@@ -46,4 +53,3 @@ The Wiki Page is Here. ➡️ [Wiki](https://github.com/Xuer04/Awesome-dotfiles/
 ----------
 
 Interested in any other resource? Welcome to my [profile page](https://github.com/Xuer04) 😜
-
