@@ -116,7 +116,7 @@ vim 的配置文件有两个，分别是 User 和 root，对应 主目录下的 
 ```bash
 # clone 我的配置
 cd
-git clone https://github.com/Xuer04/Mydotfiles.git 
+git clone https://github.com/cxzhou35/Mydotfiles.git 
 mkdir -p ~/.vim/autoload
 cp Mydotfiles/vim/plug.vim  ~/.vim/autoload/
 cp Mydotfiles/vim/.vimrc ~
@@ -137,7 +137,7 @@ cp Mydotfiles/vim/nord.vim  ~/.vim/plugged/nord-vim/colors
 sudo apt install tmux
 
 # 配置
-git clone https://github.com/Xuer04/Mydotfiles.git  # 前面操作中clone过的不需要再clone
+git clone https://github.com/cxzhou35/Mydotfiles.git  # 前面操作中clone过的不需要再clone
 cp -r ~/Mydotfiles/tmux ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf
 cp ~/Mydotfiles/tmux/.tmux.conf.local ~
@@ -299,7 +299,7 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 
 # 图标显示
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
-git clone https://github.com/Xuer04/Mydotfiles.git  # 前面操作中clone过的不需要再clone
+git clone https://github.com/cxzhou35/Mydotfiles.git  # 前面操作中clone过的不需要再clone
 cp ~/Mydotfiles/ranger/rc.conf ~/.config/ranger/conf
 
 # 10. lazygit
@@ -311,9 +311,10 @@ sudo apt install lazygit
 echo "alias lg="lazygit"" >> ~/.zshrc
 ```
 
+### 番外
 
-### 番外：
 #### 1. 一些有意思的终端工具
+
 ```bash
 sudo apt install sl  # 小火车
 sudo apt install cmatrix  # 字符雨
@@ -328,6 +329,4 @@ sudo apt install figlet  # 字符串转字符画
 
 ```
 
-
-Continuously updated...... 📆 
-
+Continuously updated...... 📆

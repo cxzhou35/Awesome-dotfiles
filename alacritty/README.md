@@ -19,7 +19,7 @@ brew install --cask alacritty
 **After install alacritty, clone the repo to use config**:
 
 ```bash
-git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/.dotfiles
+git clone https://github.com/cxzhou35/Awesome-dotfiles.git ~/.dotfiles
 
 # replace {os} with linux/mac
 cp -r ~/dotfiles/alacritty/{os} ~/.config/

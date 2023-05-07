@@ -1,6 +1,7 @@
 ## Configure Your Awesome Mac
 
 ### 1.  Install homebrew
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -10,19 +11,21 @@
 ```bash
 cd ~
 
-git clone https://github.com/Xuer04/Awesome-dotfiles ~/dotfiles
+git clone https://github.com/cxzhou35/Awesome-dotfiles ~/dotfiles
 ```
 
 ### 3.  Install applications
+
 ```bash
-git clone https://github.com/Xuer04/Awesome-applications ~/applications
+git clone https://github.com/cxzhou35/Awesome-applications ~/applications
 
 xargs brew install < ~/applications/Mac/brew-formulae.txt
 
 xargs brew install --cask < ~/applications/Mac/brew-casks.txt
 ```
 
-###  4. Configure oh-my-zsh
+### 4. Configure oh-my-zsh
+
 ```bash
 cd ~
 
@@ -43,6 +46,7 @@ cp -r ~/dotfiles/oh-my-zsh/scripts ~/.oh-my-zsh/
 ```
 
 ### 5. Install nerd font
+
 ```bash
 brew tap homebrew/cask-fonts
 
@@ -56,6 +60,7 @@ wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003
 ```
 
 ### 6. Configure nvim
+
 ```bash
 mkdir -p ~/.config/nvim/autoload
 
@@ -132,9 +137,11 @@ cp -r ~/dotfiles/lazygit ~/.config
 ```
 
 ### 9. Create folders
+
 ```bash
 mkdir -p ~/Code/c ~/Code/cpp ~/Code/python ~/Code/go ~/Code/rust ~/Code/shll
 ```
+
 ### 10. Configure system settings
 
 ```bash

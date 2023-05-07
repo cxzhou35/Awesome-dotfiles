@@ -3,7 +3,7 @@
 ### Installation
 
 ```sh
-git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/.dotfiles
+git clone https://github.com/cxzhou35/Awesome-dotfiles.git ~/.dotfiles
 cp -r ~/.dotfiles/tmux ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf
 cp ~/.dotfiles/tmux/.tmux.conf.local ~

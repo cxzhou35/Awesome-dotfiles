@@ -15,17 +15,20 @@
 ### Installation
 
 1. Install oh-my-zsh:
+
     ```sh
     cd ~
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
 
 2. Clone the repo:
+
     ```sh
-    git clone https://github.com/Xuer04/Awesome-dotfiles.git ~/.dotfiles
+    git clone https://github.com/cxzhou35/Awesome-dotfiles.git ~/.dotfiles
     ```
 
 3. Load configs:
+
     ```sh
     cp ~/.dotfiles/oh-my-zsh/custom/* ~/.oh-my-zsh/custom/
     cp ~/.dotfiles/oh-my-zsh/themes/* ~/.oh-my-zsh/themes/
@@ -33,6 +36,7 @@
     ```
 
 4. Install plugins
+
     ```sh
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
