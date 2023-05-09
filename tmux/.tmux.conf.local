@@ -4,30 +4,139 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+# -- general -------------------------------------------------------------------
+
+setw -g xterm-keys on
+set -s escape-time 0
+set -sg repeat-time 300
+set -s focus-events on
+set -g mouse on
+set -sg exit-empty on
+
+set -q -g status-utf8 on
+setw -q -g utf8 on
+
+set -g visual-activity off
+
+setw -g monitor-activity off
+setw -g monitor-bell off
+
+# increase history size
+set -g history-limit 10000
+
+set -g base-index 1
+setw -g pane-base-index 1
+
+setw -g automatic-rename on
+set -g renumber-windows on
+
+set -g set-titles on
+
+set -g display-panes-time 2000
+set -g display-time 2000
+
+set -g status-interval 1
+
+# enable clipboard
+set -g set-clipboard on
+
+set -g detach-on-destroy off  # don't exit from tmux when closing a session
+
+set -g default-terminal "xterm-256color"
+set -ga terminal-overrides ",xterm-256color:Tc"
+
+set-option default-path "$PWD"
 
 # -- navigation ----------------------------------------------------------------
 
-unbind C-b
-set-option -g prefix C-e
-bind-key C-e send-prefix
+# tmux-fzf
+TMUX_FZF_LAUNCH_KEY="C-f"
+TMUX_FZF_OPTIONS="-p -w 80% -h 80% -m"
+TMUX_FZF_ORDER="session|window|pane|clipboard|process"
+set -g @t-fzf-prompt '  '
+
+# extrakto
+set -g @extrakto_insert_key "enter"
+set -g @extrakto_copy_key "tab"
+
+# -- session navigation
+
+# -- window navigation
+unbind 1
+unbind 2
+unbind 3
+unbind 4
+unbind 5
+unbind 6
+unbind 7
+unbind 8
+unbind 9
+unbind 0
+
+bind -n M-1 select-window -t 1
+bind -n M-2 select-window -t 2
+bind -n M-3 select-window -t 3
+bind -n M-4 select-window -t 4
+bind -n M-5 select-window -t 5
+bind -n M-6 select-window -t 6
+bind -n M-7 select-window -t 7
+bind -n M-8 select-window -t 8
+bind -n M-9 select-window -t 9
+
+bind -n M-! join-pane -t :1
+bind -n M-@ join-pane -t :2
+bind -n 'M-#' join-pane -t :3
+bind -n 'M-$' join-pane -t :4
+bind -n M-% join-pane -t :5
+bind -n M-^ join-pane -t :6
+bind -n M-& join-pane -t :7
+bind -n M-* join-pane -t :8
+bind -n M-( join-pane -t :9
+
+# -- pane navigation
+
+bind-key h split-window -hb -c "#{pane_current_path}"
+bind-key j split-window -v -c "#{pane_current_path}"
+bind-key k split-window -vb -c "#{pane_current_path}"
+bind-key l split-window -h -c "#{pane_current_path}"
+
+# kill pane
+bind -n M-x kill-pane
+
+# fullscreen pane
+bind -n M-f resize-pane -Z
+
+bind 1 select-pane -t:.1
+bind 2 select-pane -t:.2
+bind 3 select-pane -t:.3
+bind 4 select-pane -t:.4
+bind 5 select-pane -t:.5
+bind 6 select-pane -t:.6
+bind 7 select-pane -t:.7
+bind 8 select-pane -t:.8
+bind 9 select-pane -t:.9
+bind 0 select-pane -t:.10
+bind > swap-pane -D
+bind < swap-pane -U
+bind | swap-pane
+
+bind Space next-layout
 
 # switch panes using Alt-arrow without prefix
 bind -n M-h select-pane -L
-bind -n M-l select-pane -R
-bind -n M-k select-pane -U
 bind -n M-j select-pane -D
+bind -n M-k select-pane -U
+bind -n M-l select-pane -R
 
-# split panes using - and /
-bind - split-window -v
-bind / split-window -h
+# resize panes with vim movement keys
+bind -n M-H resize-pane -L 3
+bind -n M-J resize-pane -D 3
+bind -n M-K resize-pane -U 3
+bind -n M-L resize-pane -R 3
 
-# if you're running tmux within iTerm2
-#   - and tmux is 1.9 or 1.9a
-#   - and iTerm2 is configured to let option key act as +Esc
-#   - and iTerm2 is configured to send [1;9A -> [1;9D for option + arrow keys
-# then uncomment the following line to make Meta + arrow keys mapping work
-#set -ga terminal-overrides "*:kUP3=\e[1;9A,*:kDN3=\e[1;9B,*:kRIT3=\e[1;9C,*:kLFT3=\e[1;9D"
-
+bind w choose-tree -Z
+bind s choose-tree 'move-pane -v -s "%%"'
+bind v choose-tree 'move-pane -h -s "%%"'
 
 # -- windows & pane creation ---------------------------------------------------
 
@@ -53,9 +162,9 @@ tmux_conf_new_session_prompt=false
 
 
 # -- display -------------------------------------------------------------------
+
 tmux_conf_theme_24b_colour=true
-## -- color scheme of nord begin -----------------------------------------------
-## https://www.nordtheme.com/docs/colors-and-palettes
+## -- color scheme of nord ----------------------------------------------------
 ##  Polar Night
 nord0="#2e3440"
 nord1="#3b4252"
@@ -79,7 +188,6 @@ nord12="#D08770"
 nord13="#EBCB8B"
 nord14="#A3BE8C"
 nord15="#B48EAD"
-## -- color scheme of nord end -------------------------------------------------
 
 # RGB 24-bit colour support (tmux >= 2.2), possible values are:
 #  - true
@@ -190,7 +298,7 @@ tmux_conf_theme_window_status_format="#I #W"
 #     - #{hostname_full_ssh}
 #     - #{username}
 #     - #{username_ssh}
-#   ﲵ            ﮊ ﮏ ♥ ﰸ ﯅  
+#   󰆍           󰁦 󰚌 󰚑 ♥ 󰜺 󰛇 󰅩 󰇷
 tmux_conf_theme_window_status_current_fg=$nord6
 tmux_conf_theme_window_status_current_bg=$nord10
 tmux_conf_theme_window_status_current_attr="bold"
@@ -252,7 +360,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username_ssh}
 tmux_conf_theme_status_left="  #S "
 #tmux_conf_theme_status_right="#{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}#{?battery_status,#{battery_status},} | %b %d | %R | #{username}#{root} |﯅ #{hostname} '
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}#{?battery_status,#{battery_status},} |󰃵 %b %d | %R | #{username}#{root} |󰛇 #{hostname} '
 # status left style
 tmux_conf_theme_status_left_fg=$nord5 # '#e4e4e4,#e4e4e4,#e4e4e4'  # black, white , white
 tmux_conf_theme_status_left_bg=$nord0 #',#00afff'  # yellow, pink, white blue
@@ -273,7 +381,7 @@ tmux_conf_theme_pairing_bg=$nord1
 tmux_conf_theme_pairing_attr="none"
 
 # prefix indicator
-tmux_conf_theme_prefix=" "                  # U+2328
+tmux_conf_theme_prefix="󰁦 "                  # U+2328
 tmux_conf_theme_prefix_fg=$nord13
 tmux_conf_theme_prefix_bg="none"
 tmux_conf_theme_prefix_attr="none"
@@ -329,7 +437,7 @@ tmux_conf_battery_vbar_palette="gradient"
 
 # symbols used to indicate whether battery is charging or discharging
 tmux_conf_battery_status_charging=""       # U+2191
-tmux_conf_battery_status_discharging=""    # U+2193
+tmux_conf_battery_status_discharging="󱟤"    # U+2193
 
 # clock style (when you hit <prefix> + t)
 # you may want to use %I:%M %p in place of %R in tmux_conf_theme_status_right
@@ -351,16 +459,12 @@ tmux_conf_copy_to_os_clipboard=true
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
 
-# increase history size
-set -g history-limit 10000
 
-# start with mouse mode enabled
-set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
-#set -g status-keys vi
-#set -g mode-keys vi
+set -g status-keys vi
+set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
@@ -394,9 +498,13 @@ tmux_conf_update_plugins_on_reload=false
 # to enable a plugin, use the 'set -g @plugin' syntax:
 # visit https://github.com/tmux-plugins for available plugins
 # set -g @plugin 'tmux-plugins/tmux-copycat'
+set -g @plugin 'sainnhe/tmux-fzf'
 # set -g @plugin 'tmux-plugins/tmux-cpu'
-# set -g @plugin 'tmux-plugins/tmux-resurrect'
-# set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'laktak/extrakto'
+
+# theme plugin
+# set -g @plugin 'catppuccin/tmux'
 # set -g @continuum-restore 'on'
 
 # -- custom variables ----------------------------------------------------------

@@ -52,12 +52,12 @@ function racd {
 }
 
 # hugo reload
-function loadhugo(){
-    cd ~/Site/blog && hugo && cd ./public && git add . && git commit -m "update" && git push && cd ~/Site/blog
+function deploy(){
+    cd ~/Github/site/blog && hugo && cd ./public && git add . && git commit -m "update" && git push && cd ~/Github/site/blog
 }
 
 # edit neovim config file
-function vimrc(){
+function vc(){
   cd ~/.config/nvim && nvim init.lua
 }
 
