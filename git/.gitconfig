@@ -1,6 +1,6 @@
 [user]
     email = zjajzcx3566@163.com
-    name = Xuer04
+    name = cxzhou35
 [core]
     editor = nvim
     ignorecase = false
@@ -17,6 +17,15 @@
 [pull]
     rebase = false
 [github]
-    user = Xuer04
+    user = cxzhou35
 [diff]
     tool = nvimdiff
+[push]
+    default = current
+    autoSetupRemote = true
+[remote "origin"]
+    proxy = http://127.0.0.1:7890
+[http]
+    proxy = socks5h://127.0.0.1:7890
+[https]
+    proxy = socks5h://127.0.0.1:7890

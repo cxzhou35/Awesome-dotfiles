@@ -17,7 +17,6 @@ TAGS
 *.pyc
 .zshrc.local
 .python-version
-samples
 .netrwhist
 .bundle
 /vendor/bundle
@@ -70,17 +69,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-develop-eggs/
-dist/
-downloads/
-eggs/
 .eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
@@ -177,9 +166,6 @@ venv.bak/
 
 # Rope project settings
 .ropeproject
-
-# mkdocs documentation
-/site
 
 # mypy
 .mypy_cache/
