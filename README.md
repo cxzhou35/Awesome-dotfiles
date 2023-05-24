@@ -34,6 +34,7 @@ If this is helpful to you, please give me a star ⭐.
 - [Git](https://github.com/cxzhou35/Awesome-dotfiles/tree/main/git)
 - [Clang](https://github.com/cxzhou35/Awesome-dotfiles/tree/main/clang)
 - [Iterm2](https://github.com/cxzhou35/Awesome-dotfiles/tree/main/iterm2)
+- [Joshuto](https://github.com/cxzhou35/Awesome-dotfiles/tree/main/joshuto)
 - [Rime](https://github.com/cxzhou35/Awesome-dotfiles/tree/main/rime)
 - ~~[Vim](https://github.com/cxzhou35/Awesome-dotfiles/tree/main/vim)~~
 - ~~[Neovim](https://github.com/cxzhou35/Awesome-dotfiles/tree/main/nvim)~~
