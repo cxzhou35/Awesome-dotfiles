@@ -1,0 +1,80 @@
+format = """
+[](fg:#bbc8e6)\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$conda\
+$fill\
+$cmd_duration $jobs $time\
+$line_break\
+$character"""
+
+[nodejs]
+format = "[$symbol($version )]($style)"
+
+[fill]
+symbol = " "
+
+[directory]
+style = "fg:#ACB1D6"
+format = "[ $path ]($style)"
+read_only = " 󰌾"
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Code" = " "
+"Pictures" = " "
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vicmd_symbol = "[❮](green)"
+
+[jobs]
+symbol = ""
+style = "bold red"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "fg:#769ff0"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "fg:#769ff0"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
+[conda]
+symbol = " "
+style = "fg:#a0a9cb"
+format = '[$symbol$environment]($style) '
+
+[time]
+disabled = false
+style = "fg:#a0a9cb"
+format = '[[  $time ]()]($style)'
+
+[custom.stunnel]
+when = "ps aux | grep stunnel | grep -v grep"
+command = "ps -o etime= -p $(ps aux | grep stunnel | grep -v grep | awk '{print $2}')"
+style = "red"
+format = "[TUNNEL OPEN for $output]($style)"
