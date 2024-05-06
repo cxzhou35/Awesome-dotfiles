@@ -4,6 +4,8 @@
 # Compiled Lua sources
 luac.out
 
+./zsh/secret.zsh
+
 
 # luarocks build files
 *.src.rock

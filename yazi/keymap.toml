@@ -1,0 +1,43 @@
+"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+
+[manager]
+prepend_keymap = [
+	{ on = [ "w" ], run = 'shell "$SHELL" --block --confirm', desc = "Open shell here" },
+	{ on = [ "W" ], run = "tasks_show" },
+
+	{ on = [ "H" ], run = "back" },
+	{ on = [ "L" ], run = "forward" },
+
+	{ on = [ "<C-k>" ], run = "seek -5" },
+	{ on = [ "<C-j>" ], run = "seek 5" },
+
+  { on = [ "l" ], run = "plugin --sync smart-enter", desc = "Enter the child directory, or open the file" },
+  { on = [ "p" ], run = "plugin --sync smart-paste", desc = "Paste into the hovered directory or CWD" },
+  { on = [ "T" ], run = "plugin --sync hide-preview", desc = "Hide preview pane" },
+  { on = [ "s" ], run = "search fd", desc = "Search files by name using fd" },
+	{ on = [ "S" ], run = "search rg", desc = "Search files by content using ripgrep" },
+  { on = [ "z" ], run = "plugin zoxide", desc = "Jump to a directory using zoxide" },
+	{ on = [ "Z" ], run = "plugin fzf", desc = "Jump to a directory, or reveal a file using fzf" },
+
+  # Filter
+  { on = [ "f" ], run = "filter --smart", desc = "Filter the files" },
+
+  # Find
+	{ on = [ "/" ], run = "find --smart", desc = "Find next file" },
+	{ on = [ ";" ], run = "find --previous --smart", desc = "Find previous file" },
+
+  # Help
+  { on = [ "?" ], run = "help", desc = "Open help" },
+]
+
+[input]
+prepend_keymap = [
+  { on = [ "<Esc>" ], run = "close", esc = "Cancel input" }
+]
+
+[completion]
+prepend_keymap = [
+	{ on = [ "<C-k>" ], run = "arrow -1" },
+	{ on = [ "<C-j>" ], run = "arrow 1" },
+]
+
