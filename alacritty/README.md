@@ -22,22 +22,7 @@ brew install --cask alacritty
 git clone https://github.com/cxzhou35/Awesome-dotfiles.git ~/.dotfiles
 
 # replace {os} with linux/mac
-cp -r ~/dotfiles/alacritty/{os} ~/.config/
-```
-
-Install theme:
-
-```sh
-mkdir -p ~/.config/alacritty/themes
-
-git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
-```
-
-Add an import to alacritty.yml (Replace {theme} with desired colorscheme):
-
-```yaml
-import:
- - ~/.config/alacritty/themes/themes/{theme}.yaml
+cp -r ~/dotfiles/alacritty/{os} ~/.config/alacritty
 ```
 
 Relaunch alacritty, now you can enjoy it!
