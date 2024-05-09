@@ -4,9 +4,7 @@
 
 ```sh
 git clone https://github.com/cxzhou35/Awesome-dotfiles.git ~/.dotfiles
-cp -r ~/.dotfiles/tmux ~/.tmux
-ln -s -f ~/.tmux/.tmux.conf
-cp ~/.dotfiles/tmux/.tmux.conf.local ~
+cp -r ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
 > **Tips:**
